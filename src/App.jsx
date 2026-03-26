@@ -12,6 +12,7 @@ const BrokerFinder     = lazy(() => import("./pages/BrokerFinder"));
 const Methodology      = lazy(() => import("./pages/Methodology"));
 const About            = lazy(() => import("./pages/About"));
 const Contact          = lazy(() => import("./pages/Contact"));
+const Exness           = lazy(() => import("./components/Exness"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ── Shared layout shells (build these next) ──────────────────────────────────
@@ -47,6 +48,7 @@ export default function App() {
                 {/* ── Broker listing & reviews ── */}
                 <Route path="/brokers"                element={<BrokerList />} />
                 <Route path="/brokers/:slug"          element={<BrokerReview />} />
+                <Route path="/brokers/exness"                  element={<Exness />} />
 
                 {/* ── Category pages (SEO hub pages) ── */}
                 {/* e.g. /brokers/best-forex-brokers-kenya */}
