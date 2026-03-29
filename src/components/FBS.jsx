@@ -240,6 +240,13 @@ export default function FBSReview() {
                   </tbody>
                 </table>
               </div>
+
+              <div className="py-4">
+                <p className="py-3 text-lg">
+                  FBS offers multiple ways of deposit and withdrawals. The methods include: Mobile money, Skrill, Crypto deposits, and Bank cards. These gives a trader vast choices of deposit ensuring fast deposits and withdrawals.
+                </p>
+                <img src="/fbsdeposit.png" alt="FBS Payment Methods" className="mt-6 rounded border border-white/10" />
+              </div>
             </section>
 
             <section className="p-6">

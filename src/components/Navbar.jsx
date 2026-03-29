@@ -45,7 +45,7 @@ export default function Navbar() {
             aria-label="FxBrokers.co.ke Home"
           >
             {/* Icon mark */}
-            <div className=" flex items-center justify-center shrink-0 group-hover:bg-amber-400/15 transition-colors duration-200">
+            <div className=" flex items-center justify-center shrink-0 ">
               <img
                 src="/fxbrokerskenya.png"
                 alt=""

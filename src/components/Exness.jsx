@@ -201,6 +201,11 @@ export default function ExnessReview() {
               </div>
             </section>
 
+            <div className="my-6 items-center">
+              <p className="font-semibold py-3 mb-3 text-md">Exness offers multiple means of deposit. They include M-Pesa, Airtel money, Skrill, Neteller and Bank Card. This ensures fast deposit and withdrwals with zero fees.</p>
+              <img src="/exnessdeposit.png" width="1200" height="628" alt="exness deposit" className="rounded-xs shadow-xl mx-auto" />
+            </div>
+
             {/* Regulation */}
             <section className="py-6">
               <h2 className="text-white font-bold text-xl mb-4 tracking-tight">Safety & Regulation</h2>

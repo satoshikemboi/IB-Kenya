@@ -414,7 +414,7 @@ export default function Home() {
               </defs>
             </svg>
           </div>
-
+ 
           <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* ── LEFT COLUMN ── */}
             <div className="flex flex-col">
@@ -522,7 +522,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {categories.map((cat) => (
-                <Link key={cat.slug} to={`/brokers/${cat.slug}`}
+                <Link key={cat.slug} to={`/brokers/category/${cat.slug}`}
                   className="group flex items-center gap-3 bg-[#0B1929] border border-white/8 hover:border-amber-400/35 rounded-2xl px-5 py-4 transition-all duration-200">
                   <span className="text-xl shrink-0">{cat.icon}</span>
                   <span className="text-slate-300 group-hover:text-white text-sm font-medium transition-colors">{cat.label}</span>

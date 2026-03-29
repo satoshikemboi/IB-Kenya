@@ -287,6 +287,33 @@ export default function JustMarketsReview() {
               </div>
             </section>
 
+            <div className="p-6">
+              <p>
+                Justmarkets Kenya offers many ways of depositing and withdrawing.They include, M-Pesa, Bank Card, Mobile money, Crypto, SticPay, wire Transfer and even Sirfintech. All these increases the deposit method and ensures quick deposit and withdrawals.
+              </p>
+  <div className="mb-4">
+    <p className="text-gray-500 text-[11px] mt-1">
+      Verified on March 29, 2026 — Instant M-Pesa Integration
+    </p>
+  </div>
+
+  <div className="relative group">
+    <img 
+      src="/justmarketsdeposit.png" 
+      alt="JustMarkets M-Pesa deposit interface screenshot showing local payment options in Kenya" 
+      className="w-full rounded-lg object-cover border border-white/5 group-hover:border-amber-400/30 transition-colors" 
+    />
+    {/* Optional: Add a "Verified" watermark style overlay */}
+    <div className="absolute top-2 right-2 bg-emerald-500/90 text-[#07101E] text-[9px] font-bold px-2 py-1 rounded shadow-lg uppercase">
+      Tested by FxBrokers
+    </div>
+  </div>
+
+  <p className="mt-4 text-gray-400 text-xs italic leading-relaxed">
+    "Our team tested the JustMarkets M-Pesa gateway; funds appeared in the MT5 terminal in under 2 minutes."
+  </p>
+</div>
+
             {/* Regulation */}
             <section className="p-6">
               <h2 className="text-white font-bold text-lg mb-4 tracking-tight">Safety & Regulation</h2>
