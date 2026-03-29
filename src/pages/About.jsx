@@ -1,5 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import LocationCard from "../components/LocationCard";
 
 export default function About() {
   return (
@@ -55,6 +56,9 @@ export default function About() {
                 We earn affiliate commissions when you open a broker account via our links. This is how we fund our research and keep the site free to use. Importantly, this never influences our ratings, reviews, or recommendations. Brokers cannot pay to improve their position.
               </p>
             </div>
+          </div>
+          <div className="p-6">
+          <LocationCard/>
           </div>
         </div>
       </div>

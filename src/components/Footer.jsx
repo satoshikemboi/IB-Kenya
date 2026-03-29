@@ -88,6 +88,9 @@ export default function Footer() {
                 </a>
               ))}
             </div>
+            <div className="text-white">
+              <h1>Location</h1>
+            </div>
           </div>
 
           {/* Link columns */}

@@ -542,13 +542,13 @@ export default function Home() {
               <div>
                 <h2 id="brokers-heading" className="text-3xl font-bold text-white mb-2"
                   style={{ fontFamily: "'Sora', sans-serif" }}>
-                  Top Forex Brokers — 2025
+                  Top Forex Brokers — 2026
                 </h2>
                 <p className="text-slate-400 text-sm">Hand-picked and independently verified. Updated quarterly.</p>
               </div>
               <div className="flex items-center gap-2 text-xs text-slate-500">
                 <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                Updated March 2025
+                Updated March 2026
               </div>
             </div>
 
