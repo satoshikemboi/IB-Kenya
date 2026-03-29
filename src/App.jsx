@@ -13,6 +13,11 @@ const Methodology      = lazy(() => import("./pages/Methodology"));
 const About            = lazy(() => import("./pages/About"));
 const Contact          = lazy(() => import("./pages/Contact"));
 const Exness           = lazy(() => import("./components/Exness"));
+const JustMarkets      = lazy(() => import("./components/JustMarkets"));
+const HFM              = lazy(() => import("./components/HFM"));
+const XM               = lazy(() => import("./components/XM"));
+const FxPro            = lazy(() => import("./components/FxPro"));
+const FBS              = lazy(() => import("./components/FBS"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ── Shared layout shells (build these next) ──────────────────────────────────
@@ -49,6 +54,11 @@ export default function App() {
                 <Route path="/brokers"                element={<BrokerList />} />
                 <Route path="/brokers/:slug"          element={<BrokerReview />} />
                 <Route path="/brokers/exness"                  element={<Exness />} />
+                <Route path="/brokers/justmarkets"           element={<JustMarkets />} />
+                <Route path="/brokers/hfm"                   element={<HFM />} />
+                <Route path="/brokers/xm"                    element={<XM />} />
+                <Route path="/brokers/fxpro"                 element={<FxPro />} />
+                <Route path="/brokers/fbs"                   element={<FBS />} />
 
                 {/* ── Category pages (SEO hub pages) ── */}
                 {/* e.g. /brokers/best-forex-brokers-kenya */}

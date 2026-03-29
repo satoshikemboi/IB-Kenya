@@ -34,38 +34,45 @@ const PAYMENT_METHODS = [
   { name: "Crypto", time: "~30 min", fee: "Network", min: "$10" },
 ];
 
+const AFFILIATE_LINK = "https://one.exnessonelink.com/a/1sh0vxrgqd";
+const BROKERPAGE_LINK = "https://www.exnesspromo.com/en/trade-on-the-go-app/?partner_id=1sh0vxrgqd";
+
 const FAQS = [
   { 
-    q: "Is Exness safe for Kenyan traders?", 
-    a: "Yes. Exness is highly regulated by the FCA (UK), CySEC (Cyprus), and the FSCA (South Africa). They provide negative balance protection and hold client funds in segregated top-tier bank accounts." 
+    q: <>How to register an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> account</>, 
+    a: <>To open an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> account, go to <a href={BROKERPAGE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness official page</a>. Enter your personal details and proceed to verify your identity and proof of adress. Once verified, you can proceed to deposit and trade.</>
+  },
+  { 
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> safe for Kenyan traders?</>, 
+    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> is highly regulated by the FCA (UK), CySEC (Cyprus), and the FSCA (South Africa). They provide negative balance protection and hold client funds in segregated top-tier bank accounts.</>
   },
   { 
     q: "Can I deposit and withdraw with M-Pesa?", 
-    a: "Yes. Exness offers native M-Pesa integration. Deposits are instant, and withdrawals are typically processed within seconds to minutes, 24/7. The minimum deposit via M-Pesa is $1." 
+    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> offers native M-Pesa integration. Deposits are instant, and withdrawals are typically processed within seconds to minutes, 24/7. The minimum deposit via M-Pesa is $1.</>
   },
   { 
-    q: "What is the minimum deposit for Exness in Kenya?", 
-    a: "For Standard and Standard Cent accounts, there is no fixed minimum deposit (as low as $1 via M-Pesa). Professional accounts like Raw Spread, Pro, and Zero require a minimum initial deposit of $200." 
+    q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> in Kenya?</>, 
+    a: <>For Standard and Standard Cent accounts, there is no fixed minimum deposit (as low as $1 via M-Pesa). Professional accounts like Raw Spread, Pro, and Zero require a minimum initial deposit of $200.</>
   },
   { 
-    q: "Does Exness offer a No Deposit Bonus?", 
-    a: "Exness generally does not offer traditional 'No Deposit Bonuses.' Instead, they focus on providing the industry's lowest spreads and instant withdrawal technology to provide better long-term value for traders." 
+    q: <>Does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> offer a No Deposit Bonus?</>, 
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> generally does not offer traditional &apos;No Deposit Bonuses.&apos; Instead, they focus on providing the industry&apos;s lowest spreads and instant withdrawal technology to provide better long-term value for traders.</>
   },
   { 
     q: "What is the maximum leverage available?", 
-    a: "Exness offers 'Unlimited Leverage' for experienced traders meeting specific criteria (less than 10 closed positions and 5 lots traded). Standard accounts typically access up to 1:2000 leverage." 
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> offers &apos;Unlimited Leverage&apos; for experienced traders meeting specific criteria (less than 10 closed positions and 5 lots traded). Standard accounts typically access up to 1:2000 leverage.</>
   },
   { 
     q: "Which trading platforms can I use?", 
-    a: "Exness supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), the Exness Web Terminal, and the highly-rated Exness Trade mobile app available on Android and iOS." 
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> Web Terminal, and the highly-rated <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> Trade mobile app available on Android and iOS.</>
   },
   { 
     q: "Are there any withdrawal fees?", 
-    a: "Exness does not charge any internal fees for M-Pesa or E-wallet withdrawals. However, M-Pesa users may incur standard mobile money transaction charges when sending or receiving funds from their line." 
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> does not charge any internal fees for M-Pesa or E-wallet withdrawals. However, M-Pesa users may incur standard mobile money transaction charges when sending or receiving funds from their line.</>
   },
   { 
-    q: "Is Exness regulated by the CMA in Kenya?", 
-    a: "While Exness is not currently licensed by the Kenyan Capital Markets Authority (CMA), they serve Kenyan traders via their FSA (Seychelles) and FSCA (South Africa) licenses, which are widely respected global regulations." 
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> regulated by the CMA in Kenya?</>, 
+    a: <>While <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> is not currently licensed by the Kenyan Capital Markets Authority (CMA), they serve Kenyan traders via their FSA (Seychelles) and FSCA (South Africa) licenses, which are widely respected global regulations.</>
   }
 ];
 

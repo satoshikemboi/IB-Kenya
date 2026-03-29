@@ -47,17 +47,12 @@ const CATEGORIES = {
 };
 
 const BROKER_SNIPPETS = {
-  "exness":      { name: "Exness",     rating: 4.8, minDeposit: "$0",   spread: "0.0 pips", mpesa: true,  badge: "Top Rated" },
-  "xm-group":   { name: "XM Group",   rating: 4.6, minDeposit: "$5",   spread: "0.6 pips", mpesa: true,  badge: "Best Beginners" },
-  "hfm":        { name: "HFM",        rating: 4.5, minDeposit: "$5",   spread: "0.0 pips", mpesa: true,  badge: "Low Spread" },
-  "pepperstone":{ name: "Pepperstone",rating: 4.7, minDeposit: "$200", spread: "0.0 pips", mpesa: false, badge: "Best ECN" },
-  "ic-markets": { name: "IC Markets", rating: 4.6, minDeposit: "$200", spread: "0.0 pips", mpesa: false, badge: "Raw Spreads" },
-  "fbs":        { name: "FBS",        rating: 4.2, minDeposit: "$1",   spread: "0.5 pips", mpesa: true,  badge: "$1 Deposit" },
-  "octafx":     { name: "OctaFX",     rating: 4.1, minDeposit: "$25",  spread: "0.6 pips", mpesa: true,  badge: "Copy Trading" },
-  "fp-markets": { name: "FP Markets", rating: 4.5, minDeposit: "$100", spread: "0.0 pips", mpesa: false, badge: "ASIC Regulated" },
-  "fxpro":      { name: "FxPro",      rating: 4.4, minDeposit: "$100", spread: "0.6 pips", mpesa: false, badge: "Multi-Platform" },
-  "avatrade":   { name: "AvaTrade",   rating: 4.3, minDeposit: "$100", spread: "0.9 pips", mpesa: false, badge: "Trusted Brand" },
-  "deriv":      { name: "Deriv",      rating: 4.0, minDeposit: "$5",   spread: "0.5 pips", mpesa: true,  badge: "Synthetic Indices" },
+  "exness":      { name: "Exness",    rating: 4.8, minDeposit: "$0",   spread: "0.0 pips", mpesa: true,  badge: "Top Rated", link: "https://one.exnessonelink.com/a/1sh0vxrgqd" },
+  "xm-group":   { name: "XM Group",   rating: 4.6, minDeposit: "$5",   spread: "0.6 pips", mpesa: true,  badge: "Best Beginners", link: "https://affs.click/MbQNk" },
+  "hfm":        { name: "HFM",        rating: 4.5, minDeposit: "$5",   spread: "0.0 pips", mpesa: true,  badge: "Low Spread", link: "https://register.hfm.com/ke/en/new-live-account/?refid=30515020" },
+  "justmarkets":{ name: "JustMarkets",rating: 4.7, minDeposit: "$5", spread: "0.0 pips", mpesa: true, badge: "Low min deposit", link: "https://one.justmarkets.link/a/17thm0lpq8" },
+  "fbs":        { name: "FBS",        rating: 4.2, minDeposit: "$1",   spread: "0.5 pips", mpesa: true,  badge: "$1 Deposit", link: "https://fbs.partners?ibl=876040&ibp=35444511" },
+  "fxpro":      { name: "FxPro",      rating: 4.4, minDeposit: "$100", spread: "0.6 pips", mpesa: false, badge: "Multi-Platform", link:"https://direct-fxpro.com/en/partner/2xPncqjwh" },
 };
 
 export default function BrokerCategory() {
@@ -137,10 +132,10 @@ export default function BrokerCategory() {
                   </div>
                 </div>
                 <div className="flex gap-2 shrink-0">
-                  <a href={`https://${broker.slug}.com`} target="_blank" rel="noopener noreferrer sponsored"
-                    className="bg-[#C9A84C] hover:bg-[#b8953e] text-[#07101E] text-xs font-bold px-4 py-2 rounded-lg transition-colors">
-                    Trade Now
-                  </a>
+                <a href={broker.link} target="_blank" rel="noopener noreferrer sponsored"
+                   className="bg-[#C9A84C] hover:bg-[#b8953e] text-[#07101E] text-xs font-bold px-4 py-2 rounded-lg transition-colors">
+                       Trade Now
+                </a>
                   <Link to={`/brokers/${broker.slug}`}
                     className="border border-white/20 hover:border-[#C9A84C]/40 text-gray-300 text-xs font-medium px-4 py-2 rounded-lg transition-all">
                     Review

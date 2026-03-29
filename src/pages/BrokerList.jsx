@@ -3,18 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const ALL_BROKERS = [
-  { id: 1, name: "Exness", slug: "exness", rating: 4.8, minDeposit: 10, regulation: ["FCA", "CySEC", "FSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Top Rated", category: "ecn" },
-  { id: 2, name: "XM Group", slug: "xm-group", rating: 4.6, minDeposit: 5, regulation: ["ASIC", "CySEC", "IFSC"], spread: 0.6, mpesa: true, platforms: ["MT4", "MT5"], badge: "Best for Beginners", category: "market-maker" },
-  { id: 3, name: "HFM", slug: "hfm", rating: 4.5, minDeposit: 5, regulation: ["FCA", "DFSA", "FSCA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Low Spread", category: "ecn" },
-  { id: 4, name: "Pepperstone", slug: "pepperstone", rating: 4.7, minDeposit: 200, regulation: ["FCA", "ASIC", "DFSA"], spread: 0.0, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Best ECN", category: "ecn" },
-  { id: 5, name: "IC Markets", slug: "ic-markets", rating: 4.6, minDeposit: 200, regulation: ["ASIC", "CySEC", "FSA"], spread: 0.0, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Raw Spreads", category: "ecn" },
-  { id: 6, name: "FBS", slug: "fbs", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker" },
-  { id: 7, name: "OctaFX", slug: "octafx", rating: 4.1, minDeposit: 25, regulation: ["CySEC", "SVG FSA"], spread: 0.6, mpesa: true, platforms: ["MT4", "MT5"], badge: "Copy Trading", category: "market-maker" },
-  { id: 8, name: "FxPro", slug: "fxpro", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn" },
-  { id: 9, name: "AvaTrade", slug: "avatrade", rating: 4.3, minDeposit: 100, regulation: ["Central Bank Ireland", "ASIC", "FSA"], spread: 0.9, mpesa: false, platforms: ["MT4", "MT5", "AvaTradeGO"], badge: "Trusted Brand", category: "market-maker" },
-  { id: 10, name: "Deriv", slug: "deriv", rating: 4.0, minDeposit: 5, regulation: ["Malta FSA", "VFSC"], spread: 0.5, mpesa: true, platforms: ["MT5", "DTrader"], badge: "Synthetic Indices", category: "market-maker" },
-  { id: 11, name: "EightCap", slug: "eightcap", rating: 4.3, minDeposit: 100, regulation: ["ASIC", "SCB"], spread: 0.0, mpesa: false, platforms: ["MT4", "MT5"], badge: "Tight Spreads", category: "ecn" },
-  { id: 12, name: "FP Markets", slug: "fp-markets", rating: 4.5, minDeposit: 100, regulation: ["ASIC", "CySEC"], spread: 0.0, mpesa: false, platforms: ["MT4", "MT5", "IRESS"], badge: "ASIC Regulated", category: "ecn" },
+  { id: 1, name: "Exness", slug: "exness", affiliateLink: "https://one.exnessonelink.com/a/1sh0vxrgqd", rating: 4.8, minDeposit: 10, regulation: ["FCA", "CySEC", "FSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Top Rated", category: "ecn" },
+  { id: 2, name: "XM Group", slug: "xm", affiliateLink: "https://affs.click/MbQNk", rating: 4.6, minDeposit: 5, regulation: ["ASIC", "CySEC", "IFSC"], spread: 0.6, mpesa: true, platforms: ["MT4", "MT5"], badge: "Best for Beginners", category: "market-maker" },
+  { id: 3, name: "HFM", slug: "hfm", affiliateLink: "https://register.hfm.com/ke/en/new-live-account/?refid=30515020", rating: 4.5, minDeposit: 5, regulation: ["FCA", "DFSA", "FSCA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Low Spread", category: "ecn" },
+  { id: 4, name: "Justmarkets", slug: "justmarkets", affiliateLink: "https://one.justmarkets.link/a/17thm0lpq8", rating: 4.7, minDeposit: 5, regulation: ["FCA", "ASIC", "DFSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5", "cTrader"], badge: "Low min deposit", category: "market-maker" },
+  { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker" },
+  { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn" },
 ];
 
 const SORT_OPTIONS = [
@@ -168,7 +162,7 @@ export default function BrokerList() {
                 {/* CTAs */}
                 <div className="flex gap-2 shrink-0">
                   <a
-                    href={`https://${broker.slug}.com`}
+                    href={broker.affiliateLink}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                     className="bg-[#C9A84C] hover:bg-[#b8953e] text-[#07101E] text-xs font-bold px-4 py-2 rounded-lg transition-colors"

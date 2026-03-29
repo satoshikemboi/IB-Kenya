@@ -21,7 +21,7 @@ const featuredBrokers = [
   },
   {
     id: 2,
-    name: "XM Group",
+    name: "XM",
     logo: "/xm.png",
     rating: 4.6,
     minDeposit: "$5",
