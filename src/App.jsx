@@ -63,6 +63,7 @@ export default function App() {
                 {/* ── Category pages (SEO hub pages) ── */}
                 {/* e.g. /brokers/best-forex-brokers-kenya */}
                 <Route path="/brokers/category/:slug" element={<BrokerCategory />} />
+                <Route path="/brokers/category"         element={<BrokerCategory />} />
 
                 {/* ── Tools ── */}
                 <Route path="/broker-finder"          element={<BrokerFinder />} />

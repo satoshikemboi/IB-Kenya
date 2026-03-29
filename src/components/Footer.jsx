@@ -37,14 +37,41 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-[#C9A84C] rounded-lg flex items-center justify-center">
-                <span className="text-[#07101E] font-black text-sm">FX</span>
-              </div>
-              <span className="text-white font-bold text-base">
-                FxBrokers<span className="text-[#C9A84C]">.co.ke</span>
+          <Link
+            to="/"
+            className="flex items-center gap-2.5 shrink-0 group"
+            aria-label="FxBrokers.co.ke Home"
+          >
+            {/* Icon mark */}
+            <div className="scale-150 mb-4 flex items-center justify-center shrink-0 group-hover:bg-amber-400/15 transition-colors duration-200">
+              <img
+                src="/fxbrokerskenya.png"
+                alt=""
+                aria-hidden="true"
+                className="w-12 h-12 object-contain"
+                onError={(e) => {
+                  e.target.style.display = "none";
+                  e.target.nextSibling.style.display = "block";
+                }}
+              />
+              {/* Fallback fx glyph */}
+              <span
+                className="hidden text-amber-400 font-bold text-xs leading-none"
+                aria-hidden="true"
+              >
+                FX
               </span>
-            </Link>
+            </div>
+
+            {/* Wordmark */}
+            <span
+              className="text-white font-bold text-lg tracking-tight leading-none"
+              style={{ fontFamily: "'Sora', 'DM Sans', sans-serif", letterSpacing: "-0.02em" }}
+            >
+              <span className="text-amber-400">Fx</span>Brokers
+              <span className="text-amber-400/70 font-semibold">.co.ke</span>
+            </span>
+          </Link>
             <p className="text-gray-500 text-xs leading-relaxed mb-4">
               Kenya's independent forex broker comparison site. We help Kenyan traders
               find safe, regulated brokers with transparent fees.

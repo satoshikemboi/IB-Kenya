@@ -343,7 +343,7 @@ export default function Home() {
   return (
     <>
       <Helmet>
-        <title>Best Forex Brokers in Kenya 2025 | FxBrokers.co.ke</title>
+        <title>Best Forex Brokers in Kenya 2026 | FxBrokers.co.ke</title>
         <meta name="description" content="Compare the top forex brokers in Kenya rated by expert analysts. Find regulated brokers that accept M-Pesa, offer low spreads, and suit Kenyan traders." />
         <meta name="keywords" content="forex brokers Kenya, best forex broker Kenya, M-Pesa forex, forex trading Kenya, regulated forex brokers" />
         <link rel="canonical" href="https://fxbrokers.co.ke/" />

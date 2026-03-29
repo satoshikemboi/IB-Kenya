@@ -3,12 +3,12 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 
 const ALL_BROKERS = [
-  { id: 1, name: "Exness", slug: "exness", affiliateLink: "https://one.exnessonelink.com/a/1sh0vxrgqd", rating: 4.8, minDeposit: 10, regulation: ["FCA", "CySEC", "FSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Top Rated", category: "ecn" },
-  { id: 2, name: "XM Group", slug: "xm", affiliateLink: "https://affs.click/MbQNk", rating: 4.6, minDeposit: 5, regulation: ["ASIC", "CySEC", "IFSC"], spread: 0.6, mpesa: true, platforms: ["MT4", "MT5"], badge: "Best for Beginners", category: "market-maker" },
-  { id: 3, name: "HFM", slug: "hfm", affiliateLink: "https://register.hfm.com/ke/en/new-live-account/?refid=30515020", rating: 4.5, minDeposit: 5, regulation: ["FCA", "DFSA", "FSCA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Low Spread", category: "ecn" },
-  { id: 4, name: "Justmarkets", slug: "justmarkets", affiliateLink: "https://one.justmarkets.link/a/17thm0lpq8", rating: 4.7, minDeposit: 5, regulation: ["FCA", "ASIC", "DFSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5", "cTrader"], badge: "Low min deposit", category: "market-maker" },
-  { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker" },
-  { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn" },
+  { id: 1, name: "Exness", slug: "exness", affiliateLink: "https://one.exnessonelink.com/a/1sh0vxrgqd", rating: 4.8, minDeposit: 10, regulation: ["FCA", "CySEC", "FSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Top Rated", category: "ecn", logo:"/exness.png" },
+  { id: 2, name: "XM Group", slug: "xm", affiliateLink: "https://affs.click/MbQNk", rating: 4.6, minDeposit: 5, regulation: ["ASIC", "CySEC", "IFSC"], spread: 0.6, mpesa: true, platforms: ["MT4", "MT5"], badge: "Best for Beginners", category: "market-maker", logo:"/xm.png" },
+  { id: 3, name: "HFM", slug: "hfm", affiliateLink: "https://register.hfm.com/ke/en/new-live-account/?refid=30515020", rating: 4.5, minDeposit: 5, regulation: ["FCA", "DFSA", "FSCA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Low Spread", category: "ecn", logo:"/hfm.png" },
+  { id: 4, name: "Justmarkets", slug: "justmarkets", affiliateLink: "https://one.justmarkets.link/a/17thm0lpq8", rating: 4.7, minDeposit: 5, regulation: ["FCA", "ASIC", "DFSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5", "cTrader"], badge: "Low min deposit", category: "market-maker", logo:"/justmarkets.png" },
+  { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker", logo:"/fbs.png" },
+  { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn", logo:"fxpro.png" },
 ];
 
 const SORT_OPTIONS = [
@@ -119,14 +119,16 @@ export default function BrokerList() {
                 className="bg-[#0D1B2E] border border-white/10 rounded-xl p-4 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-[#C9A84C]/30 transition-all duration-200"
               >
                 {/* Rank */}
-                <div className="hidden sm:flex w-8 shrink-0 text-gray-600 text-sm font-semibold justify-center">
-                  #{idx + 1}
+                <div className="hidden sm:flex w-8 shrink-0 text-gray-200 text-sm font-semibold justify-center">
+                  {idx + 1}.
                 </div>
 
-                {/* Logo */}
-                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center text-[#C9A84C] font-black text-sm shrink-0">
-                  {broker.name.slice(0, 2).toUpperCase()}
-                </div>
+                <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-lg flex items-center justify-center shrink-0 overflow-hidden">
+  {broker.logo
+    ? <img src={broker.logo} alt={broker.name} className="w-10 h-10 object-contain" />
+    : <span className="text-[#C9A84C] font-black text-sm">{broker.name.slice(0, 2).toUpperCase()}</span>
+  }
+</div>
 
                 {/* Info */}
                 <div className="flex-1 min-w-0">

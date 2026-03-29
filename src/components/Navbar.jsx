@@ -3,7 +3,7 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 
 const navLinks = [
   { label: "Brokers", href: "/brokers" },
-  { label: "Categories", href: "/brokers/category/best-forex-brokers-kenya" },
+  { label: "Categories", href: "/brokers/category" },
   { label: "Broker Finder", href: "/broker-finder" },
   { label: "Methodology", href: "/methodology" },
   { label: "About", href: "/about" },
@@ -45,12 +45,12 @@ export default function Navbar() {
             aria-label="FxBrokers.co.ke Home"
           >
             {/* Icon mark */}
-            <div className="w-8 h-8 rounded-lg bg-amber-400/10 border border-amber-400/25 flex items-center justify-center shrink-0 group-hover:bg-amber-400/15 transition-colors duration-200">
+            <div className=" flex items-center justify-center shrink-0 group-hover:bg-amber-400/15 transition-colors duration-200">
               <img
-                src="/kenya.png"
+                src="/fxbrokerskenya.png"
                 alt=""
                 aria-hidden="true"
-                className="w-5 h-5 object-contain"
+                className="w-12 h-12 scale-[1.5] object-contain"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
