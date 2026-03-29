@@ -158,7 +158,7 @@ export default function FBSReview() {
               </div>
               <div className="w-full md:w-auto flex pt-4 gap-2">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                  className="w-full md:w-44 bg-[#C9A84C] text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
+                  className="w-full md:w-44 bg-amber-400 text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
                   Open Account
                 </a>
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
@@ -268,21 +268,13 @@ export default function FBSReview() {
 
           <aside className="space-y-6">
             <div className="p-6 sticky top-24">
-              <h3 className="text-white font-bold text-sm mb-6 border-b border-white/5 pb-2">Trust Score</h3>
-              <div className="mb-8">
-                {Object.entries(SCORES).map(([label, score]) => <ScoreBar key={label} label={label} score={score} />)}
-              </div>
-              <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-xl p-4 mb-4 text-center">
-                <p className="text-[#C9A84C] text-[10px] font-bold uppercase mb-1">Overall Rating</p>
-                <p className="text-white text-3xl font-black">4.2<span className="text-gray-500 text-sm">/5</span></p>
-              </div>
               <div className="space-y-4">
                 <div className="bg-emerald-500/5 p-4"><p className="text-emerald-400 text-[10px] font-bold uppercase mb-1">Local Support</p><p className="text-white text-xs font-medium">M-Pesa from $1</p></div>
                 <div className="bg-yellow-500/5 p-4 border border-yellow-500/10"><p className="text-yellow-400 text-[10px] font-bold uppercase mb-1">Regulation</p><p className="text-white text-xs font-medium">CySEC (Group) · IFSC (KE)</p></div>
                 <div className="bg-purple-500/5 p-4"><p className="text-purple-400 text-[10px] font-bold uppercase mb-1">Unique Feature</p><p className="text-white text-xs font-medium">$1 Cent Account</p></div>
               </div>
               <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-[#C9A84C] text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
+                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-sm text-center text-md hover:bg-[#b5953b] transition-all">
                 Open FBS Account →
               </a>
               <p className="text-[10px] text-gray-600 text-center mt-2">Min deposit: $1 via M-Pesa</p>

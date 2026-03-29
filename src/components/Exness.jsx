@@ -106,7 +106,6 @@ function FaqItem({ q, a }) {
 }
 
 // ─── Page ─────────────────────────────────────────────────────────────────────
-
 export default function ExnessReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
@@ -131,17 +130,17 @@ export default function ExnessReview() {
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
                 <h1 className="text-3xl font-semibold text-white tracking-tight">Exness Review 2026</h1>
-                <span className="bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">#1 KENYA PICK</span>
+                <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">#1 KENYA PICK</span>
               </div>
-              <p className="text-gray-400 max-w-xl mb-4 text-sm leading-relaxed">The best all-rounder for Kenyans: Instant M-Pesa, $0 minimum deposit, and Tier-1 regulation from the FCA.</p>
+              <p className="text-gray-400 max-w-xl mb-4 text-md leading-relaxed">The best all-rounder for Kenyans: Instant M-Pesa, $10 minimum deposit, and Tier-1 regulation from the FCA.Exness offers favourable trading conditions by allowing fast trade executions and fast deposits & withdrawals</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
-                {["🛡️ FCA", "📱 M-Pesa", "⚡ Instant"].map(tag => (
+                {["FCA", "M-Pesa", "Instant"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
                 ))}
               </div>
               
             <div className="w-full md:w-auto flex pt-4 gap-2">
-              <a href="https://one.exnessonelink.com/a/1sh0vxrgqd" target="_blank" rel="noopener noreferrer sponsored" className="w-full md:w-44 bg-[#C9A84C] text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">Open Account</a>
+              <a href="https://one.exnessonelink.com/a/1sh0vxrgqd" target="_blank" rel="noopener noreferrer sponsored" className="w-full md:w-44 bg-amber-400 text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">Open Account</a>
               <a href="https://one.exnessonelink.com/a/1sh0vxrgqd" target="_blank" rel="noopener noreferrer sponsored" className="w-full md:w-44 border border-white/10 py-2 rounded-sm text-center text-sm hover:bg-white/5 transition-all">Try Demo</a>
             </div>
             </div>
@@ -159,25 +158,25 @@ export default function ExnessReview() {
           <div className="lg:col-span-2 space-y-8">
             {/* Verdict */}
             <section className="p-4">
-              <h2 className="text-white font-bold text-lg mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> Our Verdict
+              <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
+                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> Exness Review
               </h2>
-              <p className="text-sm leading-relaxed mb-4">Exness is currently our top-rated broker for Kenyan traders. Unlike most international brokers, they have mastered local needs by providing <strong>Native M-Pesa integration</strong> that actually works 24/7.</p>
+              <p className="text-md leading-relaxed mb-4">Exness is currently our top-rated broker for Kenyan traders. Unlike most international brokers, they have mastered local needs by providing <strong>Native M-Pesa integration</strong> that actually works 24/7.</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
                   <h4 className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Good</h4>
-                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-xs mb-2"> <span className="text-emerald-500">✓</span> {p}</div>)}
+                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-md mb-2"> <span className="text-emerald-500">✓</span> {p}</div>)}
                 </div>
                 <div>
                   <h4 className="text-red-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Bad</h4>
-                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-xs mb-2"> <span className="text-red-500">✕</span> {c}</div>)}
+                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-md mb-2"> <span className="text-red-500">✕</span> {c}</div>)}
                 </div>
               </div>
             </section>
 
             {/* Account Table */}
             <section className=" p-6 overflow-hidden">
-              <h2 className="text-white font-bold text-lg mb-4">Account Comparison</h2>
+              <h2 className="text-white font-bold text-2xl mb-4">Account Comparison</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-125">
                   <thead>
@@ -203,11 +202,11 @@ export default function ExnessReview() {
             </section>
 
             {/* Regulation */}
-            <section className="p-6">
-              <h2 className="text-white font-bold text-lg mb-4 tracking-tight">Safety & Regulation</h2>
+            <section className="py-6">
+              <h2 className="text-white font-bold text-xl mb-4 tracking-tight">Safety & Regulation</h2>
               <div className="space-y-3">
                 {REGULATORS.map(reg => (
-                  <div key={reg.authority} className="flex justify-between items-center p-3 bg-white/5 border border-white/5">
+                  <div key={reg.authority} className="flex justify-between rounded-full items-center px-6 py-3 bg-white/5 border border-white/5">
                     <div>
                       <p className="text-white font-bold text-sm">{reg.authority}</p>
                       <p className="text-[10px] text-gray-500">{reg.country}</p>
@@ -220,32 +219,56 @@ export default function ExnessReview() {
 
             {/* FAQ */}
             <section>
-              <h2 className="text-white font-bold text-lg mb-4">Exness Kenya FAQ</h2>
+              <h2 className="text-white font-bold text-xl mb-4">Exness Kenya FAQ</h2>
               {FAQS.map(f => <FaqItem key={f.q} q={f.q} a={f.a} />)}
             </section>
           </div>
 
           {/* Sidebar */}
-          <aside className="space-y-6">
-            <div className="p-6 sticky top-24">
-              <h3 className="text-white font-bold text-sm mb-6 border-b border-white/5 pb-2">Trust Score</h3>
-              <div className="mb-8">
-                {Object.entries(SCORES).map(([label, score]) => (
-                  <ScoreBar key={label} label={label} score={score} />
-                ))}
-              </div>
-              <div className="space-y-4">
-                <div className="bg-emerald-500/5 p-4">
-                  <p className="text-emerald-400 text-[10px] font-bold uppercase mb-1">Local Support</p>
-                  <p className="text-white text-xs font-medium">M-Pesa Native Support</p>
-                </div>
-                <div className="bg-blue-500/5 p-4">
-                  <p className="text-blue-400 text-[10px] font-bold uppercase mb-1">Regulation</p>
-                  <p className="text-white text-xs font-medium">FCA & CySEC Licensed</p>
-                </div>
-              </div>
-            </div>
-          </aside>
+          <aside className="hidden lg:block w-full max-w-70">
+  <div className="sticky top-24 space-y-6">
+    {/* Trust Badges */}
+    <div className="space-y-3">
+      <div className="bg-emerald-500/5 border border-emerald-500/10 rounded-2xl p-4 transition-hover hover:bg-emerald-500/10">
+        <div className="flex items-center gap-3">
+          <span className="text-xl">📲</span>
+          <div>
+            <p className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest">Local Support</p>
+            <p className="text-white text-xs font-semibold">M-Pesa Native Deposits</p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-blue-500/5 border border-blue-500/10 rounded-2xl p-4 transition-hover hover:bg-blue-500/10">
+        <div className="flex items-center gap-3">
+          <span className="text-xl">🛡️</span>
+          <div>
+            <p className="text-blue-400 text-[10px] font-bold uppercase tracking-widest">Regulation</p>
+            <p className="text-white text-xs font-semibold">FCA & CySEC Licensed</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Exness Banner Section */}
+    <div className="flex flex-col items-center">
+      <a 
+        href="https://one.exnessonelink.com/intl/en/a/1sh0vxrgqd"
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="block transition-transform hover:scale-[1.01]"
+      >
+        <img 
+          src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_120x600.png" 
+          width="120" 
+          height="600" 
+          alt="Exness Forex Trading Banner - Take Control" 
+          className="rounded-lg shadow-xl mx-auto"
+        />
+      </a>
+    </div>
+  </div>
+</aside>
         </div>
       </main>
     </div>

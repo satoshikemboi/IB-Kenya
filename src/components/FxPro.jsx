@@ -263,14 +263,6 @@ export default function FxProReview() {
 
           <aside className="space-y-6">
             <div className="p-6 sticky top-24">
-              <h3 className="text-white font-bold text-sm mb-6 border-b border-white/5 pb-2">Trust Score</h3>
-              <div className="mb-8">
-                {Object.entries(SCORES).map(([label, score]) => <ScoreBar key={label} label={label} score={score} />)}
-              </div>
-              <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-xl p-4 mb-4 text-center">
-                <p className="text-[#C9A84C] text-[10px] font-bold uppercase mb-1">Overall Rating</p>
-                <p className="text-white text-3xl font-black">4.4<span className="text-gray-500 text-sm">/5</span></p>
-              </div>
               <div className="space-y-4">
                 <div className="bg-red-500/5 p-4 border border-red-500/10"><p className="text-red-400 text-[10px] font-bold uppercase mb-1">⚠️ No M-Pesa</p><p className="text-white text-xs font-medium">Use Visa or Skrill instead</p></div>
                 <div className="bg-blue-500/5 p-4"><p className="text-blue-400 text-[10px] font-bold uppercase mb-1">Regulation</p><p className="text-white text-xs font-medium">FCA & CySEC Licensed</p></div>

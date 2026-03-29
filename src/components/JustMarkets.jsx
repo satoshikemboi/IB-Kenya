@@ -49,36 +49,36 @@ const AFFILIATE_LINK = "https://one.justmarkets.link/a/17thm0lpq8";
 
 const FAQS = [
   {
-    q: <>How do I open a <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> account?</>,
-    a: <>Visit the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets registration page</a>, fill in your email and country, verify your identity with a national ID or passport, then deposit as little as $1 via M-Pesa to start trading.</>,
+    q: <>How do I open a <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> account?</>,
+    a: <>Visit the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets registration page</a>, fill in your email and country, verify your identity with a national ID or passport, submit your proof of residency(Use KRA pin for faster verification) .Deposit as little as $10 via M-Pesa to start trading.</>,
   },
   {
-    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> safe for Kenyan traders?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> is regulated by the FCA (UK) and ASIC (Australia) — two of the world's most stringent regulators. Client funds are held in segregated accounts and the broker provides negative balance protection.</>,
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> safe for Kenyan traders?</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is regulated by the FCA (UK) and ASIC (Australia) which are two of the world's most stringent regulators. Client funds are held in segregated accounts and the broker provides negative balance protection.</>,
   },
   {
     q: "Can I deposit and withdraw with M-Pesa?",
-    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> supports M-Pesa deposits and withdrawals for Kenyan traders. Deposits are typically instant and the minimum is just $1, making it one of the most accessible brokers in Kenya.</>,
+    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> supports M-Pesa deposits and withdrawals for Kenyan traders. Deposits are typically instant and the minimum is just $10, making it one of the most accessible brokers in Kenya.</>,
   },
   {
-    q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a>?</>,
-    a: <>The minimum deposit is just $1 for Standard and Standard Cent accounts via M-Pesa. Professional accounts (Raw Spread, Pro) require a minimum of $200.</>,
+    q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a>?</>,
+    a: <>The minimum deposit is just $5 for Standard and Standard Cent accounts via M-Pesa. Professional accounts (Raw Spread, Pro) require a minimum of $200.</>,
   },
   {
     q: <>What leverage does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> offer?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> offers leverage up to 1:3000 on Standard accounts — among the highest available. Professional accounts are capped at lower levels per regulatory requirements.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> offers leverage up to 1:3000 on Standard accounts, among the highest available. Professional accounts are capped at lower levels per regulatory requirements.</>,
   },
   {
     q: "Which platforms are supported?",
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader — a major advantage over many brokers that skip cTrader. All platforms are available on desktop, web, and mobile.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader, a major advantage over many brokers that skip cTrader. All platforms are available on desktop, web, and mobile.</>,
   },
   {
-    q: "Are there withdrawal fees?",
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> does not charge internal withdrawal fees for M-Pesa or card withdrawals. Standard mobile money charges from Safaricom may apply on the M-Pesa side.</>,
+    q: "Are there withdrawal fees in Justmarkets?",
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> does not charge internal withdrawal fees for M-Pesa or card withdrawals. Standard mobile money charges from Safaricom may apply on the M-Pesa side.</>,
   },
   {
-    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> regulated by the CMA in Kenya?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> is not currently licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are served under the FSC (Mauritius) entity. The broker is, however, overseen by the FCA and ASIC at a group level.</>,
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> regulated by the CMA in Kenya?</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is not currently licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are served under the FSC (Mauritius) entity. The broker is, however, overseen by the FCA and ASIC at a group level.</>,
   },
 ];
 
@@ -196,27 +196,27 @@ export default function JustMarketsReview() {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
 
-            {/* Verdict */}
+            {/* Review */}
             <section className="p-4 mt-4">
-              <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
+              <h2 className="text-white font-bold text-3xl pt-3 mb-4 flex items-center gap-2">
                 <span className="w-1 h-5 bg-amber-400 rounded-full"></span> JustMarkets Review
               </h2>
-              <p className="text-sm leading-relaxed mb-4">
+              <p className="text-md leading-relaxed mb-4">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 font-semibold hover:underline">JustMarkets</a> is one of the best value-for-money brokers available to Kenyan traders. With a $1 minimum deposit via M-Pesa, three trading platforms including cTrader, and FCA regulation at the group level, it punches well above its weight. It's our top pick for traders who want low entry barriers without sacrificing platform quality.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
-                  <h4 className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Good</h4>
+                  <h4 className="text-emerald-400 text-lg font-bold uppercase tracking-widest mb-3">The Good</h4>
                   {PROS.map(p => (
-                    <div key={p} className="flex items-center gap-2 text-xs mb-2">
+                    <div key={p} className="flex items-center gap-2 text-md mb-2">
                       <span className="text-emerald-500">✓</span> {p}
                     </div>
                   ))}
                 </div>
                 <div>
-                  <h4 className="text-red-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Bad</h4>
+                  <h4 className="text-red-400 text-lg font-bold uppercase tracking-widest mb-3">The Bad</h4>
                   {CONS.map(c => (
-                    <div key={c} className="flex items-center gap-2 text-xs mb-2">
+                    <div key={c} className="flex items-center gap-2 text-md mb-2">
                       <span className="text-red-500">✕</span> {c}
                     </div>
                   ))}
@@ -337,7 +337,7 @@ export default function JustMarketsReview() {
                 href={AFFILIATE_LINK}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-[#C9A84C] text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all"
+                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-full text-center text-md hover:bg-amber-500 transition-all"
               >
                 Open JustMarkets Account →
               </a>

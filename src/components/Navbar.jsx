@@ -50,7 +50,7 @@ export default function Navbar() {
                 src="/fxbrokerskenya.png"
                 alt=""
                 aria-hidden="true"
-                className="w-12 h-12 scale-[1.5] object-contain"
+                className="w-12 h-12 scale-[1.3] object-contain"
                 onError={(e) => {
                   e.target.style.display = "none";
                   e.target.nextSibling.style.display = "block";
@@ -152,63 +152,60 @@ export default function Navbar() {
           </div>
         </nav>
 
-        {/* ── Mobile menu ── */}
-        <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ${
-            menuOpen ? "max-h-112 opacity-100" : "max-h-0 opacity-0"
-          }`}
-        >
-          {/* Hairline separator */}
-          <div className="h-px mx-4 bg-white/6" />
+{/* ── Mobile menu ── */}
+<div
+  className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+    menuOpen ? "max-h-125 opacity-100" : "max-h-0 opacity-0 pointer-events-none"
+  }`}
+>
+  <div className="h-px mx-4 bg-white/5" />
 
-          <div
-            className="px-4 py-4 flex flex-col gap-1"
-            style={{ background: "rgba(5,13,26,0.97)", backdropFilter: "blur(20px)" }}
-          >
-            {navLinks.map((link) => (
-              <NavLink
-                key={link.href}
-                to={link.href}
-                className={({ isActive }) =>
-                  `flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-colors duration-150 ${
-                    isActive
-                      ? "text-amber-400 bg-amber-400/8"
-                      : "text-slate-300 hover:text-white hover:bg-white/5"
-                  }`
-                }
-              >
-                {({ isActive }) => (
-                  <>
-                    {link.label}
-                    {isActive && (
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-400 shrink-0" />
-                    )}
-                  </>
-                )}
-              </NavLink>
-            ))}
+  <div
+    className="px-4 py-4 flex flex-col gap-1 shadow-2xl"
+    style={{ background: "rgba(5,13,26,0.98)", backdropFilter: "blur(20px)" }}
+  >
+    {navLinks.map((link) => (
+      <NavLink
+        key={link.href}
+        to={link.href}
+        // FIX: Close menu on click
+        onClick={() => setMenuOpen(false)}
+        className={({ isActive }) =>
+          `flex items-center justify-between px-4 py-3 rounded-xl text-sm font-medium transition-all ${
+            isActive
+              ? "text-amber-400 bg-amber-400/10"
+              : "text-slate-300 hover:text-white"
+          }`
+        }
+      >
+        {link.label}
+        {/* Simplified dot logic for cleaner code */}
+        <span className="isActive ? 'opacity-100' : 'opacity-0' transition-opacity w-1.5 h-1.5 rounded-full bg-amber-400" />
+      </NavLink>
+    ))}
 
-            <Link
-              to="/contact"
-              className="flex items-center px-4 py-3 text-slate-400 text-sm font-medium hover:text-white rounded-xl hover:bg-white/5 transition-colors duration-150"
-            >
-              Contact
-            </Link>
+    <Link
+      to="/contact"
+      onClick={() => setMenuOpen(false)} // FIX: Close menu
+      className="px-4 py-3 text-slate-400 text-sm font-medium"
+    >
+      Contact
+    </Link>
 
-            {/* Divider */}
-            <div className="h-px bg-white/6 my-1" />
+    <div className="h-px bg-white/5 my-2" />
 
-            <Link
-              to="/broker-finder"
-              className="flex items-center justify-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold text-sm py-3 rounded-xl transition-colors duration-200"
-            >
-              Find My Broker
-              <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </div>
+    <Link
+      to="/broker-finder"
+      onClick={() => setMenuOpen(false)} // FIX: Close menu
+      className="flex items-center justify-center gap-2 bg-amber-400 text-slate-900 font-bold text-sm py-4 rounded-xl active:scale-95 transition-transform"
+    >
+      Find My Broker
+      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+      </svg>
+    </Link>
+  </div>
+</div>
       </header>
     </>
   );

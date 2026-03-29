@@ -287,15 +287,15 @@ function FullBrokerCard({ broker }) {
       </div>
 
       <dl className="grid grid-cols-2 gap-2 text-sm">
-        <div className="bg-white/4 rounded-xl p-2.5">
+        <div className="">
           <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Min. Deposit</dt>
           <dd className="text-white font-semibold mt-0.5">{broker.minDeposit}</dd>
         </div>
-        <div className="bg-white/4 rounded-xl p-2.5">
+        <div className="">
           <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Spread</dt>
           <dd className="text-white font-semibold mt-0.5">{broker.spread}</dd>
         </div>
-        <div className="bg-white/4 rounded-xl p-2.5 col-span-2">
+        <div className="col-span-2">
           <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Regulation</dt>
           <dd className="text-white font-semibold mt-0.5">{broker.regulation}</dd>
         </div>
@@ -421,7 +421,7 @@ export default function Home() {
               {/* Trust pill */}
               <div className="inline-flex self-start items-center gap-2 bg-amber-400/8 border border-amber-400/20 rounded-full px-4 py-1.5 mb-7">
                 <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                <span className="text-amber-400 text-xs font-semibold tracking-widest uppercase">
+                <span className="text-amber-400 text-xs font-semibold uppercase">
                   Kenya's Most Trusted Forex Review Site
                 </span>
               </div>
@@ -452,7 +452,7 @@ export default function Home() {
                 </Link>
                 <Link to="/brokers/best-forex-brokers-kenya"
                   className="group border border-white/12 hover:border-amber-400/35 text-slate-300 hover:text-white font-medium px-7 py-3.5 rounded-xl transition-all duration-200 text-base text-center flex items-center justify-center gap-2">
-                  2025 Top Picks
+                  2026 Top Picks
                   <svg className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                   </svg>

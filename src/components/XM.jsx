@@ -50,12 +50,12 @@ const AFFILIATE_LINK = "https://affs.click/MbQNk";
 
 const FAQS = [
   {
-    q: <>How do I open an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> account?</>,
-    a: <>Go to the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM registration page</a>, fill in your email and personal details, choose your account type, and verify your identity. You can deposit from $5 via M-Pesa to start trading immediately.</>,
+    q: <>How do I open an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">XM</a> account?</>,
+    a: <>Go to the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">XM registration page</a>, fill in your email and personal details, choose your account type, verify your identity and submit proof of adress.Once the verification is done, you can deposit from $5 via M-Pesa to start trading immediately.</>,
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> safe for Kenyan traders?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is regulated by ASIC (Australia) and CySEC (Cyprus), two of the most respected financial regulators globally. Kenyan clients are served through the IFSC (Belize) entity with full negative balance protection.</>,
+    a: <>Yes, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is regulated by ASIC (Australia) and CySEC (Cyprus), two of the most respected financial regulators globally. Kenyan clients are served through the IFSC (Belize) entity with full negative balance protection.</>,
   },
   {
     q: "Can I deposit and withdraw with M-Pesa?",
@@ -71,15 +71,15 @@ const FAQS = [
   },
   {
     q: <>Does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> offer educational resources?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> has one of the best educational offerings among retail brokers — including live webinars, video tutorials, trading seminars, and a comprehensive research section updated daily. This is a key reason it's our top pick for beginners.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> has one of the best educational offerings among retail brokers, including live webinars, video tutorials, trading seminars, and a comprehensive research section updated daily. This is a key reason why it is our top pick for beginners.</>,
   },
   {
     q: "What leverage does XM offer?",
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> offers leverage up to 1:1000 on Micro and Standard accounts for clients under the IFSC entity. CySEC and ASIC-regulated accounts are capped at 1:30 per regulatory requirements.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> offers leverage up to 1:1000 on Micro and Standard accounts for clients under the IFSC entity. CySEC and ASIC-regulated accounts are capped at 1:400 per regulatory requirements.</>,
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> regulated by the CMA in Kenya?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is not licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are onboarded through XM Global Limited, regulated by the IFSC in Belize. The group holds ASIC and CySEC licences.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is not yet licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are onboarded through XM Global Limited, regulated by the IFSC in Belize. The group holds ASIC and CySEC licences.</>,
   },
 ];
 
@@ -145,10 +145,10 @@ export default function XMReview() {
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
                 <h1 className="text-3xl font-semibold text-white tracking-tight">XM Group Review 2026</h1>
-                <span className="bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">BEST FOR BEGINNERS</span>
+                <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">BEST FOR BEGINNERS</span>
               </div>
-              <p className="text-gray-500 max-w-xl font-semibold mb-4 text-sm leading-relaxed">
-                XM Group is our top pick for beginner Kenyan traders — combining a $5 minimum deposit, free education, M-Pesa support, and a trusted ASIC-regulated reputation built over 15+ years.
+              <p className="text-gray-500 max-w-xl font-semibold mb-4 text-md leading-relaxed">
+                XM Group is our top pick for beginner Kenyan traders, combining a $5 minimum deposit, free education, M-Pesa support, and a trusted ASIC-regulated reputation built over 15+ years.
               </p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["ASIC & CySEC", "M-Pesa", "$5 Min", "Free Education"].map(tag => (
@@ -157,7 +157,7 @@ export default function XMReview() {
               </div>
               <div className="w-full md:w-auto flex pt-4 gap-2">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                  className="w-full md:w-44 bg-[#C9A84C] text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
+                  className="w-full md:w-44 bg-amber-400 text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
                   Open Account
                 </a>
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
@@ -174,40 +174,40 @@ export default function XMReview() {
 
             <section className="p-4 mt-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> XM Group Review
+                <span className="w-1 h-5 bg-amber-400 rounded-full"></span> XM Group Review
               </h2>
-              <p className="text-sm leading-relaxed mb-4">
-                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM Group</a> has been serving retail traders since 2009 and has grown to over 10 million clients globally. For Kenyan traders, its appeal is straightforward: a $5 minimum deposit via M-Pesa, no withdrawal fees, and the most comprehensive free education suite of any broker on this list. If you are new to forex, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is where we recommend starting.
+              <p className="text-md leading-relaxed mb-4">
+                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">XM Group</a> has been serving retail traders since 2009 and has grown to over 10 million clients globally. For Kenyan traders, its appeal is straightforward: a $5 minimum deposit via M-Pesa, no withdrawal fees, and the most comprehensive free education suite of any broker on this list. If you are new to forex, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is where we recommend starting.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
-                  <h4 className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Good</h4>
-                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-xs mb-2"><span className="text-emerald-500">✓</span> {p}</div>)}
+                  <h4 className="text-emerald-400 text-md font-bold uppercase tracking-widest mb-3">The Good</h4>
+                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-md mb-2"><span className="text-emerald-500">✓</span> {p}</div>)}
                 </div>
                 <div>
-                  <h4 className="text-red-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Bad</h4>
-                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-xs mb-2"><span className="text-red-500">✕</span> {c}</div>)}
+                  <h4 className="text-red-400 text-md font-bold uppercase tracking-widest mb-3">The Bad</h4>
+                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-md mb-2"><span className="text-red-500">✕</span> {c}</div>)}
                 </div>
               </div>
             </section>
 
             <section className="p-6 overflow-hidden">
-              <h2 className="text-white font-bold text-lg mb-4">Account Types</h2>
+              <h2 className="text-white font-bold text-xl mb-4">Account Types</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-125">
                   <thead>
-                    <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-white/5">
+                    <tr className="text-gray-500 text-sm uppercase tracking-widest border-b border-white/5">
                       <th className="pb-3">Type</th><th className="pb-3">Min Dep</th><th className="pb-3">Spread</th><th className="pb-3">Commission</th><th className="pb-3">Best For</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
                     {ACCOUNT_TYPES.map(acc => (
-                      <tr key={acc.name} className={acc.highlight ? "text-[#C9A84C]" : ""}>
+                      <tr key={acc.name} className={acc.highlight ? "text-amber-400" : ""}>
                         <td className="py-4 font-medium text-white">{acc.name}</td>
                         <td className="py-4">{acc.minDeposit}</td>
                         <td className="py-4">{acc.spread}</td>
-                        <td className="py-4 text-xs">{acc.commission}</td>
-                        <td className="py-4 text-xs text-gray-500">{acc.best}</td>
+                        <td className="py-4 text-md">{acc.commission}</td>
+                        <td className="py-4 text-md text-gray-500">{acc.best}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -216,24 +216,24 @@ export default function XMReview() {
             </section>
 
             <section className="p-6">
-              <h2 className="text-white font-bold text-lg mb-4">Deposits & Withdrawals</h2>
+              <h2 className="text-white font-bold text-xl mb-4">Deposits & Withdrawals</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm min-w-100">
                   <thead>
-                    <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-white/5">
+                    <tr className="text-gray-500 text-sm uppercase tracking-widest border-b border-white/5">
                       <th className="pb-3">Method</th><th className="pb-3">Processing</th><th className="pb-3">Fee</th><th className="pb-3">Minimum</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
                     {PAYMENT_METHODS.map(pm => (
-                      <tr key={pm.name} className={pm.highlight ? "text-[#C9A84C]" : ""}>
+                      <tr key={pm.name} className={pm.highlight ? "text-amber-400" : ""}>
                         <td className="py-3 font-medium text-white flex items-center gap-2">
                           {pm.name}
                           {pm.highlight && <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">Recommended</span>}
                         </td>
-                        <td className="py-3 text-xs">{pm.time}</td>
-                        <td className="py-3 text-xs">{pm.fee}</td>
-                        <td className="py-3 text-xs">{pm.min}</td>
+                        <td className="py-3 text-md">{pm.time}</td>
+                        <td className="py-3 text-md">{pm.fee}</td>
+                        <td className="py-3 text-md">{pm.min}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -264,21 +264,13 @@ export default function XMReview() {
 
           <aside className="space-y-6">
             <div className="p-6 sticky top-24">
-              <h3 className="text-white font-bold text-sm mb-6 border-b border-white/5 pb-2">Trust Score</h3>
-              <div className="mb-8">
-                {Object.entries(SCORES).map(([label, score]) => <ScoreBar key={label} label={label} score={score} />)}
-              </div>
-              <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-xl p-4 mb-4 text-center">
-                <p className="text-[#C9A84C] text-[10px] font-bold uppercase mb-1">Overall Rating</p>
-                <p className="text-white text-3xl font-black">4.6<span className="text-gray-500 text-sm">/5</span></p>
-              </div>
               <div className="space-y-4">
                 <div className="bg-emerald-500/5 p-4"><p className="text-emerald-400 text-[10px] font-bold uppercase mb-1">Local Support</p><p className="text-white text-xs font-medium">M-Pesa from $5</p></div>
                 <div className="bg-blue-500/5 p-4"><p className="text-blue-400 text-[10px] font-bold uppercase mb-1">Regulation</p><p className="text-white text-xs font-medium">ASIC & CySEC Licensed</p></div>
                 <div className="bg-purple-500/5 p-4"><p className="text-purple-400 text-[10px] font-bold uppercase mb-1">Unique Feature</p><p className="text-white text-xs font-medium">Free Education & Webinars</p></div>
               </div>
               <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-[#C9A84C] text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
+                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
                 Open XM Account →
               </a>
               <p className="text-[10px] text-gray-600 text-center mt-2">Min deposit: $5 via M-Pesa</p>

@@ -52,19 +52,19 @@ const AFFILIATE_LINK = "https://register.hfm.com/ke/en/new-live-account/?refid=3
 const FAQS = [
   {
     q: <>How do I open an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> account?</>,
-    a: <>Visit the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM registration page</a>, enter your details and select Kenya as your country. Verify your identity with a national ID or passport, then deposit from as little as $5 via M-Pesa.</>,
+    a: <>Visit the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM registration page</a>, enter your details and select Kenya as your country. Verify your identity with a valid national ID or passport. Upload your proof of adress (recommend you use KRA PIN) then deposit from as little as $10 via M-Pesa.</>,
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> safe for Kenyan traders?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> (formerly HotForex) is regulated by the FCA (UK) and DFSA (Dubai), both Tier-1 authorities. Client funds are held in segregated accounts with negative balance protection.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> (formerly HotForex) is regulated by the FCA (UK), CMA (Kenya) and DFSA (Dubai), both Tier-1 authorities. Client funds are held in a segregated accounts with negative balance protection.</>,
   },
   {
     q: "Can I deposit and withdraw with M-Pesa?",
-    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> supports M-Pesa for both deposits and withdrawals in Kenya. The minimum M-Pesa deposit is $5 and processing is typically instant.</>,
+    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> supports M-Pesa for both deposits and withdrawals in Kenya. The minimum M-Pesa deposit is $10 and processing is typically instant.</>,
   },
   {
     q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> in Kenya?</>,
-    a: <>The Micro account starts at just $5 via M-Pesa, making <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> highly accessible for beginners. The Zero Spread and Auto accounts require $200–$300.</>,
+    a: <>The Micro account starts at just $5 via M-Pesa, making <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> highly accessible for beginners. The Zero Spread and Auto accounts require upto $200.</>,
   },
   {
     q: <>What is the Zero Spread account at <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a>?</>,
@@ -72,7 +72,7 @@ const FAQS = [
   },
   {
     q: <>Does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> offer copy trading?</>,
-    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> has its own copy trading platform called HFcopy, where you can follow experienced strategy providers and automatically replicate their trades from as little as $100.</>,
+    a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> has its own copy trading platform called HFcopy, where you can follow experienced strategy providers and automatically replicate their strategies & trades from as little as $100.</>,
   },
   {
     q: "Are there any inactivity fees?",
@@ -80,7 +80,7 @@ const FAQS = [
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> regulated by the CMA in Kenya?</>,
-    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> is not licensed by the Kenyan Capital Markets Authority (CMA). Kenyan traders are served through the FSCA (South Africa) and FSA (Seychelles) entities, while the group holds FCA and DFSA licences.</>,
+    a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> is licensed by the Kenyan Capital Markets Authority (CMA) with the licence number 155.</>,
   },
 ];
 
@@ -150,9 +150,9 @@ export default function HFMReview() {
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
                 <h1 className="text-3xl font-semibold text-white tracking-tight">HFM Review 2026</h1>
-                <span className="bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">LOW SPREAD</span>
+                <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">LOW SPREAD</span>
               </div>
-              <p className="text-gray-500 max-w-xl font-semibold mb-4 text-sm leading-relaxed">
+              <p className="text-gray-500 max-w-xl font-semibold mb-4 text-md leading-relaxed">
                 HFM (formerly HotForex) is a globally trusted broker with a strong presence in Kenya, offering 0.0 pip spreads, M-Pesa support, and a built-in copy trading platform.
               </p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
@@ -162,7 +162,7 @@ export default function HFMReview() {
               </div>
               <div className="w-full md:w-auto flex pt-4 gap-2">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                  className="w-full md:w-44 bg-[#C9A84C] text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
+                  className="w-full md:w-44 bg-amber-400 text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">
                   Open Account
                 </a>
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
@@ -182,17 +182,17 @@ export default function HFMReview() {
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
                 <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> HFM Review
               </h2>
-              <p className="text-sm leading-relaxed mb-4">
-                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> is one of the most established international brokers serving Kenyan traders, with over a decade of operation and FCA regulation. The standout feature is the Zero Spread account offering 0.0 pip spreads on 50+ instruments — combined with M-Pesa support from just $5, it's a compelling option for both beginners and experienced traders.
+              <p className="text-md leading-relaxed mb-4">
+                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">HFM</a> is one of the most established international brokers serving Kenyan traders, with over a decade of operation and FCA regulation. The standout feature is the Zero Spread account offering 0.0 pip spreads on 50+ instruments, combined with M-Pesa support from just $5, it's a compelling option for both beginners and experienced traders.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
-                  <h4 className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Good</h4>
-                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-xs mb-2"><span className="text-emerald-500">✓</span> {p}</div>)}
+                  <h4 className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-3">The Good</h4>
+                  {PROS.map(p => <div key={p} className="flex items-center gap-2 text-md mb-2"><span className="text-emerald-500">✓</span> {p}</div>)}
                 </div>
                 <div>
-                  <h4 className="text-red-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Bad</h4>
-                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-xs mb-2"><span className="text-red-500">✕</span> {c}</div>)}
+                  <h4 className="text-red-400 text-sm font-bold uppercase tracking-widest mb-3">The Bad</h4>
+                  {CONS.map(c => <div key={c} className="flex items-center gap-2 text-md mb-2"><span className="text-red-500">✕</span> {c}</div>)}
                 </div>
               </div>
             </section>
@@ -203,18 +203,18 @@ export default function HFMReview() {
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-125">
                   <thead>
-                    <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-white/5">
+                    <tr className="text-gray-500 text-xs uppercase tracking-widest border-b border-white/5">
                       <th className="pb-3">Type</th><th className="pb-3">Min Dep</th><th className="pb-3">Spread</th><th className="pb-3">Commission</th><th className="pb-3">Best For</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
                     {ACCOUNT_TYPES.map(acc => (
-                      <tr key={acc.name} className={acc.highlight ? "text-[#C9A84C]" : ""}>
+                      <tr key={acc.name} className={acc.highlight ? "text-amber-400" : ""}>
                         <td className="py-4 font-medium text-white">{acc.name}</td>
                         <td className="py-4">{acc.minDeposit}</td>
                         <td className="py-4">{acc.spread}</td>
-                        <td className="py-4 text-xs">{acc.commission}</td>
-                        <td className="py-4 text-xs text-gray-500">{acc.best}</td>
+                        <td className="py-4 text-md">{acc.commission}</td>
+                        <td className="py-4 text-md text-gray-500">{acc.best}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -228,20 +228,20 @@ export default function HFMReview() {
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm min-w-100">
                   <thead>
-                    <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-white/5">
+                    <tr className="text-gray-500 text-xs uppercase tracking-widest border-b border-white/5">
                       <th className="pb-3">Method</th><th className="pb-3">Processing</th><th className="pb-3">Fee</th><th className="pb-3">Minimum</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
                     {PAYMENT_METHODS.map(pm => (
-                      <tr key={pm.name} className={pm.highlight ? "text-[#C9A84C]" : ""}>
+                      <tr key={pm.name} className={pm.highlight ? "text-amber-400" : ""}>
                         <td className="py-3 font-medium text-white flex items-center gap-2">
                           {pm.name}
                           {pm.highlight && <span className="text-[9px] px-1.5 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/20">Recommended</span>}
                         </td>
-                        <td className="py-3 text-xs">{pm.time}</td>
-                        <td className="py-3 text-xs">{pm.fee}</td>
-                        <td className="py-3 text-xs">{pm.min}</td>
+                        <td className="py-3 text-md">{pm.time}</td>
+                        <td className="py-3 text-md">{pm.fee}</td>
+                        <td className="py-3 text-md">{pm.min}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -251,7 +251,7 @@ export default function HFMReview() {
 
             {/* Regulation */}
             <section className="p-6">
-              <h2 className="text-white font-bold text-lg mb-4 tracking-tight">Safety & Regulation</h2>
+              <h2 className="text-white font-bold text-xl mb-4 tracking-tight">Safety & Regulation</h2>
               <div className="space-y-3">
                 {REGULATORS.map(reg => (
                   <div key={reg.authority} className="flex justify-between items-center p-3 bg-white/5 border border-white/5">
@@ -275,21 +275,13 @@ export default function HFMReview() {
           {/* Sidebar */}
           <aside className="space-y-6">
             <div className="p-6 sticky top-24">
-              <h3 className="text-white font-bold text-sm mb-6 border-b border-white/5 pb-2">Trust Score</h3>
-              <div className="mb-8">
-                {Object.entries(SCORES).map(([label, score]) => <ScoreBar key={label} label={label} score={score} />)}
-              </div>
-              <div className="bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-xl p-4 mb-4 text-center">
-                <p className="text-[#C9A84C] text-[10px] font-bold uppercase mb-1">Overall Rating</p>
-                <p className="text-white text-3xl font-black">4.5<span className="text-gray-500 text-sm">/5</span></p>
-              </div>
               <div className="space-y-4">
                 <div className="bg-emerald-500/5 p-4"><p className="text-emerald-400 text-[10px] font-bold uppercase mb-1">Local Support</p><p className="text-white text-xs font-medium">M-Pesa from $5</p></div>
                 <div className="bg-blue-500/5 p-4"><p className="text-blue-400 text-[10px] font-bold uppercase mb-1">Regulation</p><p className="text-white text-xs font-medium">FCA & DFSA Licensed</p></div>
                 <div className="bg-purple-500/5 p-4"><p className="text-purple-400 text-[10px] font-bold uppercase mb-1">Unique Feature</p><p className="text-white text-xs font-medium">HFcopy Copy Trading</p></div>
               </div>
               <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-[#C9A84C] text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
+                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
                 Open HFM Account →
               </a>
               <p className="text-[10px] text-gray-600 text-center mt-2">Min deposit: $5 via M-Pesa</p>

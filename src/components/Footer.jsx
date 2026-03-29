@@ -43,7 +43,7 @@ export default function Footer() {
             aria-label="FxBrokers.co.ke Home"
           >
             {/* Icon mark */}
-            <div className="scale-150 mb-4 flex items-center justify-center shrink-0 group-hover:bg-amber-400/15 transition-colors duration-200">
+            <div className="scale-150 mb-4 flex items-center justify-center shrink-0">
               <img
                 src="/fxbrokerskenya.png"
                 alt=""
@@ -88,8 +88,18 @@ export default function Footer() {
                 </a>
               ))}
             </div>
-            <div className="text-white">
-              <h1>Location</h1>
+            <div className="mt-8 pt-6 border-t border-white/5">
+             <div className="flex flex-col items-center justify-center gap-2">
+             <div className="flex items-center gap-2 text-[#C9A84C]">
+                  {/* Location Pin Icon */}
+             <span className="text-lg">📍</span>
+            </div>
+    
+             <div className="text-center">
+              <p className="text-white font-medium text-sm">Westlands, Nairobi, Kenya</p>
+               <p className="text-gray-500 text-[11px] mt-1">The Hub of Forex Trading in East Africa</p>
+             </div>
+              </div>
             </div>
           </div>
 

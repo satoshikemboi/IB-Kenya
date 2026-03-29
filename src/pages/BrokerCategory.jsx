@@ -59,110 +59,47 @@ export default function BrokerCategory() {
   const { slug } = useParams();
   const cat = CATEGORIES[slug];
   const CATEGORY_META = {
-    "best-forex-brokers-kenya": { icon: "🏆", iconBg: "rgba(201,168,76,0.12)",   desc: "Our top-ranked picks for Kenyan traders, tested on spreads, regulation & M-Pesa support." },
-    "mpesa-brokers":            { icon: "📱", iconBg: "rgba(16,185,129,0.12)",   desc: "Deposit and withdraw instantly using M-Pesa. No bank account needed." },
-    "lowest-spread-brokers":    { icon: "📉", iconBg: "rgba(59,130,246,0.12)",   desc: "Raw and ECN accounts starting from 0.0 pips. Pay less on every trade." },
-    "mt4-mt5-brokers":          { icon: "🖥️", iconBg: "rgba(139,92,246,0.12)",  desc: "Full MT4 and MT5 support with EA compatibility and fast execution." },
-    "regulated-brokers":        { icon: "🛡️", iconBg: "rgba(239,68,68,0.1)",    desc: "FCA, ASIC & CySEC licensed brokers with segregated client funds." },
-    "brokers-for-beginners":    { icon: "🌱", iconBg: "rgba(20,184,166,0.12)",   desc: "Low minimum deposits, demo accounts, and education for new traders." },
+    "best-forex-brokers-kenya": { iconBg: "rgba(201,168,76,0.12)",   desc: "Our top-ranked picks for Kenyan traders, tested on spreads, regulation & M-Pesa support." },
+    "mpesa-brokers":            { iconBg: "rgba(16,185,129,0.12)",   desc: "Deposit and withdraw instantly using M-Pesa. No bank account needed." },
+    "lowest-spread-brokers":    { iconBg: "rgba(59,130,246,0.12)",   desc: "Raw and ECN accounts starting from 0.0 pips. Pay less on every trade." },
+    "mt4-mt5-brokers":          { iconBg: "rgba(139,92,246,0.12)",  desc: "Full MT4 and MT5 support with EA compatibility and fast execution." },
+    "regulated-brokers":        { iconBg: "rgba(239,68,68,0.1)",    desc: "FCA, ASIC & CySEC licensed brokers with segregated client funds." },
+    "brokers-for-beginners":    { iconBg: "rgba(20,184,166,0.12)",   desc: "Low minimum deposits, demo accounts, and education for new traders." },
   };
   
   if (!slug) {
     return (
       <div className="min-h-screen bg-[#07101E] pt-24 pb-16 px-4">
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-3xl mx-auto">
   
           {/* Hero */}
-          <div className="border border-[#C9A84C]/20 rounded-2xl p-10 mb-8 text-center">
+          <div className="py-10 max-w-3xl mb-8 text-left">
             <span className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-full px-4 py-1">
               Kenya Forex Guide
             </span>
             <h1 className="text-3xl font-bold text-white mt-4 mb-3">Find the right broker for you</h1>
-            <p className="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed">
+            <p className="text-sm text-gray-500 leading-relaxed">
               Browse our curated categories. Every broker is tested, regulated, and reviewed by our Kenya-based team.
             </p>
-            <div className="flex justify-center gap-10 mt-7">
-              {[["50+","Brokers tested"],["6","Categories"],["M-Pesa","Supported"]].map(([n,l]) => (
-                <div key={l} className="text-center">
-                  <div className="text-xl font-bold text-[#C9A84C]">{n}</div>
-                  <div className="text-[11px] text-gray-600 mt-0.5">{l}</div>
-                </div>
-              ))}
-            </div>
           </div>
   
           {/* 2-column grid */}
-          <div className="grid grid-cols-2 gap-3">
+          <div className="grid md:grid-cols-2 pl-6 gap-3">
             {Object.entries(CATEGORIES).map(([key, cat]) => {
               const meta = CATEGORY_META[key] || {};
               return (
-                <Link key={key} to={`/brokers/category/${key}`}
-                  className="bg-[#0D1B2E] border border-white/8 rounded-2xl p-5 hover:border-[#C9A84C]/35 transition-all group">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg mb-3"
-                    style={{ background: meta.iconBg }}>
-                    {meta.icon}
-                  </div>
-                  <div className="text-sm font-semibold text-white mb-1.5 leading-snug">{cat.title}</div>
-                  <div className="text-xs text-gray-600 leading-relaxed mb-4">{meta.desc}</div>
+                <div>
+                  <Link key={key} to={`/brokers/category/${key}`} className=" group">
+                     <div className="text-md underline font-semibold text-gray-200 mb-1.5 leading-snug">{cat.title}</div>
+                  </Link>
+                  <div className="text-xs text-gray-400 leading-relaxed mb-4">{meta.desc}</div>
                   <div className="flex items-center justify-between">
                     <span className="text-[11px] text-[#C9A84C]/80 bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-2.5 py-0.5">
                       {cat.brokers.length} brokers
                     </span>
                     <span className="text-gray-700 group-hover:text-[#C9A84C] transition-colors text-sm">→</span>
                   </div>
-                </Link>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    );
-  }
-
-  if (!slug) {
-    return (
-      <div className="min-h-screen bg-[#07101E] pt-24 pb-16 px-4">
-        <div className="max-w-2xl mx-auto">
-  
-          {/* Hero */}
-          <div className="border border-[#C9A84C]/20 rounded-2xl p-10 mb-8 text-center">
-            <span className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-full px-4 py-1">
-              Kenya Forex Guide
-            </span>
-            <h1 className="text-3xl font-bold text-white mt-4 mb-3">Find the right broker for you</h1>
-            <p className="text-sm text-gray-500 max-w-sm mx-auto leading-relaxed">
-              Browse our curated categories. Every broker is tested, regulated, and reviewed by our Kenya-based team.
-            </p>
-            <div className="flex justify-center gap-10 mt-7">
-              {[["50+","Brokers tested"],["6","Categories"],["M-Pesa","Supported"]].map(([n,l]) => (
-                <div key={l} className="text-center">
-                  <div className="text-xl font-bold text-[#C9A84C]">{n}</div>
-                  <div className="text-[11px] text-gray-600 mt-0.5">{l}</div>
                 </div>
-              ))}
-            </div>
-          </div>
-  
-          {/* 2-column grid */}
-          <div className="grid grid-cols-2 gap-3">
-            {Object.entries(CATEGORIES).map(([key, cat]) => {
-              const meta = CATEGORY_META[key] || {};
-              return (
-                <Link key={key} to={`/brokers/category/${key}`}
-                  className="bg-[#0D1B2E] border border-white/8 rounded-2xl p-5 hover:border-[#C9A84C]/35 transition-all group">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center text-lg mb-3"
-                    style={{ background: meta.iconBg }}>
-                    {meta.icon}
-                  </div>
-                  <div className="text-sm font-semibold text-white mb-1.5 leading-snug">{cat.title}</div>
-                  <div className="text-xs text-gray-600 leading-relaxed mb-4">{meta.desc}</div>
-                  <div className="flex items-center justify-between">
-                    <span className="text-[11px] text-[#C9A84C]/80 bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full px-2.5 py-0.5">
-                      {cat.brokers.length} brokers
-                    </span>
-                    <span className="text-gray-700 group-hover:text-[#C9A84C] transition-colors text-sm">→</span>
-                  </div>
-                </Link>
               );
             })}
           </div>
@@ -206,7 +143,7 @@ export default function BrokerCategory() {
           </nav>
 
           <h1 className="text-3xl font-bold text-white mb-4">{cat.title}</h1>
-          <p className="text-gray-400 text-sm leading-relaxed mb-10 max-w-xl">{cat.intro}</p>
+          <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl">{cat.intro}</p>
 
           <div className="flex flex-col gap-4">
             {brokers.map((broker, idx) => (
