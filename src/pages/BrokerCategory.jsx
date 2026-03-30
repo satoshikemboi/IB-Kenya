@@ -28,7 +28,7 @@ const CATEGORIES = {
     metaTitle: "Best MT4 & MT5 Brokers Kenya 2025",
     metaDesc: "Find the best MetaTrader 4 and MetaTrader 5 brokers for Kenyan traders. Compare platforms, spreads, and EA compatibility.",
     intro: "MetaTrader 4 and MT5 are the most popular trading platforms in Kenya. All brokers below offer full MT4/MT5 support with competitive conditions.",
-    brokers: ["exness", "xm-group", "hfm", "fbs", "justmarkets", "fxpro"],
+    brokers: ["exness", "xm-group","fpmarkets", "hfm", "fbs", "justmarkets", "fxpro"],
   },
   "regulated-brokers": {
     title: "Best Regulated Forex Brokers for Kenyan Traders",
@@ -54,6 +54,7 @@ const BROKER_SNIPPETS = {
   "fbs":        { name: "FBS",        rating: 4.2, minDeposit: "$1",   spread: "0.5 pips", mpesa: true,  badge: "$1 Deposit", link: "https://fbs.partners?ibl=876040&ibp=35444511", logo:"/fbs.png" },
   "fxpro":      { name: "FxPro",      rating: 4.4, minDeposit: "$100", spread: "0.6 pips", mpesa: false, badge: "Multi-Platform", link:"https://direct-fxpro.com/en/partner/2xPncqjwh", logo:"/fxpro.png" },
   "fxpesa":     { name: "FxPesa",      rating: 4.0, minDeposit: "$10",  spread: "0.8 pips", mpesa: true,  badge: "M-Pesa Support", link: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", logo:"/fxpesa.png" },
+  "fpmarkets":  { name: "FPMarkets",   rating: 4.1, minDeposit: "$10",  spread: "0.8 pips",  mpesa: false,  badge: "Best Customer Support", link: "https://portal.fpmarkets.com/int-EN/register?fpm-affiliate-utm-source=IB&fpm-affiliate-agt=66167", logo:"/fpmarkets.png"},
 };
 
 export default function BrokerCategory() {

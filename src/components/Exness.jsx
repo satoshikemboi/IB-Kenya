@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import AuthorCard from "./Authorcard";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const SCORES = {
@@ -122,7 +123,7 @@ export default function ExnessReview() {
         </nav>
 
         {/* Hero Section */}
-        <header className="  p-6 mb-8">
+        <header className="  md:px-3 mb-8 flex gap-x-6 flex-col lg:flex-row items-center lg:items-start">
           <div className="flex flex-col md:flex-row gap-4 items-center md:items-start text-center md:text-left">
             <div className=" flex items-center justify-center text-[#07101E] font-black text-2xl shrink-0 shadow-xl">
               <img src="/exness.png" alt="Exness Logo" className="w-24 h-24 object-contain" />
@@ -132,19 +133,27 @@ export default function ExnessReview() {
                 <h1 className="text-3xl font-semibold text-white tracking-tight">Exness Review 2026</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">#1 KENYA PICK</span>
               </div>
-              <p className="text-gray-400 max-w-xl mb-4 text-md leading-relaxed">The best all-rounder for Kenyans: Instant M-Pesa, $10 minimum deposit, and Tier-1 regulation from the FCA.Exness offers favourable trading conditions by allowing fast trade executions and fast deposits & withdrawals</p>
+              <p className="text-gray-400 max-w-xl mb-4 text-md md:text-lg leading-relaxed">The best all-rounder for Kenyans: Instant M-Pesa, $10 minimum deposit, and Tier-1 regulation from the FCA.Exness offers favourable trading conditions by allowing fast trade executions and fast deposits & withdrawals</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["FCA", "M-Pesa", "Instant"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
                 ))}
               </div>
               
-            <div className="w-full md:w-auto flex pt-4 gap-2">
+            <div className="w-full md:w-auto flex pt-4 mb-4 gap-2">
               <a href="https://one.exnessonelink.com/a/1sh0vxrgqd" target="_blank" rel="noopener noreferrer sponsored" className="w-full md:w-44 bg-amber-400 text-[#07101E] font-bold py-2 rounded-sm text-center hover:bg-[#b5953b] transition-all">Open Account</a>
               <a href="https://one.exnessonelink.com/a/1sh0vxrgqd" target="_blank" rel="noopener noreferrer sponsored" className="w-full md:w-44 border border-white/10 py-2 rounded-sm text-center text-sm hover:bg-white/5 transition-all">Try Demo</a>
             </div>
             </div>
           </div>
+          <div className="md:max-w-lg md:pl-4 gap-4">
+          <AuthorCard
+  name="Felix"
+  role="Lead Forex Analyst & Editor"
+  date="June 12, 2025"
+  updatedDate="March 28, 2026"
+/>
+</div>
         </header>
 
         <div className="my-6">

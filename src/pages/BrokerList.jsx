@@ -10,6 +10,7 @@ const ALL_BROKERS = [
   { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker", logo:"/fbs.png" },
   { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn", logo:"fxpro.png" },
   { id: 7, name: "FxPesa", slug: "fxpesa", affiliateLink: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fxpesa.png" },
+  { id: 8, name: "FP Markets", slug: "fpmarkets", affiliateLink: "https://www.fpmarkets.com/switch-to-fp-markets/?fpm-affiliate-utm-source=IB&fpm-affiliate-agt=66167", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fpmarkets.png" },
 ];
 
 const SORT_OPTIONS = [
