@@ -18,6 +18,7 @@ const HFM              = lazy(() => import("./components/HFM"));
 const XM               = lazy(() => import("./components/XM"));
 const FxPro            = lazy(() => import("./components/FxPro"));
 const FBS              = lazy(() => import("./components/FBS"));
+const FxPesa           = lazy(() => import("./components/FxPesa"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ── Shared layout shells (build these next) ──────────────────────────────────
@@ -59,6 +60,7 @@ export default function App() {
                 <Route path="/brokers/xm"                    element={<XM />} />
                 <Route path="/brokers/fxpro"                 element={<FxPro />} />
                 <Route path="/brokers/fbs"                   element={<FBS />} />
+                <Route path="/brokers/fxpesa"                element={<FxPesa />} />
 
                 {/* ── Category pages (SEO hub pages) ── */}
                 {/* e.g. /brokers/best-forex-brokers-kenya */}

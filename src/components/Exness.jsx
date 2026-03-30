@@ -72,7 +72,7 @@ const FAQS = [
   },
   { 
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> regulated by the CMA in Kenya?</>, 
-    a: <>While <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> is not currently licensed by the Kenyan Capital Markets Authority (CMA), they serve Kenyan traders via their FSA (Seychelles) and FSCA (South Africa) licenses, which are widely respected global regulations.</>
+    a: <>Yes <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">Exness</a> is currently licensed by the Kenyan Capital Markets Authority (CMA).</>
   }
 ];
 
@@ -202,7 +202,7 @@ export default function ExnessReview() {
             </section>
 
             <div className="my-6 items-center">
-              <p className="font-semibold py-3 mb-3 text-md">Exness offers multiple means of deposit. They include M-Pesa, Airtel money, Skrill, Neteller and Bank Card. This ensures fast deposit and withdrwals with zero fees.</p>
+              <p className=" text-gray-400 tracking-wide py-3 mb-3 text-md md:text-xl">Exness offers multiple means of deposit. They include M-Pesa, Airtel money, Skrill, Neteller and Bank Card. This ensures fast deposit and withdrwals with zero fees.</p>
               <img src="/exnessdeposit.png" width="1200" height="628" alt="exness deposit" className="rounded-xs shadow-xl mx-auto" />
             </div>
 

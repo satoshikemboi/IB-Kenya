@@ -152,12 +152,12 @@ export default function JustMarketsReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">JustMarkets Review 2026</h1>
+                <h1 className="text-4xl font-semibold text-white tracking-tight">JustMarkets Review 2026</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">
                   LOW MIN DEPOSIT
                 </span>
               </div>
-              <p className="text-gray-500 max-w-xl font-semibold mb-4 text-sm leading-relaxed">
+              <p className="text-gray-400 max-w-2xl font-semibold mb-4 text-md md:text-lg leading-relaxed">
                 JustMarkets is a fast-growing broker ideal for both beginners and active traders in Kenya. It offers favorable trading conditions, including low minimum deposits, competitive spreads, and access to multiple trading platforms like MT4, MT5, and cTrader.
               </p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">

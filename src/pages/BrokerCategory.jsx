@@ -14,7 +14,7 @@ const CATEGORIES = {
     metaTitle: "Forex Brokers Accepting M-Pesa in Kenya 2025",
     metaDesc: "Find forex brokers that accept M-Pesa deposits and withdrawals in Kenya. Compare fees, processing times, and minimum amounts.",
     intro: "M-Pesa is the most convenient way for Kenyan traders to fund a forex account. These brokers all support M-Pesa deposits and fast withdrawals.",
-    brokers: ["exness", "xm-group", "hfm", "fbs", "justmarkets"],
+    brokers: ["exness", "xm-group", "fxpesa", "hfm", "fbs", "justmarkets"],
   },
   "lowest-spread-brokers": {
     title: "Lowest Spread Forex Brokers for Kenyan Traders",
@@ -53,6 +53,7 @@ const BROKER_SNIPPETS = {
   "justmarkets":{ name: "JustMarkets",rating: 4.7, minDeposit: "$5", spread: "0.0 pips", mpesa: true, badge: "Low min deposit", link: "https://one.justmarkets.link/a/17thm0lpq8", logo:"/justmarkets.png" },
   "fbs":        { name: "FBS",        rating: 4.2, minDeposit: "$1",   spread: "0.5 pips", mpesa: true,  badge: "$1 Deposit", link: "https://fbs.partners?ibl=876040&ibp=35444511", logo:"/fbs.png" },
   "fxpro":      { name: "FxPro",      rating: 4.4, minDeposit: "$100", spread: "0.6 pips", mpesa: false, badge: "Multi-Platform", link:"https://direct-fxpro.com/en/partner/2xPncqjwh", logo:"/fxpro.png" },
+  "fxpesa":     { name: "FxPesa",      rating: 4.0, minDeposit: "$10",  spread: "0.8 pips", mpesa: true,  badge: "M-Pesa Support", link: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", logo:"/fxpesa.png" },
 };
 
 export default function BrokerCategory() {
@@ -77,9 +78,9 @@ export default function BrokerCategory() {
             <span className="text-xs font-medium tracking-widest uppercase text-[#C9A84C] bg-[#C9A84C]/10 border border-[#C9A84C]/25 rounded-full px-4 py-1">
               Kenya Forex Guide
             </span>
-            <h1 className="text-3xl font-bold text-white mt-4 mb-3">Find the right broker for you</h1>
-            <p className="text-sm text-gray-500 leading-relaxed">
-              Browse our curated categories. Every broker is tested, regulated, and reviewed by our Kenya-based team.
+            <h1 className="text-4xl font-bold text-white mt-4 mb-3">Find the right broker for you</h1>
+            <p className="text-lg text-gray-300 leading-relaxed">
+              To help forex traders find the right broker to trade with, we publish hundreds of thousands of words of research .We collect thousands of data points in pursuit of our mission to provide the most accurate, unbiased forex broker reviews in the industry. Our in-depth forex guides cover a variety of forex-related and broker-related topics.
             </p>
           </div>
   
@@ -90,7 +91,7 @@ export default function BrokerCategory() {
               return (
                 <div>
                   <Link key={key} to={`/brokers/category/${key}`} className=" group">
-                     <div className="text-md underline font-semibold text-gray-200 mb-1.5 leading-snug">{cat.title}</div>
+                     <div className="text-lg underline font-semibold text-gray-200 mb-1.5 leading-snug">{cat.title}</div>
                   </Link>
                   <div className="text-xs text-gray-400 leading-relaxed mb-4">{meta.desc}</div>
                   <div className="flex items-center justify-between">

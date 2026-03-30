@@ -239,6 +239,12 @@ export default function XMReview() {
                   </tbody>
                 </table>
               </div>
+              <div className="py-4 mt-6">
+                  <p className="text-gray-200 text-md mb-4 leading-relaxed">
+                    XM accepts M-Pesa deposits with instant processing and no fees, making it ideal for Kenyan traders. Additional deposit methods include Visa, Mastercard, Skrill, Astropay, Neteller, Bank Transfer, and Binance Pay for maximum flexibility.
+                  </p>
+                <img src="/xmdeposit.png" alt="XM Payment Methods" className="mt-6 rounded border border-white/5" />
+              </div>
             </section>
 
             <section className="p-6">

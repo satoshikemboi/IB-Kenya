@@ -247,6 +247,12 @@ export default function HFMReview() {
                   </tbody>
                 </table>
               </div>
+              <div className="mt-6 text-gray-500 text-sm">
+                <p className="text-lg text-gray-200">
+                  HFM offers a variety of deposit and withdrawal methods for Kenyan traders, with M-Pesa being the most popular due to its convenience and low minimum deposit of $5. Card payments and e-wallets like Skrill and Neteller are also available, while bank transfers take longer but are free of charge.
+                </p>
+                <img src="/hfmdeposit.png" alt="HFM Payment Methods" className="mt-6 rounded border border-white/10" />
+              </div>
             </section>
 
             {/* Regulation */}
@@ -272,21 +278,59 @@ export default function HFMReview() {
             </section>
           </div>
 
-          {/* Sidebar */}
-          <aside className="space-y-6">
-            <div className="p-6 sticky top-24">
-              <div className="space-y-4">
-                <div className="bg-emerald-500/5 p-4"><p className="text-emerald-400 text-[10px] font-bold uppercase mb-1">Local Support</p><p className="text-white text-xs font-medium">M-Pesa from $5</p></div>
-                <div className="bg-blue-500/5 p-4"><p className="text-blue-400 text-[10px] font-bold uppercase mb-1">Regulation</p><p className="text-white text-xs font-medium">FCA & DFSA Licensed</p></div>
-                <div className="bg-purple-500/5 p-4"><p className="text-purple-400 text-[10px] font-bold uppercase mb-1">Unique Feature</p><p className="text-white text-xs font-medium">HFcopy Copy Trading</p></div>
-              </div>
-              <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-sm text-center text-sm hover:bg-[#b5953b] transition-all">
-                Open HFM Account →
-              </a>
-              <p className="text-[10px] text-gray-600 text-center mt-2">Min deposit: $5 via M-Pesa</p>
-            </div>
-          </aside>
+          <aside className="hidden lg:block w-90 shrink-0">
+  <div className="sticky top-24 space-y-6">
+    {/* Highlight Cards */}
+    <div className="bg-[#0D1B2E] border border-white/5 rounded-xl p-4 space-y-4">
+      <div className="bg-emerald-500/5 p-3 rounded-lg border border-emerald-500/10">
+        <p className="text-emerald-400 text-[9px] font-bold uppercase tracking-wider mb-1">Local Support</p>
+        <p className="text-white text-xs font-semibold">M-Pesa from $5</p>
+      </div>
+
+      <div className="bg-blue-500/5 p-3 rounded-lg border border-blue-500/10">
+        <p className="text-blue-400 text-[9px] font-bold uppercase tracking-wider mb-1">Regulation</p>
+        <p className="text-white text-xs font-semibold">FCA & DFSA Licensed</p>
+      </div>
+
+      <div className="bg-purple-500/5 p-3 rounded-lg border border-purple-500/10">
+        <p className="text-purple-400 text-[9px] font-bold uppercase tracking-wider mb-1">Unique Feature</p>
+        <p className="text-white text-xs font-semibold">HFcopy Trading</p>
+      </div>
+
+      <div className="pt-2">
+        <a 
+          href={AFFILIATE_LINK} 
+          target="_blank" 
+          rel="noopener noreferrer sponsored"
+          className="block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-lg text-center text-xs hover:bg-amber-500 transition-all active:scale-95"
+        >
+          Open HFM Account →
+        </a>
+        <p className="text-[9px] text-gray-500 text-center mt-3 leading-tight italic">
+          Capital at risk. Min deposit: $5 via M-Pesa.
+        </p>
+      </div>
+    </div>
+
+    {/* HFM Skyscraper Banner */}
+    <div className="flex justify-center">
+      <a 
+        href="https://banner-api.hfm.com/link/724b5845?regulator=HFKE&refid=30515020" 
+        target="_blank" 
+        rel="noopener noreferrer sponsored"
+        className="block group"
+      >
+        <img 
+          src="https://banner-api.hfm.com/banner/724b5845?regulator=HFKE&refid=30515020" 
+          width="160" 
+          height="600" 
+          alt="HFM Kenya Trading Banner"
+          className="rounded-lg shadow-lg group-hover:opacity-90 transition-opacity"
+        />
+      </a>
+    </div>
+  </div>
+</aside>
         </div>
       </main>
     </div>

@@ -9,6 +9,7 @@ const ALL_BROKERS = [
   { id: 4, name: "Justmarkets", slug: "justmarkets", affiliateLink: "https://one.justmarkets.link/a/17thm0lpq8", rating: 4.7, minDeposit: 5, regulation: ["FCA", "ASIC", "DFSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5", "cTrader"], badge: "Low min deposit", category: "market-maker", logo:"/justmarkets.png" },
   { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker", logo:"/fbs.png" },
   { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn", logo:"fxpro.png" },
+  { id: 7, name: "FxPesa", slug: "fxpesa", affiliateLink: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fxpesa.png" },
 ];
 
 const SORT_OPTIONS = [
@@ -62,14 +63,25 @@ export default function BrokerList() {
         <div className="max-w-5xl mx-auto">
 
           {/* Header */}
-          <div className="text-center mb-10">
-            <h1 className="text-4xl font-bold text-white mb-3">All Forex Brokers in Kenya</h1>
-            <p className="text-gray-400 text-sm max-w-lg mx-auto">
-              {ALL_BROKERS.length} brokers independently reviewed and ranked for Kenyan traders.
-            </p>
-          </div>
+          <div className="mb-12 max-w-4xl">
+  <h1 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
+    Forex Brokers in <span className="text-amber-400">Kenya</span> (2026)
+  </h1>
+  
+  <div className="border-l-2 border-amber-400/30 pl-6">
+    <p className="text-gray-400 text-lg leading-relaxed">
+      Compare and filter top-rated forex brokers in Kenya on{" "}
+      <Link to="/" className="text-white underline hover:text-amber-400 transition-colors font-medium border-b border-white/10">
+        FxBrokers.co.ke
+      </Link>. 
+      Our real-time resources allows you to filter by <strong>CMA regulation</strong>, 
+      <strong>M-Pesa deposit speed</strong>, and <strong>low spreads</strong> to find 
+      the safest platform for your trading style.
+    </p>
+  </div>
+</div>
 
-          {/* Filters */}
+                {/* Filters */}
           <div className="bg-[#0D1B2E] border border-white/10 rounded-xl p-4 mb-8 flex flex-wrap gap-3 items-center">
             <input
               type="search"
