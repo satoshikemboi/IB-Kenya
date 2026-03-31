@@ -117,7 +117,7 @@ export default function Methodology() {
           </div>
 
           {/* Process Strip */}
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
+          <div className="grid md:grid-cols-2 sm:grid-cols-4 gap-3 mb-16">
             {PROCESS_STEPS.map((s) => (
               <div
                 key={s.step}
@@ -129,7 +129,7 @@ export default function Methodology() {
                 >
                   {s.step}
                 </span>
-                <p className="text-[#C9A84C] text-[10px] font-bold uppercase tracking-widest mb-2">
+                <p className="text-[#C9A84C] text-[10px] font-semibold uppercase tracking-widest mb-2">
                   Step {s.step}
                 </p>
                 <p className="text-white text-sm font-semibold mb-1 leading-snug">{s.title}</p>
@@ -152,9 +152,9 @@ export default function Methodology() {
             {CRITERIA.map((c) => (
               <div
                 key={c.num}
-                className="bg-[#0D1B2E] border border-white/5 rounded-2xl overflow-hidden group hover:border-white/10 transition-all"
+                className="bg-[#0D1B2E] border border-white/5 rounded-xl overflow-hidden group hover:border-white/10 transition-all"
               >
-                <div className="flex flex-col sm:flex-row">
+                <div className="flex md:flex-col-2">
 
                   {/* Content */}
                   <div className="flex-1 p-6">
