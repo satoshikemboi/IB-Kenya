@@ -521,7 +521,7 @@ export default function Home() {
               style={{ fontFamily: "'Sora', sans-serif" }}>
               Browse by Category
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            <div className="grid md:grid-cols-3 gap-3">
               {categories.map((cat) => (
                 <Link key={cat.slug} to={`${cat.slug}`}
                   className="group flex items-center gap-3 bg-[#0B1929] border border-white/8 hover:border-amber-400/35 rounded-2xl px-5 py-4 transition-all duration-200">
