@@ -22,16 +22,16 @@ const CATEGORIES = {
       { rank: 6,  name: "FxPro",           slug: "fxpro",       note: "Multi-platform: MT4, MT5, cTrader & more" },
       { rank: 7,  name: "FxPesa",          slug: "fxpesa",      note: "CMA licence no. 107; built for Kenyan traders" },
       { rank: 8,  name: "FP Markets",      slug: "fpmarkets",   note: "CMA licence no. 193; strong customer support" },
-      { rank: 9,  name: "Deriv",      slug: "deriv",          note: "CMA licence no.20200000243; 24/7 trade on derivatives" },
-      { rank: 10, name: "Windsor Brokers", slug: null,          note: "CMA licence no. 156; regulated since 1988" },
+      { rank: 9,  name: "Deriv",      slug: "deriv",            note: "CMA licence no.20200000243; 24/7 trade on derivatives" },
+      { rank: 10, name: "Fusion Markets", slug: "fusion",       note: " The Lowest Spreads" },
     ],
   },
   "best-forex-brokers-kenya": {
     title: "Best Forex Brokers in Kenya",
     metaTitle: "Best Forex Brokers in Kenya 2026 — Top 10 Ranked",
     metaDesc: "The 10 best forex brokers for Kenyan traders in 2026, ranked by our experts. Compare regulation, spreads, M-Pesa support, and minimum deposits.",
-    intro: "We tested over 50 forex brokers to find the best options for Kenyan traders. Our top picks are regulated, accept M-Pesa, and offer competitive spreads.",
-    editorNote: "I've spent years analysing forex brokers available to Kenyan traders — testing platforms hands-on, verifying regulatory licences, and comparing real trading costs including spreads, commissions, and swap rates. Every broker on this list has been scored across more than 30 data points so you can trade with confidence.",
+    intro: "The best forex brokers in Kenya for 2026, offering strong local regulation (CMA), M-Pesa integration, and low spreads, include JustMarkets, Exness, FXPesa, and HFM. These brokers provide secure, fast execution for traders seeking access to global markets with competitive fees and local support.",
+    editorNote: "I've spent years analysing forex brokers available to Kenyan traders, testing platforms hands-on, verifying regulatory licences, and comparing real trading costs including spreads, commissions, and swap rates. Every broker on this list has been scored across more than 30 data points so you can trade with confidence.",
     brokers: ["exness", "xm-group", "hfm", "justmarkets", "fbs"],
   },
   "mpesa-brokers": {
@@ -64,7 +64,7 @@ const CATEGORIES = {
     metaDesc: "Only trade with regulated forex brokers. Compare FCA, ASIC, and CySEC regulated brokers available in Kenya with segregated client funds.",
     intro: "Trading with a regulated broker protects your funds. These brokers hold licences from top-tier regulators including the FCA, ASIC, and CySEC. Such brokers include Exness (CMA licence no. 162), HFM (CMA licence no. 155), Windsor Brokers (CMA licence no. 156), FxPesa (CMA licence no. 107), FP Markets (CMA licence no. 193) and IC Markets (CMA licence no. 199) all of which are regulated and offer segregated client accounts for added security.",
     editorNote: "I hand-verified every regulatory licence listed here — cross-checking CMA Kenya, FCA, ASIC, and CySEC registers. Never trade with a broker you haven't confirmed holds a valid, active licence.",
-    brokers: ["hfm", "exness"],
+    brokers: ["hfm", "exness", "fxpesa", ""],
   },
   "brokers-for-beginners": {
     title: "Best Forex Brokers for Beginners in Kenya",
@@ -94,6 +94,7 @@ const BROKER_SNIPPETS = {
   "fxpesa":     { name: "FxPesa",     rating: 4.0, minDeposit: "$10",  spread: "0.8 pips", mpesa: true,  badge: "M-Pesa Support",        link: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", logo: "/fxpesa.png" },
   "fpmarkets":  { name: "FPMarkets",  rating: 4.1, minDeposit: "$10",  spread: "0.8 pips", mpesa: false, badge: "Best Customer Support", link: "https://portal.fpmarkets.com/int-EN/register?fpm-affiliate-utm-source=IB&fpm-affiliate-agt=66167", logo: "/fpmarkets.png" },
   "deriv":     { name: "Deriv",      rating: 4.3, minDeposit: "$5",   spread: "0.7 pips", mpesa: false, badge: "24/7 Trading",          link: "https://deriv.com/partner/FXBROKERSKE", logo: "/deriv.png" },
+  "fusion":     { name: "Fusion Markets", rating: 4.3, minDeposit: "$10", spread: "0.4 pips", mpesa: true, badge: "Low Spreads",         link: "https://fusionmarkets.com/?refcode=111166", logo: "/fusion.png"},
 };
 
 const CATEGORY_META = {

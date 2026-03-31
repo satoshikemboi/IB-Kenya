@@ -87,12 +87,13 @@ const whyTrustUs = [
 ];
 
 const categories = [
-  { label: "Best Forex Brokers Kenya", slug: "best-forex-brokers-kenya"},
-  { label: "Lowest Spread Brokers", slug: "lowest-spread-brokers"},
-  { label: "Best MT4 & MT5 Brokers", slug: "mt4-mt5-brokers"},
-  { label: "Brokers Accepting M-Pesa", slug: "mpesa-brokers"},
-  { label: "Best Regulated Brokers", slug: "regulated-brokers" },
-  { label: "Best for Beginners", slug: "brokers-for-beginners" },
+  { label: "Best Forex Brokers Kenya", slug: "/brokers/category/best-forex-brokers-kenya"},
+  { label: "Lowest Spread Brokers", slug: "/brokers/category/lowest-spread-brokers"},
+  { label: "Best MT4 & MT5 Brokers", slug: "/brokers/category/mt4-mt5-brokers"},
+  { label: "Brokers Accepting M-Pesa", slug: "/brokers/category/mpesa-brokers"},
+  { label: "Best Regulated Brokers", slug: "/brokers/category/regulated-brokers" },
+  { label: "Best for Beginners", slug: "/brokers/category/brokers-for-beginners" },
+  { label: "Top Forex Brokers in Kenya (2026)", slug: "/brokers/best-forex-brokers-kenya" },
 ];
 
 const faqs = [
@@ -522,7 +523,7 @@ export default function Home() {
             </h2>
             <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
               {categories.map((cat) => (
-                <Link key={cat.slug} to={`/brokers/category/${cat.slug}`}
+                <Link key={cat.slug} to={`${cat.slug}`}
                   className="group flex items-center gap-3 bg-[#0B1929] border border-white/8 hover:border-amber-400/35 rounded-2xl px-5 py-4 transition-all duration-200">
                   <span className="text-xl shrink-0">{cat.icon}</span>
                   <span className="text-slate-300 group-hover:text-white text-sm font-medium transition-colors">{cat.label}</span>

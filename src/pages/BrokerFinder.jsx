@@ -1,42 +1,43 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import ForexGuides from "../components/ForexGuides";
 
 const QUESTIONS = [
   {
     id: "experience",
     question: "What is your trading experience?",
     options: [
-      { label: "Complete Beginner", value: "beginner"},
-      { label: "Some Experience", value: "intermediate"},
-      { label: "Experienced Trader", value: "advanced" },
+      { label: "Complete Beginner", value: "beginner", icon: "🌱" },
+      { label: "Some Experience", value: "intermediate", icon: "📈" },
+      { label: "Experienced Trader", value: "advanced", icon: "🏛️" },
     ],
   },
   {
     id: "deposit",
     question: "How much are you looking to deposit?",
     options: [
-      { label: "Under $50", value: "micro" },
-      { label: "$50 – $500", value: "small" },
-      { label: "Over $500", value: "large" },
+      { label: "Under $50", value: "micro", icon: "💰" },
+      { label: "$50 – $500", value: "small", icon: "💵" },
+      { label: "Over $500", value: "large", icon: "🏦" },
     ],
   },
   {
     id: "payment",
     question: "How will you fund your account?",
     options: [
-      { label: "M-Pesa", value: "mpesa"},
-      { label: "Bank Transfer", value: "bank"},
-      { label: "Card / e-Wallet", value: "card" },
+      { label: "M-Pesa", value: "mpesa", icon: "📱" },
+      { label: "Bank Transfer", value: "bank", icon: "🏛️" },
+      { label: "Card / e-Wallet", value: "card", icon: "💳" },
     ],
   },
   {
     id: "style",
     question: "What best describes your trading style?",
     options: [
-      { label: "Long-term / Swing", value: "swing"},
-      { label: "Day Trading", value: "day"},
-      { label: "Scalping", value: "scalp"},
+      { label: "Long-term / Swing", value: "swing", icon: "⏳" },
+      { label: "Day Trading", value: "day", icon: "☀️" },
+      { label: "Scalping", value: "scalp", icon: "⚡" },
     ],
   },
 ];
@@ -68,8 +69,8 @@ export default function BrokerFinder() {
   const [result, setResult] = useState(null);
 
   const current = QUESTIONS[step];
-  // Fixed progress calculation to show 0% on start and 100% on last question
-  const progress = (step / (QUESTIONS.length - 1)) * 100;
+  // Improved progress calculation: shows progress through total steps
+  const progress = ((step) / QUESTIONS.length) * 100;
 
   function handleAnswer(value) {
     const updated = { ...answers, [current.id]: value };
@@ -94,17 +95,17 @@ export default function BrokerFinder() {
         <meta name="description" content="Answer 4 quick questions and we'll match you with the best forex broker for your experience level in Kenya." />
       </Helmet>
 
-      <div className="min-h-screen bg-[#07101E] pt-24 pb-16 px-4 flex items-center justify-center">
+      <div className="min-h-screen bg-[#07101E] pt-24 pb-16 px-4 flex flex-col items-center justify-start">
         <div className="w-full max-w-lg">
           {!result ? (
-            <div className="bg-[#0D1B2E] border border-white/10 rounded-2xl p-8 shadow-2xl">
+            <div className="bg-[#0D1B2E] border border-white/10 rounded-2xl p-8 shadow-2xl transition-all">
               {/* Progress Bar */}
               <div className="mb-8">
-                <div className="flex justify-between text-[10px] uppercase tracking-wider text-gray-500 mb-2">
+                <div className="flex justify-between text-[10px] uppercase tracking-wider text-gray-500 mb-2 font-bold">
                   <span>Step {step + 1} of {QUESTIONS.length}</span>
-                  <span>{Math.round(progress)}%</span>
+                  <span>{Math.round(progress)}% Complete</span>
                 </div>
-                <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                <div className="h-1.5 bg-white/5 rounded-full overflow-hidden">
                   <div 
                     className="h-full bg-[#C9A84C] transition-all duration-500 ease-out"
                     style={{ width: `${progress}%` }}
@@ -121,20 +122,23 @@ export default function BrokerFinder() {
                     onClick={() => handleAnswer(opt.value)}
                     className="flex items-center gap-4 bg-white/5 border border-white/10 hover:border-[#C9A84C]/40 hover:bg-[#C9A84C]/5 text-white text-left px-5 py-4 rounded-xl transition-all group"
                   >
-                    <span className="text-xl grayscale group-hover:grayscale-0 transition-all">{opt.icon}</span>
+                    <span className="text-2xl grayscale group-hover:grayscale-0 transition-all">{opt.icon}</span>
                     <span className="font-medium text-sm group-hover:text-[#C9A84C]">{opt.label}</span>
                   </button>
                 ))}
               </div>
 
               {step > 0 && (
-                <button onClick={() => setStep(step - 1)} className="mt-6 text-gray-500 hover:text-white text-xs w-full text-center">
+                <button 
+                  onClick={() => setStep(step - 1)} 
+                  className="mt-6 text-gray-500 hover:text-white text-xs w-full text-center transition-colors"
+                >
                   ← Previous Question
                 </button>
               )}
             </div>
           ) : (
-            <div className="bg-[#0D1B2E] border border-white/10 rounded-2xl p-8 text-center shadow-2xl animate-in fade-in zoom-in duration-300">
+            <div className="bg-[#0D1B2E] border border-white/10 rounded-2xl p-8 text-center shadow-2xl animate-in fade-in zoom-in duration-500">
               <div className="w-16 h-16 bg-[#C9A84C]/10 border border-[#C9A84C]/20 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-3xl">🎯</span>
               </div>
@@ -162,12 +166,16 @@ export default function BrokerFinder() {
                 </button>
               </div>
 
-              <p className="text-gray-700 text-[9px] mt-8 leading-tight uppercase tracking-tight">
+              <p className="text-gray-600 text-[10px] mt-8 leading-tight uppercase tracking-tight">
                 Trading involves risk. We may receive a commission if you sign up through our links.
               </p>
             </div>
           )}
+          
         </div>
+        <div className="mt-12">
+            <ForexGuides/>
+          </div>
       </div>
     </>
   );

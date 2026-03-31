@@ -12,6 +12,7 @@ const BrokerFinder     = lazy(() => import("./pages/BrokerFinder"));
 const Methodology      = lazy(() => import("./pages/Methodology"));
 const About            = lazy(() => import("./pages/About"));
 const Contact          = lazy(() => import("./pages/Contact"));
+const TopBrokersKenya  = lazy(() => import("./pages/TopBrokersKenya"));
 const Exness           = lazy(() => import("./components/Exness"));
 const JustMarkets      = lazy(() => import("./components/JustMarkets"));
 const HFM              = lazy(() => import("./components/HFM"));
@@ -70,6 +71,7 @@ export default function App() {
 
                 {/* ── Category pages (SEO hub pages) ── */}
                 <Route path="/brokers/compare"              element={<BrokerCategory />} />
+                <Route path="/brokers/best-forex-brokers-kenya" element={<TopBrokersKenya />} />
                 {/* e.g. /brokers/best-forex-brokers-kenya */}
                 <Route path="/brokers/category/:slug" element={<BrokerCategory />} />
                 <Route path="/brokers/category"         element={<BrokerCategory />} />

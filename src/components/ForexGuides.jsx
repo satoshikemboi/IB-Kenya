@@ -4,11 +4,11 @@ import { ChevronRight } from 'lucide-react'; // Optional: Use lucide-react for c
 
 const ForexGuides = () => {
   const guides = [
-    { title: "Best Low Spread Forex Brokers for 2026", href: "/brokers/category/lowest-spread-brokers" },
-    { title: "Best Copy Trading Platforms in Kenya for 2026", href: "/brokers/category/copy-trading" },
+    { title: "Best Low Spread Forex Brokers in Kenya (2026)", href: "/brokers/category/lowest-spread-brokers" },
+    { title: "Best Copy Trading Platforms in Kenya (2026)", href: "/brokers/category/copy-trading" },
     { title: "Compare Forex Brokers in Kenya", href: "/brokers" },
-    { title: "Best Forex Brokers in Kenya for Beginners of 2026", href: "/brokers/category/brokers-for-beginners" },
-    { title: "Best Forex Trading Apps for 2026", href: "/brokers" },
+    { title: "Best Forex Brokers in Kenya for Beginners", href: "/brokers/category/brokers-for-beginners" },
+    { title: "Best Forex Trading Apps in Kenya", href: "/brokers" },
     { title: "Best MetaTrader 4 (MT4) Brokers for 2026", href: "/brokers/category/mt4-mt5-brokers" },
   ];
 
