@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import BrokerStrengths from "../components/BrokerStrengths";
 
 const ALL_BROKERS = [
   { id: 1, name: "Exness", slug: "exness", affiliateLink: "https://one.exnessonelink.com/a/1sh0vxrgqd", rating: 4.8, minDeposit: 10, regulation: ["FCA", "CySEC", "FSA"], spread: 0.0, mpesa: true, platforms: ["MT4", "MT5"], badge: "Top Rated", category: "ecn", logo:"/exness.png" },
@@ -10,7 +11,9 @@ const ALL_BROKERS = [
   { id: 5, name: "FBS", slug: "fbs", affiliateLink: "https://fbs.partners?ibl=876040&ibp=35444511", rating: 4.2, minDeposit: 1, regulation: ["IFSC", "CySEC"], spread: 0.5, mpesa: true, platforms: ["MT4", "MT5"], badge: "$1 Min Deposit", category: "market-maker", logo:"/fbs.png" },
   { id: 6, name: "FxPro", slug: "fxpro", affiliateLink: "https://direct-fxpro.com/en/partner/2xPncqjwh", rating: 4.4, minDeposit: 100, regulation: ["FCA", "CySEC", "FSCA"], spread: 0.6, mpesa: false, platforms: ["MT4", "MT5", "cTrader"], badge: "Multi-Platform", category: "ecn", logo:"fxpro.png" },
   { id: 7, name: "FxPesa", slug: "fxpesa", affiliateLink: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fxpesa.png" },
-  { id: 8, name: "FP Markets", slug: "fpmarkets", affiliateLink: "https://www.fpmarkets.com/switch-to-fp-markets/?fpm-affiliate-utm-source=IB&fpm-affiliate-agt=66167", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fpmarkets.png" },
+  { id: 8, name: "FP Markets", slug: "fpmarkets", affiliateLink: "https://portal.fpmarkets.com/int-EN/register?fpm-affiliate-utm-source=IB&fpm-affiliate-agt=66167", rating: 4.3, minDeposit: 10, regulation: ["CMA"], spread: 0.8, mpesa: true, platforms: ["MT4"], badge: "Kenya's Own", category: "market-maker", logo:"/fpmarkets.png" },
+  { id: 9, name: "Deriv", slug: "deriv", affiliateLink: "https://track.deriv.com/_QstxbfW082hZl7VyVw174GNd7ZgqdRLk/1/", rating: 4.0, minDeposit: 5, regulation: ["FCA", "CySEC", "IFSC"], spread: 0.7, mpesa: true, platforms: ["MT5"], badge: "Unique Assets", category: "market-maker", logo:"/deriv.png" },
+  { id: 10,name: "Fusion Markets", slug: "fusion-markets", affiliateLink: "https://fusionmarkets.com/?refcode=111166", rating: 4.4, minDeposit: 10, regulation: ["ASIC"], spread: 0.2, mpesa: false, platforms: ["MT4", "MT5"], badge: "Low Spread", category: "ecn", logo:"/fusion.png" },
 ];
 
 const SORT_OPTIONS = [
@@ -206,6 +209,7 @@ export default function BrokerList() {
             Disclosure: We may earn a commission when you open an account via our links. This does not affect our ratings.
           </p>
         </div>
+        <BrokerStrengths />
       </div>
     </>
   );

@@ -20,6 +20,8 @@ const FxPro            = lazy(() => import("./components/FxPro"));
 const FBS              = lazy(() => import("./components/FBS"));
 const FxPesa           = lazy(() => import("./components/FxPesa"));
 const FPMarkets         = lazy(() => import("./components/FpMarkets"));
+const Deriv            = lazy(() => import("./components/Deriv"));
+const Fusion      = lazy(() => import("./components/Fusion"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ── Shared layout shells (build these next) ──────────────────────────────────
@@ -63,8 +65,11 @@ export default function App() {
                 <Route path="/brokers/fbs"                   element={<FBS />} />
                 <Route path="/brokers/fxpesa"                element={<FxPesa />} />
                 <Route path="/brokers/fpmarkets"            element={<FPMarkets />} />
+                <Route path="/brokers/deriv"               element={<Deriv />} />
+                <Route path="/brokers/fusion-markets"      element={<Fusion />} />
 
                 {/* ── Category pages (SEO hub pages) ── */}
+                <Route path="/brokers/compare"              element={<BrokerCategory />} />
                 {/* e.g. /brokers/best-forex-brokers-kenya */}
                 <Route path="/brokers/category/:slug" element={<BrokerCategory />} />
                 <Route path="/brokers/category"         element={<BrokerCategory />} />

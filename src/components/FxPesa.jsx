@@ -386,7 +386,7 @@ export default function FxPesaReview() {
           <div className="lg:col-span-2 space-y-8">
             {/* Verdict */}
             <section className="p-4">
-              <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
+              <h2 className="text-white font-bold text-2xl md:text-3xl mb-4 flex items-center gap-2">
                 <span className="w-1 h-5 bg-[#00A86B] rounded-full"></span>{" "}
                 FxPesa Review
               </h2>
