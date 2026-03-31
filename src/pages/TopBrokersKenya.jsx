@@ -113,7 +113,7 @@ export default function TopBrokersKenya() {
     <section className="bg-[#07101E] py-20 px-6 font-sans">
       <div className="max-w-7xl mx-auto">
         <div className=" mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">Top Forex Brokers in Kenya (2026)</h2>
+          <h2 className="text-4xl text-center font-bold text-white mb-4">Top Forex Brokers in Kenya (2026)</h2>
           <p className="text-gray-400 max-w-2xl mx-auto">
             We've analyzed dozens of platforms to find the safest, most cost-effective brokers that specifically support Kenyan payment methods and regulations.
           </p>
