@@ -2,124 +2,117 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://fxbrokers.co.ke/</loc>
+    <loc>https://www.fxbrokers.co.ke/</loc>
     <lastmod>2026-03-31</lastmod>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/exness</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/exness</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/xm</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/xm</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/justmarkets</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/justmarkets</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://fxbrokers.co.ke/brokers/hfm</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/hfm</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/fbs</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.8</priority>
-  </url>
-    <url>
-    <loc>https://fxbrokers.co.ke/brokers/fxpro</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/fbs</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/fxpesa</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/fxpro</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.8</priority>
   </url>
-    <url>
-    <loc>https://fxbrokers.co.ke/brokers/fpmarkets</loc>
+  <url>
+    <loc>https://www.fxbrokers.co.ke/brokers/fxpesa</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.fxbrokers.co.ke/brokers/fpmarkets</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/deriv</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/deriv</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/fusion-market</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/fusion-market</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/best-forex-brokers-kenya</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/best-forex-brokers-kenya</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/broker-finder</loc>
-    <lastmod>2026-03-29</lastmod>
-    <priority>0.9</priority>
-  </url>
-    <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/best-forex-brokers-kenya</loc>
+    <loc>https://www.fxbrokers.co.ke/broker-finder</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/top-10-forex-brokers-in-kenya</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/best-forex-brokers-kenya</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/mpesa-brokers</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/top-10-forex-brokers-in-kenya</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/lowest-spread-brokers</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/mpesa-brokers</loc>
     <lastmod>2026-03-29</lastmod>
-    <priority>0.7</priority>
+    <priority>0.9</priority>
   </url>
-
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/mt4-mt5-brokers</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/lowest-spread-brokers</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/regulated-brokers</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/mt4-mt5-brokers</loc>
+    <lastmod>2026-03-29</lastmod>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/regulated-brokers</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/brokers-for-beginners</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/brokers-for-beginners</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/brokers/category/copy-trading</loc>
+    <loc>https://www.fxbrokers.co.ke/brokers/category/copy-trading</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.6</priority>
   </url>
-
   <url>
-    <loc>https://fxbrokers.co.ke/about</loc>
+    <loc>https://www.fxbrokers.co.ke/about</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://fxbrokers.co.ke/contact</loc>
+    <loc>https://www.fxbrokers.co.ke/contact</loc>
     <lastmod>2026-03-29</lastmod>
     <priority>0.3</priority>
   </url>
