@@ -57,7 +57,7 @@ const CATEGORIES = {
     metaTitle: "Best Regulated Forex Brokers Kenya 2026 | FCA, ASIC, CySEC",
     metaDesc: "Only trade with regulated forex brokers. Compare FCA, ASIC, and CySEC regulated brokers available in Kenya with segregated client funds.",
     intro: "Trading with a regulated broker protects your funds. These brokers hold licences from top-tier regulators including the FCA, ASIC, and CySEC.",
-    brokers: ["hfm", "exness", "fxpesa", ""],
+    brokers: ["hfm", "exness", "fxpesa", "deriv", "fusion"],
   },
   "brokers-for-beginners": {
     title: "Best Forex Brokers for Beginners in Kenya",
