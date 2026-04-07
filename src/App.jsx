@@ -16,6 +16,8 @@ const Methodology      = lazy(() => import("./pages/Methodology"));
 const About            = lazy(() => import("./pages/About"));
 const Contact          = lazy(() => import("./pages/Contact"));
 const TopBrokersKenya  = lazy(() => import("./pages/TopBrokersKenya"));
+const Blog             = lazy(() => import("./pages/Blog"));
+const BlogPost         = lazy(() => import("./pages/BlogPost"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ─── Broker-Specific Components ──────────────────────────────────────────────
@@ -107,6 +109,10 @@ export default function App() {
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+
+                {/* ── Blog ── */}
+                <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
 
                 {/* ── 404 Page ── */}
                 <Route path="*" element={<NotFound />} />

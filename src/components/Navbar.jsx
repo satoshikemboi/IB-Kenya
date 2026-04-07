@@ -89,8 +89,8 @@ export default function Navbar() {
 
             {/* ── Desktop CTA ── */}
             <div className="hidden md:flex items-center gap-3">
-              <Link to="/contact" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-150">
-                Contact
+              <Link to="/blog" className="text-slate-400 hover:text-white text-sm font-medium transition-colors duration-150">
+                Blog
               </Link>
               <Link
                 to="/broker-finder"
@@ -151,8 +151,8 @@ export default function Navbar() {
               </NavLink>
             ))}
 
-            <Link to="/contact" onClick={() => setMenuOpen(false)} className="px-4 py-4 text-slate-400 text-base font-medium">
-              Contact
+            <Link to="/blog" onClick={() => setMenuOpen(false)} className="px-4 py-4 text-slate-400 text-base font-medium">
+              Blog
             </Link>
 
             <div className="h-px bg-white/5 my-4" />
