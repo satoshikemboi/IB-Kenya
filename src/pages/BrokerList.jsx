@@ -80,7 +80,7 @@ export default function BrokerList() {
       </Link>. 
       Our real-time resources allows you to filter by <strong>CMA regulation</strong>, 
       <strong>M-Pesa deposit speed</strong>, and <strong>low spreads</strong> to find 
-      the safest platform for your trading style.
+      the safest platform for your trading style.The major forex brokers we recommend for Kenyan traders include Exness, XM Group, HFM, Justmarkets, FBS, FxPro, FxPesa, FP Markets, Fusion Markets and Deriv for synthetics. Each broker is vetted for reliability, security, and user experience to ensure you have the best trading journey possible.
     </p>
   </div>
 </div>
