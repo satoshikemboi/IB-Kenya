@@ -4,7 +4,6 @@ import { Link, NavLink, useLocation } from "react-router-dom";
 const navLinks = [
   { label: "Brokers", href: "/brokers" },
   { label: "Categories", href: "/brokers/category" },
-  { label: "Broker Finder", href: "/broker-finder" },
   { label: "Methodology", href: "/methodology" },
   { label: "About", href: "/about" },
 ];
