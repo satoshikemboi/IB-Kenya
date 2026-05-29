@@ -11,7 +11,6 @@ import Home from "./pages/Home";
 const BrokerList       = lazy(() => import("./pages/BrokerList"));
 const BrokerReview     = lazy(() => import("./pages/BrokerReview"));
 const BrokerCategory   = lazy(() => import("./pages/BrokerCategory"));
-const BrokerFinder     = lazy(() => import("./pages/BrokerFinder"));
 const Methodology      = lazy(() => import("./pages/Methodology"));
 const About            = lazy(() => import("./pages/About"));
 const Contact          = lazy(() => import("./pages/Contact"));
@@ -105,7 +104,6 @@ export default function App() {
                 <Route path="/brokers/category/:slug" element={<BrokerCategory />} />
 
                 {/* ── Tools & Information ── */}
-                <Route path="/broker-finder" element={<BrokerFinder />} />
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
