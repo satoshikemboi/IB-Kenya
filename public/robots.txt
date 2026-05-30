@@ -15,4 +15,4 @@ Allow: /
 
 Sitemap: https://fxbrokers.co.ke/sitemap.xml
 
-# llms.txt: https://www.fxbrokers.co.ke/llms.txt
+# llms.txt: https://fxbrokers.co.ke/llms.txt
