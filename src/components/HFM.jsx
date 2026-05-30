@@ -34,10 +34,11 @@ const CONS = [
 ];
 
 const REGULATORS = [
-  { authority: "FCA", country: "UK", tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
-  { authority: "DFSA", country: "Dubai", tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
-  { authority: "FSCA", country: "South Africa", tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
-  { authority: "CySEC", country: "Cyprus", tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
+  { authority: "FCA",  country: "UK",           tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "DFSA", country: "Dubai",         tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "CMA",  country: "Kenya",         tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "FSCA", country: "South Africa",  tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
+  { authority: "CySEC",country: "Cyprus",        tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
 ];
 
 const PAYMENT_METHODS = [
@@ -63,7 +64,7 @@ const FAQS = [
     a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> supports M-Pesa for both deposits and withdrawals in Kenya. The minimum M-Pesa deposit is $10 and processing is typically instant.</>,
   },
   {
-    q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> in Kenya?</>,
+    q: <>What is the<a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a>minimum deposit in Kenya?</>,
     a: <>The Micro account starts at just $5 via M-Pesa, making <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> highly accessible for beginners. The Zero Spread and Auto accounts require upto $200.</>,
   },
   {
@@ -79,7 +80,7 @@ const FAQS = [
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> charges a monthly inactivity fee of $5 after 6 consecutive months of no trading activity. This is waived as soon as you place a trade.</>,
   },
   {
-    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> regulated by the CMA in Kenya?</>,
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> regulated in Kenya?</>,
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">HFM</a> is licensed by the Kenyan Capital Markets Authority (CMA) with the licence number 155.</>,
   },
 ];
@@ -119,17 +120,45 @@ export default function HFMReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>HFM Review 2026 — M-Pesa, Zero Spread & Copy Trading | FxBrokers.co.ke</title>
-        <meta name="description" content="HFM review for Kenyan traders 2026. Compare spreads, M-Pesa support, copy trading via HFcopy, FCA regulation, and account types." />
-        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/hfm" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Review",
-          itemReviewed: { "@type": "Organization", name: "HFM" },
-          reviewRating: { "@type": "Rating", ratingValue: "4.5", bestRating: "5" },
-          author: { "@type": "Organization", name: "FxBrokers.co.ke" },
-        })}</script>
-      </Helmet>
+  <title>HFM Kenya Review 2026 | M-Pesa, Zero Spread & CMA Regulated</title>
+  <meta name="description" content="Is HFM a good broker in Kenya? Our 2026 review covers HFM's $5 minimum deposit, M-Pesa deposits, 0.0 pip zero spread account, HFcopy trading, and CMA regulation. Read before you open an account." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/hfm" />
+
+  <meta property="og:title" content="HFM Kenya Review 2026 | Zero Spread, M-Pesa & Copy Trading" />
+  <meta property="og:description" content="HFM Kenya review — $5 minimum deposit, M-Pesa support, 0.0 pip spreads, HFcopy trading and full CMA & FCA regulation breakdown." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/hfm" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "HFM Kenya Review 2026",
+      "reviewBody": "HFM is a CMA and FCA regulated broker offering M-Pesa deposits from $5, a 0.0 pip zero spread account, and HFcopy copy trading — making it one of the best brokers for Kenyan traders in 2026.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.5",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "HFM",
+        "alternateName": "HotForex",
+        "url": "https://hfm.com",
+        "description": "Globally regulated forex broker offering zero spread accounts, M-Pesa support, and copy trading for Kenyan traders."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         {/* Breadcrumb */}
@@ -138,7 +167,7 @@ export default function HFMReview() {
           <span>/</span>
           <Link to="/brokers" className="hover:text-white">Brokers</Link>
           <span>/</span>
-          <span className="text-gray-400">HFM Review</span>
+          <span className="text-gray-400">HFM Kenya Review</span>
         </nav>
 
         {/* Hero */}
@@ -149,12 +178,15 @@ export default function HFMReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">HFM Review 2026</h1>
+                <h1 className="text-3xl font-semibold text-white tracking-tight">HFM Kenya Review 2026 — Legit Broker or Not?</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">LOW SPREAD</span>
               </div>
               <p className="text-gray-500 max-w-xl font-semibold mb-4 text-md leading-relaxed">
-                HFM (formerly HotForex) is a globally trusted broker with a strong presence in Kenya, offering 0.0 pip spreads, M-Pesa support, and a built-in copy trading platform.
-              </p>
+  HFM Kenya (formerly HotForex) is one of the most trusted forex brokers for Kenyan traders in 2026, 
+  regulated by both the FCA (UK) and Kenya's own Capital Markets Authority (CMA). With a $5 minimum 
+  deposit, M-Pesa support, 0.0 pip zero spread accounts, and built-in copy trading via HFcopy, HFM 
+  covers every type of trader.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["FCA & DFSA", "M-Pesa", "$5 Min", "Copy Trading"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
@@ -180,11 +212,24 @@ export default function HFMReview() {
             {/* Verdict */}
             <section className="p-4 mt-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> HFM Review
+                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> HFM Kenya Review
               </h2>
               <p className="text-md leading-relaxed mb-4">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">HFM</a> is one of the most established international brokers serving Kenyan traders, with over a decade of operation and FCA regulation. The standout feature is the Zero Spread account offering 0.0 pip spreads on 50+ instruments, combined with M-Pesa support from just $5, it's a compelling option for both beginners and experienced traders.
               </p>
+              <p className="text-md leading-relaxed mb-4">
+  A common question from Kenyan traders is <strong>whether HFM is regulated in Kenya</strong> — the 
+  answer is yes. HFM holds a CMA licence (No. 155), making it one of the few international brokers 
+  fully authorised to operate in Kenya. This means local oversight, which adds an extra layer of 
+  protection beyond the FCA and DFSA licences it holds internationally.
+</p>
+
+<p className="text-md leading-relaxed mb-4">
+  The <strong>HFM zero spread account</strong> is particularly popular among scalpers — offering 0.0 pip 
+  spreads on 50+ instruments with a $6/lot commission and a $200 minimum deposit. For beginners, the 
+  Micro account starts at just $5 via M-Pesa, making HFM one of the most accessible regulated brokers 
+  in Kenya.
+</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
                   <h4 className="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-3">The Good</h4>
@@ -199,7 +244,7 @@ export default function HFMReview() {
 
             {/* Account Types */}
             <section className="p-6 overflow-hidden">
-              <h2 className="text-white font-bold text-lg mb-4">Account Types</h2>
+              <h2 className="text-white font-bold text-lg mb-4">HFM Kenya Account Types</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-125">
                   <thead>
@@ -224,7 +269,7 @@ export default function HFMReview() {
 
             {/* Payments */}
             <section className="p-6">
-              <h2 className="text-white font-bold text-lg mb-4">Deposits & Withdrawals</h2>
+              <h2 className="text-white font-bold text-lg mb-4">HFM Kenya Deposits & Withdrawals</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm min-w-100">
                   <thead>

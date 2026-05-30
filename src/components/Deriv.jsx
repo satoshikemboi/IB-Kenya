@@ -119,10 +119,46 @@ export default function DerivReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>Deriv Review 2026 — M-Pesa, Synthetic Indices & MT5 | FxBrokers.co.ke</title>
-        <meta name="description" content="In-depth Deriv review for Kenyan traders in 2026. Compare account types, spreads, M-Pesa support, synthetic indices, and regulation." />
-        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/deriv" />
-      </Helmet>
+  <title>Deriv Kenya Review 2026 | M-Pesa, Synthetic Indices & Min Deposit</title>
+  <meta name="description" content="Is Deriv a good broker for Kenyan traders? Our 2026 review covers M-Pesa deposits, $5 minimum deposit, synthetic indices, regulation (MFSA, LFSA) and how to open a Deriv account in Kenya." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/deriv" />
+
+  {/* Open Graph — improves how the link looks when shared on WhatsApp/social */}
+  <meta property="og:title" content="Deriv Kenya Review 2026 | M-Pesa & Synthetic Indices" />
+  <meta property="og:description" content="Deriv review for Kenyan traders — M-Pesa deposits, $5 minimum, synthetic indices 24/7, and full regulation breakdown." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/deriv" />
+  <meta property="og:type" content="article" />
+
+  {/* Review structured data — helps Google show star ratings in search results */}
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "Deriv Kenya Review 2026",
+      "reviewBody": "Deriv is a top choice for Kenyan traders offering synthetic indices, M-Pesa deposits, and a $5 minimum deposit across MT5, DTrader and DBot platforms.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.0",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "Deriv",
+        "url": "https://deriv.com",
+        "description": "Online forex and CFD broker offering synthetic indices, MT5, and M-Pesa support for Kenyan traders."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         {/* Breadcrumb */}
@@ -131,7 +167,7 @@ export default function DerivReview() {
           <span>/</span>
           <Link to="/brokers" className="hover:text-white">Brokers</Link>
           <span>/</span>
-          <span className="text-gray-400">Deriv Review</span>
+          <span className="text-gray-400">Deriv Kenya Review</span>
         </nav>
 
         {/* Hero */}
@@ -142,12 +178,14 @@ export default function DerivReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">Deriv Review 2026</h1>
+                <h1 className="text-3xl font-semibold text-white tracking-tight">Deriv Kenya Review 2026 — Is It Worth It?</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">SYNTHETIC INDICES</span>
               </div>
               <p className="text-gray-400 max-w-xl mb-4 text-md md:text-lg leading-relaxed">
-                Deriv (formerly Binary.com) is the only broker offering proprietary synthetic indices you can trade 24/7 — including weekends. With M-Pesa support, a $5 minimum deposit, and multiple platforms including MT5 and DBot, it's a strong choice for Kenyan traders.
-              </p>
+  Deriv Kenya is the only broker offering proprietary synthetic indices you can trade 24/7 — including weekends. 
+  With M-Pesa deposits, a $5 minimum deposit, and platforms including MT5 and DBot, Deriv is one of the 
+  most popular brokers in Kenya for both beginners and experienced traders.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["MFSA", "M-Pesa", "Synthetic Indices", "MT5", "DBot"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
@@ -192,14 +230,20 @@ export default function DerivReview() {
             <section className="p-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
                 <span className="w-1 h-5 bg-[#C9A84C] rounded-full" />
-                Deriv Review
+                Deriv Kenya Review
               </h2>
               <p className="text-md leading-relaxed mb-4">
                 Deriv stands out in the Kenyan market primarily because of its <strong>synthetic indices</strong> — instruments you won't find at any other broker. These allow you to trade volatility, crash, and boom indices around the clock, making it popular among traders who want exposure beyond traditional forex pairs.
               </p>
               <p className="text-md leading-relaxed mb-4">
-                The broker has been operating since 1999 under the Binary.com brand, giving it a long track record. The platform suite — DTrader, DBot, SmartTrader, and MT5 — covers everything from manual trading to fully automated bot strategies.
+                The broker has been operating since 2008 under the Binary.com brand, giving it a long track record. The platform suite — DTrader, DBot, SmartTrader, and MT5 — covers everything from manual trading to fully automated bot strategies.
               </p>
+              <p className="text-md leading-relaxed mb-4">
+  For Kenyan traders specifically, Deriv's M-Pesa integration is seamless — deposits arrive instantly 
+  with a minimum of just $5. The question of <strong>whether Deriv is regulated in Kenya</strong> is 
+  common: while Deriv is not CMA-regulated, it holds licences from MFSA (Malta) and LFSA (Labuan), 
+  which are internationally recognised regulators. Client funds are held in segregated accounts.
+</p>
 
               {/* Score Bars */}
               <div className="mt-6 pt-6 border-t border-white/5">
