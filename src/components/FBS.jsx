@@ -117,17 +117,44 @@ export default function FBSReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>FBS Review 2026 — $1 Min Deposit & M-Pesa Kenya | FxBrokers.co.ke</title>
-        <meta name="description" content="FBS review for Kenyan traders 2026. $1 minimum deposit, M-Pesa support, Cent account for beginners, and up to 1:3000 leverage. Full review." />
-        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/fbs" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Review",
-          itemReviewed: { "@type": "Organization", name: "FBS" },
-          reviewRating: { "@type": "Rating", ratingValue: "4.2", bestRating: "5" },
-          author: { "@type": "Organization", name: "FxBrokers.co.ke" },
-        })}</script>
-      </Helmet>
+  <title>FBS Kenya Review 2026 | $1 Min Deposit, M-Pesa & Cent Account</title>
+  <meta name="description" content="Is FBS a good broker for Kenyan traders? Our 2026 review covers FBS minimum deposit ($1), M-Pesa support, the FBS Cent account, regulation, and whether FBS is regulated in Kenya by the CMA." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/fbs" />
+
+  <meta property="og:title" content="FBS Kenya Review 2026 | $1 Cent Account & M-Pesa" />
+  <meta property="og:description" content="FBS Kenya review — $1 minimum deposit via M-Pesa, Cent account for beginners, up to 1:3000 leverage, CySEC regulated at group level." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/fbs" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "FBS Kenya Review 2026",
+      "reviewBody": "FBS is one of the most popular brokers in Kenya thanks to its $1 minimum deposit Cent account, instant M-Pesa support, and 1:3000 leverage. Kenyan clients are served under the IFSC (Belize) entity.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.2",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "FBS",
+        "url": "https://fbs.com",
+        "description": "Global forex broker popular in Kenya for its $1 minimum deposit Cent account and M-Pesa support."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         <nav className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-600 mb-6">
@@ -135,7 +162,7 @@ export default function FBSReview() {
           <span>/</span>
           <Link to="/brokers" className="hover:text-white">Brokers</Link>
           <span>/</span>
-          <span className="text-gray-400">FBS Review</span>
+          <span className="text-gray-400">FBS Kenya Review</span>
         </nav>
 
         <header className="p-6 mb-8">
@@ -145,12 +172,29 @@ export default function FBSReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">FBS Review 2026</h1>
+                <h1 className="text-3xl font-semibold text-white tracking-tight">FBS Kenya Review 2026 — Best $1 Broker?</h1>
                 <span className="bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">$1 DEPOSIT</span>
               </div>
               <p className="text-gray-500 max-w-xl font-semibold mb-4 text-sm leading-relaxed">
-                FBS offers the lowest entry point of any broker we review — start trading with just $1 via M-Pesa on the Cent account. Popular across Africa for its accessibility and high leverage options.
-              </p>
+  FBS Kenya offers the lowest entry point of any broker on our list — start trading with just 
+  $1 via M-Pesa on the Cent account. One of the most popular forex brokers across Kenya and 
+  East Africa, FBS is best suited to beginners who want real market exposure with minimal risk.
+</p>
+<p className="text-sm leading-relaxed mb-4">
+  The most common question from Kenyan traders is <strong>whether FBS is regulated in Kenya</strong>. 
+  FBS is not licensed by the Kenyan Capital Markets Authority (CMA) — Kenyan clients are served 
+  under the IFSC (Belize) entity. While the parent group holds CySEC (Cyprus) and ASIC (Australia) 
+  licences, these do not directly cover Kenyan accounts. This is worth knowing before you deposit, 
+  though FBS has operated reliably across Africa since 2009.
+</p>
+
+<p className="text-sm leading-relaxed mb-4">
+  The <strong>FBS minimum deposit in Kenya</strong> is just $1 on the Cent account via M-Pesa — 
+  the lowest of any broker we review. The Standard account requires $100, which is the main 
+  jump in entry cost. The <strong>FBS Cent account</strong> is particularly useful for beginners: 
+  it operates in US cents rather than dollars, so $1 gives you 100 cents to trade with, 
+  dramatically reducing risk while using real money.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["CySEC Licensed", "M-Pesa", "$1 Min", "1:3000 Leverage"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
@@ -175,7 +219,7 @@ export default function FBSReview() {
 
             <section className="p-4 mt-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> FBS Review
+                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> FBS Kenya Review
               </h2>
               <p className="text-sm leading-relaxed mb-4">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">FBS</a> is one of the most popular forex brokers in Africa, and for good reason. Its Cent account — requiring just $1 via M-Pesa — is the most accessible way for any Kenyan to start live forex trading. While its regulation (IFSC, Belize for Kenyan clients) is not as strong as FCA-regulated competitors, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">FBS</a> has operated reliably since 2009 and has a large, satisfied client base across Kenya and East Africa.
@@ -193,7 +237,7 @@ export default function FBSReview() {
             </section>
 
             <section className="p-6 overflow-hidden">
-              <h2 className="text-white font-bold text-lg mb-4">Account Types</h2>
+              <h2 className="text-white font-bold text-lg mb-4">FBS Kenya Account Types</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-125">
                   <thead>
@@ -242,9 +286,11 @@ export default function FBSReview() {
               </div>
 
               <div className="py-4">
-                <p className="py-3 text-lg">
-                  FBS offers multiple ways of deposit and withdrawals. The methods include: Mobile money, Skrill, Crypto deposits, and Bank cards. These gives a trader vast choices of deposit ensuring fast deposits and withdrawals.
-                </p>
+                <p className="py-3 text-sm leading-relaxed text-gray-400">
+  FBS supports multiple deposit and withdrawal methods for Kenyan traders, including M-Pesa, 
+  Visa/Mastercard, Skrill, Neteller, and crypto (USDT). M-Pesa deposits are instant with a 
+  minimum of just $1 — the lowest M-Pesa entry point of any broker we have tested.
+</p>
                 <img src="/fbsdeposit.png" alt="FBS Payment Methods" className="mt-6 rounded border border-white/10" />
               </div>
             </section>

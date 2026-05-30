@@ -115,18 +115,46 @@ function FaqItem({ q, a }) {
 export default function XMReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
-      <Helmet>
-        <title>XM Group Review 2026 — Best Broker for Beginners in Kenya | FxBrokers.co.ke</title>
-        <meta name="description" content="XM Group review for Kenyan traders 2026. Compare spreads, M-Pesa support, education, ASIC regulation, and $5 minimum deposit accounts." />
-        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/xm-group" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Review",
-          itemReviewed: { "@type": "Organization", name: "XM Group" },
-          reviewRating: { "@type": "Rating", ratingValue: "4.6", bestRating: "5" },
-          author: { "@type": "Organization", name: "FxBrokers.co.ke" },
-        })}</script>
-      </Helmet>
+<Helmet>
+  <title>XM Group Kenya Review 2026 | $5 Min Deposit, M-Pesa & Free Education</title>
+  <meta name="description" content="XM Group Kenya review 2026. $5 minimum deposit, M-Pesa support, free forex education, ASIC & CySEC regulation. Is XM the best broker for beginners in Kenya?" />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/xm" />
+
+  <meta property="og:title" content="XM Group Kenya Review 2026 | Best Broker for Beginners" />
+  <meta property="og:description" content="XM Kenya review — $5 minimum deposit, M-Pesa deposits, free webinars and education, ASIC regulated. Top pick for beginners." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/xm" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "XM Group Kenya Review 2026",
+      "reviewBody": "XM Group is a globally trusted broker popular with beginner Kenyan traders, offering a $5 minimum deposit, M-Pesa support, free forex education and webinars, and ASIC regulation.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.6",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "XM Group",
+        "alternateName": "XM Forex",
+        "url": "https://xm.com",
+        "description": "Global forex broker offering M-Pesa deposits, free education, and a $5 minimum deposit for Kenyan traders."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         <nav className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-600 mb-6">
@@ -144,12 +172,19 @@ export default function XMReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">XM Group Review 2026</h1>
+                <h1 className="text-3xl font-semibold text-white tracking-tight">XM Group Kenya Review 2026 — Best for Beginners?</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">BEST FOR BEGINNERS</span>
               </div>
               <p className="text-gray-500 max-w-xl font-semibold mb-4 text-md leading-relaxed">
                 XM Group is our top pick for beginner Kenyan traders, combining a $5 minimum deposit, free education, M-Pesa support, and a trusted ASIC-regulated reputation built over 15+ years.
               </p>
+              <p className="text-md leading-relaxed mb-4">
+  The <strong>XM minimum deposit in Kenya</strong> is $5 on both Micro and Standard accounts 
+  via M-Pesa — with no deposit fees charged by XM. A common question is whether 
+  <strong> XM is regulated in Kenya</strong> by the CMA — it is not. Kenyan clients are 
+  served through XM Global Limited, regulated by the IFSC (Belize). The parent group holds 
+  ASIC and CySEC licences, which provide strong international oversight.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["ASIC & CySEC", "M-Pesa", "$5 Min", "Free Education"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
@@ -174,7 +209,7 @@ export default function XMReview() {
 
             <section className="p-4 mt-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-amber-400 rounded-full"></span> XM Group Review
+                <span className="w-1 h-5 bg-amber-400 rounded-full"></span> XM Group Kenya Review
               </h2>
               <p className="text-md leading-relaxed mb-4">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">XM Group</a> has been serving retail traders since 2009 and has grown to over 10 million clients globally. For Kenyan traders, its appeal is straightforward: a $5 minimum deposit via M-Pesa, no withdrawal fees, and the most comprehensive free education suite of any broker on this list. If you are new to forex, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">XM</a> is where we recommend starting.

@@ -310,8 +310,45 @@ export default function FxPesaReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#00A86B]/30">
       <Helmet>
-        <title>FxPesa Review 2026 — CMA-Regulated & M-Pesa | FxBrokers.co.ke</title>
-      </Helmet>
+  <title>FxPesa Review 2026 | Kenya's CMA-Regulated Broker & M-Pesa</title>
+  <meta name="description" content="Is FxPesa a good broker? Our 2026 review covers FxPesa's CMA licence (No. 107), M-Pesa deposits, the 30% Karibu bonus, minimum deposit, and how FxPesa compares to Equity Bank for Kenyan traders." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/fxpesa" />
+
+  <meta property="og:title" content="FxPesa Review 2026 | CMA Regulated, M-Pesa & Karibu Bonus" />
+  <meta property="og:description" content="FxPesa is Kenya's home-grown CMA-regulated broker. M-Pesa deposits from KES 500, 30% Karibu bonus, MT4/MT5 and free in-person trading workshops." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/fxpesa" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "FxPesa Kenya Review 2026",
+      "reviewBody": "FxPesa (EGM Securities) is Kenya's first CMA-licensed non-dealing forex broker, offering M-Pesa deposits from KES 500, a 30% Karibu welcome bonus, MT4 and MT5 platforms, and free in-person trading education across Kenya.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.3",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "FxPesa",
+        "alternateName": "EGM Securities",
+        "url": "https://fxpesa.com",
+        "description": "Kenya's first CMA-licensed non-dealing forex broker offering M-Pesa deposits, MT4/MT5 and a 30% Karibu welcome bonus."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         {/* Breadcrumb */}
@@ -319,6 +356,8 @@ export default function FxPesaReview() {
           <Link to="/" className="hover:text-white">
             Home
           </Link>
+          <span>/</span>
+          <Link to="/brokers" className="hover:text-white">Brokers</Link>
           <span>/</span>
           <span className="text-gray-400">FxPesa Review</span>
         </nav>
@@ -343,11 +382,26 @@ export default function FxPesaReview() {
                 </span>
               </div>
               <p className="text-gray-400 max-w-xl mb-4 text-md leading-relaxed">
-                Kenya&apos;s home-grown forex broker. FxPesa (EGM Securities) is
-                the first CMA-licensed non-dealing broker in Kenya, offering
-                M-Pesa deposits, a 30% welcome bonus, and up to 1:400 leverage
-                on MT4, MT5, and the Equiti Trader app.
-              </p>
+  FxPesa (EGM Securities Limited) is Kenya's home-grown forex broker and one of the first 
+  brokers licensed by Kenya's Capital Markets Authority (CMA licence No. 107). With M-Pesa 
+  deposits from KES 500, a 30% Karibu welcome bonus, and free in-person trading workshops 
+  across Kenya, it's the top choice for traders who want full local regulatory protection.
+</p>
+<p className="text-md leading-relaxed mb-4">
+  A common search is <strong>"what is FxPesa"</strong> — it is the trading brand of EGM 
+  Securities Limited, a Nairobi-based financial services company. Unlike most brokers on 
+  this site, FxPesa is not a foreign broker operating in Kenya — it is a Kenyan company, 
+  regulated locally by the CMA, with offices in Nairobi. This makes it fundamentally 
+  different from international brokers who hold offshore licences.
+</p>
+
+<p className="text-md leading-relaxed mb-4">
+  Traders often compare <strong>FxPesa vs Equity Bank</strong> — both offer forex trading 
+  to Kenyan clients. The key difference is that FxPesa is a dedicated forex broker with 
+  tighter spreads, more instruments, leverage up to 1:400, and platforms like MT4 and MT5. 
+  Equity Bank's forex services are primarily for retail currency exchange rather than 
+  active CFD trading.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["CMA", "FCA", "M-Pesa", "Karibu Bonus"].map((tag) => (
                   <span
