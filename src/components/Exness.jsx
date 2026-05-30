@@ -24,9 +24,10 @@ const PROS = ["No minimum deposit", "Instant 24/7 M-Pesa", "Spreads from 0.0 pip
 const CONS = ["No cTrader platform", "Not available to US clients"];
 
 const REGULATORS = [
-  { authority: "FCA", country: "UK", tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
-  { authority: "CySEC", country: "Cyprus", tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
-  { authority: "FSCA", country: "South Africa", tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
+  { authority: "FCA",  country: "UK",           tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "CySEC",country: "Cyprus",        tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "CMA",  country: "Kenya",         tier: "Tier 1", tierColor: "text-blue-300 bg-blue-500/15" },
+  { authority: "FSCA", country: "South Africa",  tier: "Tier 2", tierColor: "text-emerald-300 bg-emerald-500/15" },
 ];
 
 const PAYMENT_METHODS = [
@@ -111,15 +112,53 @@ export default function ExnessReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>Exness Review 2025 — M-Pesa & Low Spreads | FxBrokers.co.ke</title>
-      </Helmet>
+  <title>Exness Kenya Review 2026 | M-Pesa, No Min Deposit & CMA Regulated</title>
+  <meta name="description" content="Is Exness a good broker for Kenyan traders? Our 2026 review covers Exness M-Pesa deposits, minimum deposit in Kenya, CMA regulation, spreads from 0.0 pips, and how to open an Exness account." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/exness" />
+
+  <meta property="og:title" content="Exness Kenya Review 2026 | M-Pesa & Zero Spread" />
+  <meta property="og:description" content="Exness Kenya review — instant M-Pesa deposits, no minimum deposit on standard accounts, spreads from 0.0 pips, FCA and CMA regulated." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/exness" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "Exness Kenya Review 2026",
+      "reviewBody": "Exness is our top-rated broker for Kenyan traders in 2026, offering instant M-Pesa deposits, no minimum deposit on standard accounts, spreads from 0.0 pips, and regulation from the FCA, CySEC and Kenya's CMA.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.8",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "Exness",
+        "url": "https://exness.com",
+        "description": "Global forex broker offering M-Pesa deposits, zero spread accounts, and CMA regulation for Kenyan traders."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-600 mb-6">
           <Link to="/" className="hover:text-white">Home</Link>
           <span>/</span>
-          <span className="text-gray-400">Exness Review</span>
+          <Link to="/brokers" className="hover:text-white">Brokers</Link>
+          <span>/</span>
+          <span className="text-gray-400">Exness Kenya Review</span>
         </nav>
 
         {/* Hero Section */}
@@ -130,10 +169,15 @@ export default function ExnessReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-3xl font-semibold text-white tracking-tight">Exness Review 2026</h1>
+                <h1 className="text-3xl font-semibold text-white tracking-tight">Exness Review 2026 — Is It the Best Broker?</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">#1 KENYA PICK</span>
               </div>
-              <p className="text-gray-400 max-w-xl mb-4 text-md md:text-lg leading-relaxed">The best all-rounder for Kenyans: Instant M-Pesa, $10 minimum deposit, and Tier-1 regulation from the FCA.Exness offers favourable trading conditions by allowing fast trade executions and fast deposits & withdrawals</p>
+              <p className="text-gray-400 max-w-xl mb-4 text-md md:text-lg leading-relaxed">
+  Exness Kenya is our top-rated broker for Kenyan traders in 2026. With instant 24/7 M-Pesa deposits, 
+  no minimum deposit on standard accounts, spreads from 0.0 pips, and regulation from both the FCA 
+  and Kenya's Capital Markets Authority (CMA), Exness stands out as the most complete option for 
+  traders in Kenya.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["FCA", "M-Pesa", "Instant"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
@@ -158,7 +202,7 @@ export default function ExnessReview() {
 
         <div className="my-6">
           <a href="https://one.exnessonelink.com/intl/en/a/1sh0vxrgqd">
-          <img src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png" width="1200" height="628" alt="" />
+          <img src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png" width="1200" height="628" alt="Exness Kenya forex trading — take control of your trades" />
         </a>
           </div>
 
@@ -168,9 +212,22 @@ export default function ExnessReview() {
             {/* Verdict */}
             <section className="p-4">
               <h2 className="text-white font-bold text-2xl mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> Exness Review
+                <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> Exness Kenya Review
               </h2>
               <p className="text-md leading-relaxed mb-4">Exness is currently our top-rated broker for Kenyan traders. Unlike most international brokers, they have mastered local needs by providing <strong>Native M-Pesa integration</strong> that actually works 24/7.</p>
+              <p className="text-md leading-relaxed mb-4">
+  A question we get often is <strong>whether Exness is regulated in Kenya</strong> — yes it is. 
+  Exness holds a CMA licence, making it one of the few international brokers fully authorised 
+  to operate locally. This means Kenyan traders have regulatory protection both locally and 
+  internationally through the FCA.
+</p>
+
+<p className="text-md leading-relaxed mb-4">
+  The <strong>minimum deposit for Exness in Kenya</strong> is effectively zero on Standard accounts — 
+  you can start with as little as $1 via M-Pesa. Professional accounts (Raw Spread, Pro, Zero) 
+  require $200. Withdrawals via M-Pesa are processed in seconds, 24/7, with no fees charged 
+  by Exness.
+</p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                 <div>
                   <h4 className="text-emerald-400 text-[10px] font-bold uppercase tracking-widest mb-3">The Good</h4>

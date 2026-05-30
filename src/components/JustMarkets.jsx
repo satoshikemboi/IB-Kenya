@@ -39,7 +39,7 @@ const REGULATORS = [
 ];
 
 const PAYMENT_METHODS = [
-  { name: "M-Pesa", time: "Instant", fee: "Free", min: "$1", highlight: true },
+  { name: "M-Pesa", time: "Instant", fee: "Free", min: "$5", highlight: true },
   { name: "Visa / Mastercard", time: "Instant", fee: "Free", min: "$10" },
   { name: "Crypto (USDT)", time: "~20 min", fee: "Network", min: "$10" },
   { name: "Bank Transfer", time: "1–3 days", fee: "Free", min: "$50" },
@@ -118,21 +118,46 @@ function FaqItem({ q, a }) {
 export default function JustMarketsReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
-      <Helmet>
-        <title>JustMarkets Review 2026 — M-Pesa, cTrader & Low Spreads | FxBrokers.co.ke</title>
-        <meta
-          name="description"
-          content="JustMarkets review for Kenyan traders in 2026. Compare spreads, M-Pesa support, platforms (MT4, MT5, cTrader), regulation, and minimum deposits."
-        />
-        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/justmarkets" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "Review",
-          itemReviewed: { "@type": "Organization", name: "JustMarkets" },
-          reviewRating: { "@type": "Rating", ratingValue: "4.7", bestRating: "5" },
-          author: { "@type": "Organization", name: "FxBrokers.co.ke" },
-        })}</script>
-      </Helmet>
+<Helmet>
+  <title>JustMarkets Kenya Review 2026 | M-Pesa, $1 Min Deposit & cTrader</title>
+  <meta name="description" content="Is JustMarkets a good broker for Kenyan traders? Our 2026 review covers JustMarkets minimum deposit, M-Pesa support, MT4/MT5/cTrader platforms, FCA regulation, and whether JustMarkets is regulated in Kenya." />
+  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/justmarkets" />
+
+  <meta property="og:title" content="JustMarkets Kenya Review 2026 | M-Pesa & cTrader" />
+  <meta property="og:description" content="JustMarkets Kenya review — $1 minimum deposit, M-Pesa support, MT4, MT5 and cTrader platforms, FCA & ASIC regulated." />
+  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/justmarkets" />
+  <meta property="og:type" content="article" />
+
+  <script type="application/ld+json">{`
+    {
+      "@context": "https://schema.org",
+      "@type": "Review",
+      "name": "JustMarkets Kenya Review 2026",
+      "reviewBody": "JustMarkets is a fast-growing broker popular with Kenyan traders, offering a $1 minimum deposit, M-Pesa support, MT4, MT5 and cTrader platforms, and FCA regulation at group level.",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "4.7",
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": "Felix"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "FxBrokers Kenya",
+        "url": "https://fxbrokers.co.ke"
+      },
+      "itemReviewed": {
+        "@type": "FinancialService",
+        "name": "JustMarkets",
+        "alternateName": "JustForex",
+        "url": "https://justmarkets.com",
+        "description": "Global forex broker offering M-Pesa deposits, cTrader, and low minimum deposits for Kenyan traders."
+      }
+    }
+  `}</script>
+</Helmet>
 
       <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
         {/* Breadcrumb */}
@@ -141,7 +166,7 @@ export default function JustMarketsReview() {
           <span>/</span>
           <Link to="/brokers" className="hover:text-white">Brokers</Link>
           <span>/</span>
-          <span className="text-gray-400">JustMarkets Review</span>
+          <span className="text-gray-400">JustMarkets Kenya Review</span>
         </nav>
 
         {/* Hero */}
@@ -152,14 +177,31 @@ export default function JustMarketsReview() {
             </div>
             <div className="flex-1">
               <div className="flex flex-col md:flex-row items-center gap-4 mb-2">
-                <h1 className="text-4xl font-semibold text-white tracking-tight">JustMarkets Review 2026</h1>
+                <h1 className="text-4xl font-semibold text-white tracking-tight">JustMarkets Kenya Review 2026 - Worth It?</h1>
                 <span className="bg-[#C9A84C]/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">
                   LOW MIN DEPOSIT
                 </span>
               </div>
               <p className="text-gray-400 max-w-2xl font-semibold mb-4 text-md md:text-lg leading-relaxed">
-                JustMarkets is a fast-growing broker ideal for both beginners and active traders in Kenya. It offers favorable trading conditions, including low minimum deposits, competitive spreads, and access to multiple trading platforms like MT4, MT5, and cTrader.
-              </p>
+  JustMarkets Kenya is a fast-growing broker popular with both beginners and active traders. 
+  With a $1 minimum deposit via M-Pesa, access to MT4, MT5 and cTrader, and FCA regulation 
+  at group level, it offers strong value for Kenyan traders looking for low entry barriers 
+  without sacrificing platform quality.
+</p>
+<p className="text-md leading-relaxed mb-4">
+  A question we get often is <strong>whether JustMarkets is regulated in Kenya</strong>. 
+  JustMarkets is not currently licensed by the Kenyan Capital Markets Authority (CMA) — 
+  Kenyan clients are served under the FSC (Mauritius) entity. However, the group is 
+  regulated by the FCA (UK) and ASIC (Australia), two of the world's strictest regulators, 
+  providing strong investor protection at the group level.
+</p>
+
+<p className="text-md leading-relaxed mb-4">
+  The <strong>JustMarkets minimum deposit in Kenya</strong> is just $1 on Standard accounts 
+  via M-Pesa — making it one of the most accessible brokers available. Previously known as 
+  JustForex, the rebrand to JustMarkets came with expanded regulation and improved trading 
+  conditions across all account types.
+</p>
               <div className="flex flex-wrap justify-center py-3 md:justify-start gap-2">
                 {["FCA & ASIC", "M-Pesa", "$5 Min", "cTrader"].map(tag => (
                   <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">
@@ -190,7 +232,7 @@ export default function JustMarketsReview() {
         </header>
 
         {/* Banner Ad */}
-        <a target="_blank" rel="nofollow" href="https://one.justmarkets.link/a/17thm0lpq8/landing/global-trusted-broker?promo=5040"><img alt="JustMarkets" width="1200" height="628" src="https://justmarkets.com/uploads/promo_materials/jm-banner-global-trusted-broker-en-1200x628.png"/></a>
+        <a target="_blank" rel="noopener noreferrer sponsored" href="https://one.justmarkets.link/a/17thm0lpq8/landing/global-trusted-broker?promo=5040"><img alt="JustMarkets" width="1200" height="628" src="https://justmarkets.com/uploads/promo_materials/jm-banner-global-trusted-broker-en-1200x628.png"/></a>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Main Content */}
@@ -199,7 +241,7 @@ export default function JustMarketsReview() {
             {/* Review */}
             <section className="p-4 mt-4">
               <h2 className="text-white font-bold text-3xl pt-3 mb-4 flex items-center gap-2">
-                <span className="w-1 h-5 bg-amber-400 rounded-full"></span> JustMarkets Review
+                <span className="w-1 h-5 bg-amber-400 rounded-full"></span> JustMarkets Kenya Review
               </h2>
               <p className="text-md leading-relaxed mb-4">
                 <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 font-semibold hover:underline">JustMarkets</a> is one of the best value-for-money brokers available to Kenyan traders. With a $1 minimum deposit via M-Pesa, three trading platforms including cTrader, and FCA regulation at the group level, it punches well above its weight. It's our top pick for traders who want low entry barriers without sacrificing platform quality.
@@ -288,9 +330,11 @@ export default function JustMarketsReview() {
             </section>
 
             <div className="p-6">
-              <p>
-                Justmarkets Kenya offers many ways of depositing and withdrawing.They include, M-Pesa, Bank Card, Mobile money, Crypto, SticPay, wire Transfer and even Sirfintech. All these increases the deposit method and ensures quick deposit and withdrawals.
-              </p>
+              <p className="text-gray-400 text-md leading-relaxed">
+  JustMarkets supports multiple deposit and withdrawal methods for Kenyan traders, including 
+  M-Pesa, bank cards, crypto (USDT), SticPay, and wire transfer. M-Pesa deposits are instant 
+  with no fees charged by JustMarkets, making it the most convenient option for traders in Kenya.
+</p>
   <div className="mb-4">
     <p className="text-gray-500 text-[11px] mt-1">
       Verified on March 29, 2026 — Instant M-Pesa Integration
