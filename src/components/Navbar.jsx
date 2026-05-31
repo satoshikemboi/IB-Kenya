@@ -92,7 +92,7 @@ export default function Navbar() {
                 Blog
               </Link>
               <Link
-                to="/broker-finder"
+                to="/brokers"
                 className="relative group overflow-hidden bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-bold px-4 py-2 rounded-xl transition-colors duration-200 flex items-center gap-1.5"
               >
                 Find My Broker

@@ -57,7 +57,7 @@ const FAQS = [
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is regulated by the FCA (UK) and ASIC (Australia) which are two of the world's most stringent regulators. Client funds are held in segregated accounts and the broker provides negative balance protection.</>,
   },
   {
-    q: "Can I deposit and withdraw with M-Pesa?",
+    q: "Does JustMarkets support M-Pesa deposits and withdrawals?",
     a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> supports M-Pesa deposits and withdrawals for Kenyan traders. Deposits are typically instant and the minimum is just $10, making it one of the most accessible brokers in Kenya.</>,
   },
   {
