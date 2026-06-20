@@ -17,8 +17,8 @@ export default function About() {
       "url": "https://fxbrokers.co.ke",
       "logo": "https://fxbrokers.co.ke/fxbrokerskenya.png",
       "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Westlands, Nairobi",
+        "@type": "GoogleMaps",
+        "addressLocality": "https://maps.app.goo.gl/5JqXnrzgyhJiD88o9",
         "addressCountry": "KE"
       },
       "description": "The leading authority on forex broker reviews and regulatory compliance in Kenya."
