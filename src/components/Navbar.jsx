@@ -157,7 +157,7 @@ export default function Navbar() {
             <div className="h-px bg-white/5 my-4" />
 
             <Link
-              to="/broker-finder"
+              to="/brokers"
               onClick={() => setMenuOpen(false)}
               className="flex items-center justify-center gap-2 bg-amber-400 text-slate-900 font-bold text-base py-4 rounded-xl active:scale-95 transition-transform"
             >
