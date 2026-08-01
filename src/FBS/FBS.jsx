@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import FBSHero, { AFFILIATE_LINK, ScoreRing, ShieldIcon, PhoneIcon, TrendingIcon } from "./FBSHero";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 const SCORES = {
@@ -30,8 +31,6 @@ const PROS = [
 const CONS = [
   "IFSC (Belize) regulation for Kenyan clients",
   "High commission on Zero Spread ($20/lot)",
-  "Inactivity fee after 90 days",
-  "Standard account requires $100",
 ];
 
 const REGULATORS = [
@@ -46,8 +45,6 @@ const PAYMENT_METHODS = [
   { name: "Skrill / Neteller", time: "Instant", fee: "Free", min: "$1" },
   { name: "Crypto (USDT)", time: "~20 min", fee: "Network", min: "$1" },
 ];
-
-const AFFILIATE_LINK = "https://fbs.partners?ibl=876040&ibp=35444511";
 
 const FAQS = [
   {
@@ -110,79 +107,8 @@ function XIcon() {
     </svg>
   );
 }
-function ShieldIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <path d="M12 3l7 3v5c0 4.5-2.9 8.3-7 9.5-4.1-1.2-7-5-7-9.5V6l7-3z" stroke="currentColor" strokeWidth="1.5" strokeLinejoin="round" />
-      <path d="M9 12l2 2 4-4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-function PhoneIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <rect x="7" y="2.5" width="10" height="19" rx="2" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M11 18.5h2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-function TrendingIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <path d="M3 17l6-6 4 4 8-9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M15 6h6v6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-    </svg>
-  );
-}
-function HeadsetIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <path d="M4 13v-1a8 8 0 0116 0v1" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-      <rect x="3" y="13" width="4" height="6" rx="1.3" stroke="currentColor" strokeWidth="1.5" />
-      <rect x="17" y="13" width="4" height="6" rx="1.3" stroke="currentColor" strokeWidth="1.5" />
-      <path d="M19 19v1a3 3 0 01-3 3h-2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
-const QUICK_STATS = [
-  { label: "Min. Deposit", value: "$1", icon: PhoneIcon },
-  { label: "Max Leverage", value: "1:3000", icon: TrendingIcon },
-  { label: "Group Regulator", value: "CySEC", icon: ShieldIcon },
-  { label: "Support", value: "24/7 Local", icon: HeadsetIcon },
-];
 
 // ─── Components ───────────────────────────────────────────────────────────────
-function ScoreRing({ score, size = 104 }) {
-  const stroke = 7;
-  const radius = (size - stroke) / 2;
-  const circumference = 2 * Math.PI * radius;
-  const pct = Math.min(Math.max(score / 10, 0), 1);
-  const offset = circumference * (1 - pct);
-  return (
-    <div className="relative shrink-0" style={{ width: size, height: size }}>
-      <svg width={size} height={size} className="-rotate-90">
-        <circle cx={size / 2} cy={size / 2} r={radius} stroke="rgba(255,255,255,0.08)" strokeWidth={stroke} fill="none" />
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          stroke="#C9A84C"
-          strokeWidth={stroke}
-          fill="none"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          strokeLinecap="round"
-        />
-      </svg>
-      <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-white font-bold text-2xl tabular-nums leading-none">{score}</span>
-        <span className="text-[9px] text-gray-500 uppercase tracking-wider mt-1">out of 10</span>
-      </div>
-    </div>
-  );
-}
-
 function ScoreBar({ label, score }) {
   return (
     <div className="mb-4 last:mb-0">
@@ -191,7 +117,7 @@ function ScoreBar({ label, score }) {
         <span className="text-white font-bold tabular-nums">{score}/10</span>
       </div>
       <div className="h-1.5 bg-white/10 rounded-full overflow-hidden">
-        <div className="h-full bg-[#C9A84C] rounded-full" style={{ width: `${score * 10}%` }} />
+        <div className="h-full bg-green-600 rounded-full" style={{ width: `${score * 10}%` }} />
       </div>
     </div>
   );
@@ -204,7 +130,7 @@ function FaqItem({ q, a }) {
       <button
         onClick={() => setOpen(!open)}
         aria-expanded={open}
-        className="w-full flex justify-between items-center gap-3 p-4 text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C9A84C]"
+        className="w-full flex justify-between items-center gap-3 p-4 text-left focus-visible:outline focus-visible:outline-[#C9A84C]"
       >
         <span className="text-white font-medium text-sm">{q}</span>
         <span className={`text-[#C9A84C] text-lg leading-none shrink-0 transition-transform duration-200 ${open ? "rotate-45" : ""}`}>+</span>
@@ -262,86 +188,25 @@ export default function FBSReview() {
   `}</script>
 </Helmet>
 
-      <main className="max-w-6xl mx-auto px-4 pt-24 pb-12">
-        <nav className="flex items-center gap-2 text-[10px] uppercase tracking-widest text-gray-600 mb-6">
-          <Link to="/" className="hover:text-white">Home</Link>
-          <span>/</span>
-          <Link to="/brokers" className="hover:text-white">Brokers</Link>
-          <span>/</span>
-          <span className="text-gray-400">FBS Kenya Review</span>
-        </nav>
+      <main className="max-w-full mx-auto pt-10 pb-12">
 
-        {/* ── HERO ─────────────────────────────────────────────────────── */}
-        <header className="relative overflow-hidden rounded-2xl border border-white/10 bg-[#0A1626] mb-6">
-          <div aria-hidden className="pointer-events-none absolute -top-24 -right-24 w-80 h-80 rounded-full bg-[#C9A84C]/10 blur-3xl" />
-          <div aria-hidden className="pointer-events-none absolute -bottom-32 -left-16 w-72 h-72 rounded-full bg-emerald-500/5 blur-3xl" />
-
-          <div className="relative p-6 md:p-10">
-            <div className="flex flex-col md:flex-row gap-8 items-center md:items-start">
-              <div className="flex flex-col items-center gap-3 shrink-0">
-                <div className="w-24 h-24 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center p-3">
-                  <img src="/fbs.png" alt="FBS Logo" className="w-full h-full object-contain" />
-                </div>
-                <ScoreRing score={overallScore} />
-              </div>
-
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 mb-3">
-                  <span className="bg-[#C9A84C]/10 text-[#C9A84C] text-[10px] font-bold px-2 py-1 rounded border border-[#C9A84C]/20">$1 DEPOSIT</span>
-                  <span className="text-[10px] text-gray-500 uppercase tracking-widest">Updated for 2026</span>
-                </div>
-
-                <h1 className="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-4">FBS Kenya Review 2026 — Best $1 Broker?</h1>
-
-                <p className="text-gray-400 max-w-xl font-semibold mb-4 text-sm leading-relaxed mx-auto md:mx-0">
-                  FBS Kenya offers the lowest entry point of any broker on our list — start trading with just
-                  $1 via M-Pesa on the Cent account. One of the most popular forex brokers across Kenya and
-                  East Africa, FBS is best suited to beginners who want real market exposure with minimal risk.
-                </p>
-
-                <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-6">
-                  {["CySEC Licensed", "M-Pesa", "$1 Min", "1:3000 Leverage"].map(tag => (
-                    <span key={tag} className="text-[10px] px-2 py-1 rounded-md bg-white/5 border border-white/10 uppercase tracking-wider">{tag}</span>
-                  ))}
-                </div>
-
-                <div className="w-full md:w-auto flex flex-col sm:flex-row gap-2">
-                  <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                    className="w-full sm:w-44 bg-amber-400 text-[#07101E] font-bold py-2.5 rounded-lg text-center hover:bg-[#b5953b] transition-all">
-                    Open Account
-                  </a>
-                  <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                    className="w-full sm:w-44 border border-white/15 py-2.5 rounded-lg text-center text-sm hover:bg-white/5 transition-all">
-                    Try Demo
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Quick stat strip */}
-            <div className="mt-8 pt-6 border-t border-white/5 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {QUICK_STATS.map(({ label, value, icon: Icon }) => (
-                <div key={label} className="flex items-center gap-2.5">
-                  <div className="w-8 h-8 rounded-lg bg-[#C9A84C]/10 text-[#C9A84C] flex items-center justify-center shrink-0">
-                    <Icon />
-                  </div>
-                  <div>
-                    <p className="text-white text-sm font-bold leading-tight">{value}</p>
-                    <p className="text-[10px] text-gray-500 uppercase tracking-wider">{label}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </header>
+        <FBSHero
+          broker={{
+            name: "FBS",
+            logo: "/fbs.png",
+            score: overallScore,
+            regulation: ["CySEC", "ASIC", "IFSC"],
+            affiliateLink: AFFILIATE_LINK,
+          }}
+        />
 
         {/* ── QUICK NAV ────────────────────────────────────────────────── */}
-        <nav aria-label="Review sections" className="flex gap-2 overflow-x-auto mb-8 pb-1 [scrollbar-width:none]">
+        <nav aria-label="Review sections" className="flex gap-2 overflow-x-auto mb-8 px-4 pb-1 [scrollbar-width:none]">
           {QUICK_NAV.map(item => (
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:border-[#C9A84C]/40 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C9A84C]"
+              className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:border-[#C9A84C]/40 transition-colors focus-visible:outline focus-visible:outline-[#C9A84C]"
             >
               {item.label}
             </a>
@@ -352,10 +217,10 @@ export default function FBSReview() {
           <div className="lg:col-span-2 space-y-8">
 
             {/* ── RATINGS BREAKDOWN ─────────────────────────────────────── */}
-            <section id="ratings" className="p-6 rounded-2xl border border-white/10 bg-[#0D1B2E]">
+            <section id="ratings" className="p-6 bg-[#0D1B2E]">
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-white font-bold text-lg flex items-center gap-2">
-                  <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> Rating Breakdown
+                  <span className="w-1 h-5 bg-green-600 rounded-full"></span> Rating Breakdown
                 </h2>
                 <span className="text-[10px] text-gray-500 uppercase tracking-widest">Score: {overallScore}/10</span>
               </div>
@@ -370,19 +235,19 @@ export default function FBSReview() {
                 <span className="w-1 h-5 bg-[#C9A84C] rounded-full"></span> FBS Kenya Review
               </h2>
               <p className="text-sm leading-relaxed mb-4">
-                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">FBS</a> is one of the most popular forex brokers in Africa, and for good reason. Its Cent account — requiring just $1 via M-Pesa — is the most accessible way for any Kenyan to start live forex trading. While its regulation (IFSC, Belize for Kenyan clients) is not as strong as FCA-regulated competitors, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">FBS</a> has operated reliably since 2009 and has a large, satisfied client base across Kenya and East Africa.
+                <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-green-600 hover:underline">FBS</a> is one of the most popular forex brokers in Africa, and for good reason. Its Cent account, requiring just $1 via M-Pesa, is the most accessible way for any Kenyan to start live forex trading. While its regulation (IFSC, Belize for Kenyan clients) is not as strong as FCA-regulated competitors, <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-green-600 hover:underline">FBS</a> has operated reliably since 2009 and has a large, satisfied client base across Kenya and East Africa.
               </p>
 
               <p className="text-sm leading-relaxed mb-4">
                 The most common question from Kenyan traders is <strong>whether FBS is regulated in Kenya</strong>.
-                FBS is not licensed by the Kenyan Capital Markets Authority (CMA) — Kenyan clients are served
+                FBS is not licensed by the Kenyan Capital Markets Authority (CMA), Kenyan clients are served
                 under the IFSC (Belize) entity. While the parent group holds CySEC (Cyprus) and ASIC (Australia)
                 licences, these do not directly cover Kenyan accounts. This is worth knowing before you deposit,
                 though FBS has operated reliably across Africa since 2009.
               </p>
 
               <p className="text-sm leading-relaxed mb-6">
-                The <strong>FBS minimum deposit in Kenya</strong> is just $1 on the Cent account via M-Pesa —
+                The <strong>FBS minimum deposit in Kenya</strong> is just $1 on the Cent account via M-Pesa,
                 the lowest of any broker we review. The Standard account requires $100, which is the main
                 jump in entry cost. The <strong>FBS Cent account</strong> is particularly useful for beginners:
                 it operates in US cents rather than dollars, so $1 gives you 100 cents to trade with,
@@ -410,13 +275,13 @@ export default function FBSReview() {
             </section>
 
             {/* ── ACCOUNT TYPES ─────────────────────────────────────────── */}
-            <section id="accounts" className="p-6 rounded-2xl border border-white/10 bg-[#0D1B2E] overflow-hidden">
+            <section id="accounts" className="px-2 border border-white/10 bg-[#0D1B2E] overflow-hidden">
               <h2 className="text-white font-bold text-lg mb-4">FBS Kenya Account Types</h2>
               <div className="overflow-x-auto -mx-6 px-6">
-                <table className="w-full text-left text-sm min-w-125">
+                <table className="w-full text-left text-sm min-w-full">
                   <thead>
                     <tr className="text-gray-500 text-[10px] uppercase tracking-widest border-b border-white/5">
-                      <th className="pb-3">Type</th><th className="pb-3">Min Dep</th><th className="pb-3">Spread</th><th className="pb-3">Commission</th><th className="pb-3">Best For</th>
+                      <th className="pb-3">Type</th><th className="pb-3">Min Dep</th><th className="pb-3">Spread</th><th className="pb-3">Commission</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-white/5">
@@ -426,7 +291,6 @@ export default function FBSReview() {
                         <td className="py-4">{acc.minDeposit}</td>
                         <td className="py-4">{acc.spread}</td>
                         <td className="py-4 text-xs">{acc.commission}</td>
-                        <td className="py-4 text-xs text-gray-500">{acc.best}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -464,7 +328,7 @@ export default function FBSReview() {
                 <p className="py-3 text-sm leading-relaxed text-gray-400">
                   FBS supports multiple deposit and withdrawal methods for Kenyan traders, including M-Pesa,
                   Visa/Mastercard, Skrill, Neteller, and crypto (USDT). M-Pesa deposits are instant with a
-                  minimum of just $1 — the lowest M-Pesa entry point of any broker we have tested.
+                  minimum of just $1, the lowest M-Pesa entry point of any broker we have tested.
                 </p>
                 <img src="/fbsdeposit.png" alt="FBS Payment Methods" className="mt-4 rounded-lg border border-white/10 w-full" />
               </div>
@@ -526,7 +390,7 @@ export default function FBSReview() {
                 </div>
               </div>
               <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-lg text-center text-md hover:bg-[#b5953b] transition-all">
+                className="mt-6 block w-full bg-linear-to-r from-green-600 to-green-700 text-gray-100 font-bold py-3 rounded-lg text-center text-md hover:bg-[#b5953b] transition-all">
                 Open FBS Account →
               </a>
               <p className="text-[10px] text-gray-600 text-center mt-2">Min deposit: $1 via M-Pesa</p>
@@ -538,8 +402,8 @@ export default function FBSReview() {
       {/* ── MOBILE STICKY CTA ────────────────────────────────────────────── */}
       <div className="md:hidden fixed bottom-0 inset-x-0 z-30 bg-[#07101E]/95 backdrop-blur border-t border-white/10 p-3">
         <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-          className="flex items-center justify-center gap-2 w-full bg-amber-400 text-[#07101E] font-bold py-3 rounded-lg text-center text-sm">
-          Open FBS Account — $1 Min
+          className="flex items-center justify-center gap-2 w-full bg-linear-to-r from-green-600 to-green-700 text-gray-100 font-bold py-3 rounded-lg text-center text-sm">
+          Open FBS Account | $1 Min
         </a>
       </div>
     </div>

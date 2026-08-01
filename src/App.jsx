@@ -6,6 +6,7 @@ import { HelmetProvider } from "react-helmet-async";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
+import Kemboi from "./pages/Kemboi";
 
 // ─── Lazy-load Pages ─────────────────────────────────────────────────────────
 const BrokerList       = lazy(() => import("./pages/BrokerList"));
@@ -25,7 +26,7 @@ const JustMarkets      = lazy(() => import("./components/JustMarkets"));
 const HFM              = lazy(() => import("./components/HFM"));
 const XM               = lazy(() => import("./components/XM"));
 const FxPro            = lazy(() => import("./components/FxPro"));
-const FBS              = lazy(() => import("./components/FBS"));
+const FBS              = lazy(() => import("./FBS/FBS"));
 const FxPesa           = lazy(() => import("./components/FxPesa"));
 const FPMarkets        = lazy(() => import("./components/FpMarkets"));
 const Deriv            = lazy(() => import("./components/Deriv"));
@@ -107,6 +108,7 @@ export default function App() {
                 <Route path="/methodology" element={<Methodology />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/felix-kemboi" element={<Kemboi />} />
 
                 {/* ── Blog ── */}
                 <Route path="/blog" element={<Blog />} />
