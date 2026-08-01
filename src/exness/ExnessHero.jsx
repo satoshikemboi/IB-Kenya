@@ -136,7 +136,7 @@ export default function ExnessHero({ broker = defaultBroker }) {
               rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 text-gray-800 text-md font-semibold rounded-lg no-underline hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
             >
-              Create {broker.name} Account
+              Visit {broker.name}
               <span className="text-md font-bold">→</span>
             </a>
           </div>
