@@ -152,7 +152,7 @@ export default function ExnessReview() {
   ).toFixed(1);
 
   return (
-    <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30 pb-24 md:pb-0">
+    <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30 pb-12 md:pb-0">
       <Helmet>
         <title>Exness Kenya Review 2026 | M-Pesa, No Min Deposit & CMA Regulated</title>
         <meta name="description" content="Is Exness a good broker for Kenyan traders? Our 2026 review covers Exness M-Pesa deposits, minimum deposit in Kenya, CMA regulation, spreads from 0.0 pips, and how to open an Exness account." />
@@ -206,23 +206,23 @@ export default function ExnessReview() {
         />
 
         {/* ── QUICK NAV ────────────────────────────────────────────────── */}
-        <nav aria-label="Review sections" className="flex gap-2 overflow-x-auto mb-8 px-4 pb-1 [scrollbar-width:none]">
+        <nav aria-label="Review sections" className="flex gap-2 md:justify-center overflow-x-auto pt-4 mb-8 px-4 pb-1 [scrollbar-width:none]">
           {QUICK_NAV.map(item => (
             <a
               key={item.href}
               href={item.href}
-              className="shrink-0 text-xs px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:border-[#C9A84C]/40 transition-colors focus-visible:outline focus-visible:outline-[#C9A84C]"
+              className="shrink-0 text-xs px-3 md:px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-gray-400 hover:text-white hover:border-[#C9A84C]/40 transition-colors focus-visible:outline focus-visible:outline-[#C9A84C]"
             >
               {item.label}
             </a>
           ))}
         </nav>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="grid md:px-64 grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-2 space-y-8">
 
             {/* ── RATINGS BREAKDOWN ─────────────────────────────────────── */}
-            <section id="ratings" className="p-6 bg-[#0D1B2E]">
+            <section id="ratings" className="p-6 md:rounded-xl bg-[#0D1B2E]">
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-white font-bold text-lg flex items-center gap-2">
                   <span className="w-1 h-5 bg-amber-600 rounded-full"></span> Rating Breakdown
