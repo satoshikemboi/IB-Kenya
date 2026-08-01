@@ -369,7 +369,7 @@ export default function FBSReview() {
           <aside className="space-y-6">
             <div className="p-6 rounded-2xl border border-white/10 bg-[#0D1B2E] sticky top-24">
               <div className="flex items-center justify-center gap-3 mb-5 pb-5 border-b border-white/5">
-                <ScoreRing score={overallScore} size={72} />
+                <ScoreRing score={overallScore} size={96} />
                 <div>
                   <p className="text-white font-bold text-sm">Overall Score</p>
                   <p className="text-[10px] text-gray-500">Based on 5 categories</p>
