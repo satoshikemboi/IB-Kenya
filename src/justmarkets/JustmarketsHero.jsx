@@ -139,14 +139,6 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
                 Visit {broker.name}
                 <span className="text-md font-bold">→</span>
               </a>
-              <a
-                href={broker.affiliateLink}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-flex items-center px-4 py-2 border border-white/10 text-zinc-300 text-md font-semibold rounded-lg no-underline hover:bg-white/5 transition-all duration-200"
-              >
-                Try Demo
-              </a>
             </div>
           </div>
         </div>
@@ -154,7 +146,7 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
         {/* SEO copy — unchanged wording from the original review, only relocated */}
         <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400">
           JustMarkets Kenya is a fast-growing broker popular with both beginners and active traders.
-          With a $1 minimum deposit via M-Pesa, access to MT4, MT5 and cTrader, and FCA regulation
+          With a $5 minimum deposit via M-Pesa, access to MT4, MT5 and cTrader, and FCA regulation
           at group level, it offers strong value for Kenyan traders looking for low entry barriers
           without sacrificing platform quality.
         </p>
@@ -166,7 +158,7 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
           providing strong investor protection at the group level.
         </p>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          The <strong>JustMarkets minimum deposit in Kenya</strong> is just $1 on Standard accounts
+          The <strong>JustMarkets minimum deposit in Kenya</strong> is just $5 on Standard accounts
           via M-Pesa, making it one of the most accessible brokers available. Previously known as
           JustForex, the rebrand to JustMarkets came with expanded regulation and improved trading
           conditions across all account types.
@@ -186,7 +178,7 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
             width="1200"
             height="628"
             alt="JustMarkets - global trusted broker"
-            className="w-full h-74 max-w-4xl transform transition-transform duration-500 group-hover:scale-[1.02]"
+            className="w-full h-64 max-w-4xl transform transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />
           <div className="py-2 px-4 border-t border-white/5 flex justify-between items-center bg-black/20">

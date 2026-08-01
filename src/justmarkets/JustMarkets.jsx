@@ -122,7 +122,7 @@ export default function JustMarketsReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>JustMarkets Kenya Review 2026 | M-Pesa, $1 Min Deposit & cTrader</title>
+        <title>JustMarkets Kenya Review 2026 | High leverage broker?</title>
         <meta name="description" content="Is JustMarkets a good broker for Kenyan traders? Our 2026 review covers JustMarkets minimum deposit, M-Pesa support, MT4/MT5/cTrader platforms, FCA regulation, and whether JustMarkets is regulated in Kenya." />
         <link rel="canonical" href="https://fxbrokers.co.ke/brokers/justmarkets" />
 
@@ -182,10 +182,10 @@ export default function JustMarketsReview() {
               {/* Review */}
               <section className="p-4">
                 <h2 className="text-white font-semibold text-2xl pt-3 mb-4 flex items-center gap-2">
-                  <span className="w-1 h-5 bg-amber-400 rounded-full"></span> JustMarkets Kenya Review
+                  <span className="w-1 h-5 bg-blue-400 rounded-full"></span> JustMarkets Kenya Review
                 </h2>
-                <p className="text-md leading-relaxed mb-4">
-                  <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 font-semibold hover:underline">JustMarkets</a> is one of the best value-for-money brokers available to Kenyan traders. With a $1 minimum deposit via M-Pesa, three trading platforms including cTrader, and FCA regulation at the group level, it punches well above its weight. It's our top pick for traders who want low entry barriers without sacrificing platform quality.
+                <p className="text-sm mb-4">
+                  <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-blue-500 font-thin hover:underline">JustMarkets</a> is one of the best value-for-money brokers available to Kenyan traders. With a $1 minimum deposit via M-Pesa, three trading platforms including cTrader, and FCA regulation at the group level, it punches well above its weight. It's our top pick for traders who want low entry barriers without sacrificing platform quality.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4 border-t border-white/5">
                   <div>
@@ -348,7 +348,7 @@ export default function JustMarketsReview() {
                   href={AFFILIATE_LINK}
                   target="_blank"
                   rel="noopener noreferrer sponsored"
-                  className="mt-6 block w-full bg-linear-to-r from-blue-600 to-blue-700 text-gray-100 font-bold py-3 rounded-full text-center text-md hover:bg-amber-500 transition-all"
+                  className="mt-6 block w-full bg-linear-to-r from-blue-600 to-blue-700 text-gray-100 font-bold py-3 rounded-lg text-center text-md hover:bg-amber-500 transition-all"
                 >
                   Open JustMarkets Account →
                 </a>
