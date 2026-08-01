@@ -21,7 +21,7 @@ const BlogPost         = lazy(() => import("./pages/BlogPost"));
 const NotFound         = lazy(() => import("./pages/NotFound"));
 
 // ─── Broker-Specific Components ──────────────────────────────────────────────
-const Exness           = lazy(() => import("./components/Exness"));
+const Exness           = lazy(() => import("./exness/Exness"));
 const JustMarkets      = lazy(() => import("./components/JustMarkets"));
 const HFM              = lazy(() => import("./components/HFM"));
 const XM               = lazy(() => import("./components/XM"));
