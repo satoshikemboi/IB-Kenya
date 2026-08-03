@@ -46,6 +46,7 @@ const PAYMENT_METHODS = [
   { name: "Crypto (USDT)", time: "~20 min", fee: "Network", min: "$1" },
 ];
 
+// Visible FAQ content — unchanged from original (JSX, with affiliate links)
 const FAQS = [
   {
     q: <>How do I open an <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">FBS</a> account?</>,
@@ -81,6 +82,20 @@ const FAQS = [
   },
 ];
 
+// Plain-text mirror of FAQS, for FAQPage schema. Must match the visible FAQS
+// content above verbatim (Google requires structured data to match on-page
+// content) — keep these two in sync if you ever edit the FAQ copy.
+const FAQ_SCHEMA = [
+  { q: "How do I open an FBS account?", a: "Visit the FBS registration page, enter your email and choose your account type. Verify your identity with a national ID, then deposit as little as $1 via M-Pesa to start trading on the Cent account." },
+  { q: "Is FBS safe for Kenyan traders?", a: "FBS holds a CySEC licence (Tier 1) at the group level, and Kenyan clients are served through the IFSC (Belize) entity. While not the strongest regulatory framework, FBS has operated since 2009 with a strong reputation across Africa." },
+  { q: "Can I deposit and withdraw with M-Pesa?", a: "Yes. FBS fully supports M-Pesa for both deposits and withdrawals in Kenya. The minimum deposit is just $1, making it the lowest M-Pesa entry point of any broker on our list." },
+  { q: "What is the minimum deposit for FBS?", a: "The FBS Cent account requires just $1 to open, making it the most accessible account in our entire broker list. The Standard account requires $100, and the ECN account requires $1,000." },
+  { q: "What is the FBS Cent account?", a: "The FBS Cent account works in US cents rather than dollars, so a $1 deposit gives you 100 cents to trade with. This dramatically reduces risk for beginners and is ideal for testing strategies with real money before scaling up." },
+  { q: "What leverage does FBS offer?", a: "FBS offers leverage up to 1:3000 on Cent and Standard accounts — one of the highest available. This amplifies both potential profits and losses, so should only be used carefully." },
+  { q: "Are there inactivity fees?", a: "FBS charges an inactivity fee of $5 per month after 90 consecutive days of no trading activity. To avoid this, simply log in and place a trade at least once every 90 days." },
+  { q: "Is FBS regulated by the CMA in Kenya?", a: "FBS is not regulated by the Kenyan Capital Markets Authority (CMA). Kenyan clients are served through the IFSC (Belize) entity. While the parent group holds CySEC and ASIC licences, these do not directly cover Kenyan clients." },
+];
+
 const QUICK_NAV = [
   { href: "#ratings", label: "Ratings" },
   { href: "#review", label: "Full Review" },
@@ -89,6 +104,12 @@ const QUICK_NAV = [
   { href: "#regulation", label: "Regulation" },
   { href: "#faq", label: "FAQ" },
 ];
+
+// Bump DATE_MODIFIED whenever you materially edit page content — feeds
+// dateModified in the Review schema below. Set DATE_PUBLISHED to this page's
+// actual original publish date once (don't change it again after).
+const DATE_PUBLISHED = "2026-01-01"; // TODO: replace with real original publish date
+const DATE_MODIFIED = "2026-08-03";
 
 // ─── Icons (inline, no external deps) ─────────────────────────────────────────
 function CheckIcon() {
@@ -135,7 +156,14 @@ function FaqItem({ q, a }) {
         <span className="text-white font-medium text-sm">{q}</span>
         <span className={`text-[#C9A84C] text-lg leading-none shrink-0 transition-transform duration-200 ${open ? "rotate-45" : ""}`}>+</span>
       </button>
-      {open && <div className="px-4 pb-4 text-gray-400 text-sm border-t border-white/5 pt-3 leading-relaxed">{a}</div>}
+      {/* SEO fix only: content now stays in the DOM at all times and is hidden
+          with the `hidden` class (display:none) instead of being unmounted.
+          Visually and interactively this is identical to before — same instant
+          show/hide, no animation added — but crawlers can now read the answer
+          text without needing to click the accordion open. */}
+      <div className={`px-4 pb-4 text-gray-400 text-sm border-t border-white/5 pt-3 leading-relaxed ${open ? "" : "hidden"}`}>
+        {a}
+      </div>
     </div>
   );
 }
@@ -146,47 +174,62 @@ export default function FBSReview() {
     Object.values(SCORES).reduce((sum, v) => sum + v, 0) / Object.values(SCORES).length
   ).toFixed(1);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Review",
+        "name": "FBS Kenya Review 2026",
+        "reviewBody": "FBS is one of the most popular brokers in Kenya thanks to its $1 minimum deposit Cent account, instant M-Pesa support, and 1:3000 leverage. Kenyan clients are served under the IFSC (Belize) entity.",
+        "datePublished": DATE_PUBLISHED,
+        "dateModified": DATE_MODIFIED,
+        "reviewRating": {
+          "@type": "Rating",
+          "ratingValue": overallScore,
+          "bestRating": "10",
+        },
+        "author": { "@type": "Person", "name": "Felix" },
+        "publisher": { "@type": "Organization", "name": "FxBrokers Kenya", "url": "https://fxbrokers.co.ke" },
+        "itemReviewed": {
+          "@type": "FinancialService",
+          "name": "FBS",
+          "url": "https://fbs.com",
+          "description": "Global forex broker popular in Kenya for its $1 minimum deposit Cent account and M-Pesa support.",
+        },
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": FAQ_SCHEMA.map(f => ({
+          "@type": "Question",
+          "name": f.q,
+          "acceptedAnswer": { "@type": "Answer", "text": f.a },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fxbrokers.co.ke/" },
+          { "@type": "ListItem", "position": 2, "name": "Brokers", "item": "https://fxbrokers.co.ke/brokers" },
+          { "@type": "ListItem", "position": 3, "name": "FBS", "item": "https://fxbrokers.co.ke/brokers/fbs" },
+        ],
+      },
+    ],
+  };
+
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30 pb-24 md:pb-0">
       <Helmet>
-  <title>FBS Kenya Review 2026 | $1 Min Deposit, M-Pesa & Cent Account</title>
-  <meta name="description" content="Is FBS a good broker for Kenyan traders? Our 2026 review covers FBS minimum deposit ($1), M-Pesa support, the FBS Cent account, regulation, and whether FBS is regulated in Kenya by the CMA." />
-  <link rel="canonical" href="https://fxbrokers.co.ke/brokers/fbs" />
+        <title>FBS Kenya Review 2026: $1 Minimum Deposit, Cent Account & M-Pesa</title>
+        <meta name="description" content="FBS Kenya review: $1 minimum deposit via M-Pesa, the FBS Cent account explained, leverage up to 1:3000, and whether FBS is CMA-regulated in Kenya." />
+        <link rel="canonical" href="https://fxbrokers.co.ke/brokers/fbs" />
 
-  <meta property="og:title" content="FBS Kenya Review 2026 | $1 Cent Account & M-Pesa" />
-  <meta property="og:description" content="FBS Kenya review — $1 minimum deposit via M-Pesa, Cent account for beginners, up to 1:3000 leverage, CySEC regulated at group level." />
-  <meta property="og:url" content="https://fxbrokers.co.ke/brokers/fbs" />
-  <meta property="og:type" content="article" />
+        <meta property="og:title" content="FBS Kenya Review 2026: $1 Minimum Deposit & Cent Account" />
+        <meta property="og:description" content="FBS Kenya review — $1 minimum deposit via M-Pesa, Cent account for beginners, up to 1:3000 leverage, CySEC regulated at group level." />
+        <meta property="og:url" content="https://fxbrokers.co.ke/brokers/fbs" />
+        <meta property="og:type" content="article" />
 
-  <script type="application/ld+json">{`
-    {
-      "@context": "https://schema.org",
-      "@type": "Review",
-      "name": "FBS Kenya Review 2026",
-      "reviewBody": "FBS is one of the most popular brokers in Kenya thanks to its $1 minimum deposit Cent account, instant M-Pesa support, and 1:3000 leverage. Kenyan clients are served under the IFSC (Belize) entity.",
-      "reviewRating": {
-        "@type": "Rating",
-        "ratingValue": "4.2",
-        "bestRating": "5"
-      },
-      "author": {
-        "@type": "Person",
-        "name": "Felix"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "FxBrokers Kenya",
-        "url": "https://fxbrokers.co.ke"
-      },
-      "itemReviewed": {
-        "@type": "FinancialService",
-        "name": "FBS",
-        "url": "https://fbs.com",
-        "description": "Global forex broker popular in Kenya for its $1 minimum deposit Cent account and M-Pesa support."
-      }
-    }
-  `}</script>
-</Helmet>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      </Helmet>
 
       <main className="max-w-full mx-auto pt-10 pb-12">
 
@@ -330,7 +373,7 @@ export default function FBSReview() {
                   Visa/Mastercard, Skrill, Neteller, and crypto (USDT). M-Pesa deposits are instant with a
                   minimum of just $1, the lowest M-Pesa entry point of any broker we have tested.
                 </p>
-                <img src="/fbsdeposit.png" alt="FBS Payment Methods" className="mt-4 rounded-lg border border-white/10 w-full" />
+                <img src="/fbsdeposit.png" alt="FBS Kenya deposit and withdrawal payment methods including M-Pesa" className="mt-4 rounded-lg border border-white/10 w-full" />
               </div>
             </section>
 

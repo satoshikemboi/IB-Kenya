@@ -101,7 +101,7 @@ export default function FBSHero({ broker = defaultBroker }) {
           <div className="w-24 h-24 rounded-2xl flex items-center justify-center bg-white/4 border border-white/8 shrink-0 overflow-hidden">
             <img
               src={broker.logo}
-              alt={`${broker.name} Logo`}
+              alt={`${broker.name} Kenya broker logo`}
               className="w-full h-full object-contain"
               onError={(e) => {
                 e.target.style.display = "none";
@@ -113,9 +113,9 @@ export default function FBSHero({ broker = defaultBroker }) {
           {/* Info */}
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 flex-wrap mb-2">
-              <h1 className="font-playfair text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-zinc-50">
-                {broker.name} Kenya Review 2026 | Best $1 Broker?
-              </h1>
+            <h1 className="font-playfair text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-zinc-50">
+  {broker.name} Kenya Review 2026: $1 Minimum Deposit & Cent Account
+</h1>
               <span className="text-[0.62rem] font-bold px-2.5 py-0.5 rounded-full bg-linear-to-r from-amber-600 to-amber-400 text-black tracking-wide">
                 $1 Min Deposit
               </span>
@@ -149,7 +149,7 @@ export default function FBSHero({ broker = defaultBroker }) {
         </p>
       </div>
 
-      {/* Partner offer banner */}
+      {/* Affiliate Banner */}
       <div className="flex justify-center items-center my-4 px-4">
         <a
           href={AFFILIATE_LINK}
@@ -159,7 +159,7 @@ export default function FBSHero({ broker = defaultBroker }) {
         >
           <img
             src="/fbsbanner.png"
-            alt="FBS - Trade from $1 with M-Pesa"
+            alt="FBS Kenya - trade from $1 minimum deposit via M-Pesa"
             className="w-full h-auto max-w-3xl transform transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />
