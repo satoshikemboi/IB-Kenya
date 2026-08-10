@@ -419,13 +419,6 @@ export default function Home() {
           <div className="relative max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16">
             {/* ── LEFT COLUMN ── */}
             <div className="flex flex-col">
-              {/* Trust pill */}
-              <div className="inline-flex self-start items-center gap-2 bg-amber-400/8 border border-amber-400/20 rounded-full px-4 py-1.5 mb-7">
-                <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse" />
-                <span className="text-amber-400 text-xs font-semibold uppercase">
-                  Kenya's Most Trusted Forex Review Site
-                </span>
-              </div>
 
               <h1 className="text-5xl sm:text-6xl font-bold text-white leading-[1.08] tracking-tight mb-6"
                 style={{ fontFamily: "'Sora', 'DM Sans', sans-serif", letterSpacing: "-0.02em" }}>
@@ -658,7 +651,7 @@ export default function Home() {
               <p className="relative text-slate-400 text-sm mb-7 max-w-md mx-auto leading-relaxed">
                 Answer 3 quick questions and we'll match you with the best broker for your trading style and budget.
               </p>
-              <Link to="/broker-finder"
+              <Link to="/brokers"
                 className="relative inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold px-8 py-3.5 rounded-xl transition-colors duration-200 text-base">
                 Find My Broker — Free
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

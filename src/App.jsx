@@ -31,6 +31,7 @@ const FxPesa           = lazy(() => import("./components/FxPesa"));
 const FPMarkets        = lazy(() => import("./components/FpMarkets"));
 const Deriv            = lazy(() => import("./components/Deriv"));
 const Fusion           = lazy(() => import("./components/Fusion"));
+const HowToSignUp      = lazy(() => import("./exness/HowToSignUp"));
 
 // ─── Google Analytics Tracker ────────────────────────────────────────────────
 /**
@@ -94,6 +95,7 @@ export default function App() {
                 <Route path="/brokers/fpmarkets" element={<FPMarkets />} />
                 <Route path="/brokers/deriv" element={<Deriv />} />
                 <Route path="/brokers/fusion-markets" element={<Fusion />} />
+                <Route path="/how-to-sign-up-exness-kenya" element={<HowToSignUp />} />
 
                 {/* Dynamic Review Route (Fallback for other slugs) */}
                 <Route path="/brokers/:slug" element={<BrokerReview />} />

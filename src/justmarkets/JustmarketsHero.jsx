@@ -101,7 +101,7 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
           <div className="w-24 h-24 rounded-2xl flex items-center justify-center bg-white/4 border border-white/8 shrink-0 overflow-hidden">
             <img
               src={broker.logo}
-              alt={`${broker.name} Logo`}
+              alt={`${broker.name} logo - forex broker review Kenya`}
               className="w-full h-full object-contain"
               onError={(e) => {
                 e.target.style.display = "none";
@@ -114,10 +114,10 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-3 flex-wrap mb-2">
               <h1 className="font-playfair text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-zinc-50">
-                {broker.name} Kenya Review 2026 | High leverage Broker?
+                {broker.name} Kenya Review 2026: Is It Regulated & Legit?
               </h1>
               <span className="text-[0.62rem] font-bold px-2.5 py-0.5 rounded-full bg-linear-to-r from-amber-600 to-amber-400 text-black tracking-wide">
-                High leverage broker
+                Up to 1:3000 Leverage
               </span>
             </div>
 
@@ -177,7 +177,7 @@ export default function JustmarketsHero({ broker = defaultBroker }) {
             src="https://justmarkets.com/uploads/promo_materials/jm-banner-global-trusted-broker-en-1200x628.png"
             width="1200"
             height="628"
-            alt="JustMarkets - global trusted broker"
+            alt="JustMarkets promotional banner - trusted global forex broker for Kenyan traders"
             className="w-full h-64 max-w-4xl transform transition-transform duration-500 group-hover:scale-[1.02]"
             loading="lazy"
           />

@@ -50,36 +50,101 @@ const FAQS = [
   {
     q: <>How do I open a <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> account?</>,
     a: <>Visit the <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets registration page</a>, fill in your email and country, verify your identity with a national ID or passport, submit your proof of residency(Use KRA pin for faster verification) .Deposit as little as $10 via M-Pesa to start trading.</>,
+    qText: "How do I open a JustMarkets account?",
+    aText: "Visit the JustMarkets registration page, fill in your email and country, verify your identity with a national ID or passport, and submit your proof of residency (use your KRA PIN for faster verification). Deposit as little as $10 via M-Pesa to start trading.",
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> safe for Kenyan traders?</>,
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is regulated by the FCA (UK) and ASIC (Australia) which are two of the world's most stringent regulators. Client funds are held in segregated accounts and the broker provides negative balance protection.</>,
+    qText: "Is JustMarkets safe for Kenyan traders?",
+    aText: "JustMarkets is regulated by the FCA (UK) and ASIC (Australia), two of the world's most stringent regulators. Client funds are held in segregated accounts and the broker provides negative balance protection.",
   },
   {
     q: "Does JustMarkets support M-Pesa deposits and withdrawals?",
     a: <>Yes. <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> supports M-Pesa deposits and withdrawals for Kenyan traders. Deposits are typically instant and the minimum is just $10, making it one of the most accessible brokers in Kenya.</>,
+    qText: "Does JustMarkets support M-Pesa deposits and withdrawals?",
+    aText: "Yes. JustMarkets supports M-Pesa deposits and withdrawals for Kenyan traders. Deposits are typically instant and the minimum is just $10, making it one of the most accessible brokers in Kenya.",
   },
   {
     q: <>What is the minimum deposit for <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a>?</>,
     a: <>The minimum deposit is just $5 for Standard and Standard Cent accounts via M-Pesa. Professional accounts (Raw Spread, Pro) require a minimum of $200.</>,
+    qText: "What is the minimum deposit for JustMarkets?",
+    aText: "The minimum deposit is just $5 for Standard and Standard Cent accounts via M-Pesa. Professional accounts (Raw Spread, Pro) require a minimum of $200.",
   },
   {
     q: <>What leverage does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-[#C9A84C] hover:underline">JustMarkets</a> offer?</>,
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> offers leverage up to 1:3000 on Standard accounts, among the highest available. Professional accounts are capped at lower levels per regulatory requirements.</>,
+    qText: "What leverage does JustMarkets offer?",
+    aText: "JustMarkets offers leverage up to 1:3000 on Standard accounts, among the highest available. Professional accounts are capped at lower levels per regulatory requirements.",
   },
   {
     q: "Which platforms are supported?",
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader, a major advantage over many brokers that skip cTrader. All platforms are available on desktop, web, and mobile.</>,
+    qText: "Which platforms are supported?",
+    aText: "JustMarkets supports MetaTrader 4 (MT4), MetaTrader 5 (MT5), and cTrader, a major advantage over many brokers that skip cTrader. All platforms are available on desktop, web, and mobile.",
   },
   {
     q: "Are there withdrawal fees in Justmarkets?",
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> does not charge internal withdrawal fees for M-Pesa or card withdrawals. Standard mobile money charges from Safaricom may apply on the M-Pesa side.</>,
+    qText: "Are there withdrawal fees on JustMarkets?",
+    aText: "JustMarkets does not charge internal withdrawal fees for M-Pesa or card withdrawals. Standard mobile money charges from Safaricom may apply on the M-Pesa side.",
   },
   {
     q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> regulated by the CMA in Kenya?</>,
     a: <><a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is not currently licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are served under the FSC (Mauritius) entity. The broker is, however, overseen by the FCA and ASIC at a group level.</>,
+    qText: "Is JustMarkets regulated by the CMA in Kenya?",
+    aText: "JustMarkets is not currently licensed by the Kenyan Capital Markets Authority (CMA). Kenyan clients are served under the FSC (Mauritius) entity. The broker is, however, overseen by the FCA and ASIC at a group level.",
+  },
+  {
+    q: <>What is the minimum withdrawal on <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a>?</>,
+    a: <>There isn't one fixed minimum — it depends on the payment method. M-Pesa withdrawals generally start from around $5, in line with JustMarkets' published limits for local mobile money in Kenya, while card and bank transfer withdrawals typically require a higher minimum (often $10 or more). Check the Withdrawal tab in your Personal Area for the exact current limit on your chosen method.</>,
+    qText: "What is the minimum withdrawal on JustMarkets?",
+    aText: "There isn't one fixed minimum — it depends on the payment method. M-Pesa withdrawals generally start from around $5, in line with JustMarkets' published limits for local mobile money in Kenya, while card and bank transfer withdrawals typically require a higher minimum (often $10 or more). Check the Withdrawal tab in your Personal Area for the exact current limit on your chosen method.",
+  },
+  {
+    q: <>Is <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> legit?</>,
+    a: <>Yes — <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> is a legitimate, established broker serving over 3 million traders in 160+ countries, regulated at group level by the FCA (UK), ASIC (Australia), CySEC (Cyprus) and the FSC (Mauritius), with segregated client funds and negative balance protection. As noted above, it isn't licensed by Kenya's CMA specifically, so Kenyan clients trade under the FSC-regulated entity rather than a locally licensed one — worth knowing, though it doesn't affect the broker's overall legitimacy.</>,
+    qText: "Is JustMarkets legit?",
+    aText: "Yes — JustMarkets is a legitimate, established broker serving over 3 million traders in 160+ countries, regulated at group level by the FCA (UK), ASIC (Australia), CySEC (Cyprus) and the FSC (Mauritius), with segregated client funds and negative balance protection. It isn't licensed by Kenya's CMA specifically, so Kenyan clients trade under the FSC-regulated entity rather than a locally licensed one — worth knowing, though it doesn't affect the broker's overall legitimacy.",
+  },
+  {
+    q: <>Does <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored" className="text-amber-400 hover:underline">JustMarkets</a> offer copy trading?</>,
+    a: <>Yes. JustMarkets offers copy trading through its dedicated JustMarkets Copytrading app (available on Android and iOS), which lets you automatically mirror the trades of professional traders in equal, double, or triple proportion. New copiers get a 7-day free trial with zero commission before any performance fee applies.</>,
+    qText: "Does JustMarkets offer copy trading?",
+    aText: "Yes. JustMarkets offers copy trading through its dedicated JustMarkets Copytrading app (available on Android and iOS), which lets you automatically mirror the trades of professional traders in equal, double, or triple proportion. New copiers get a 7-day free trial with zero commission before any performance fee applies.",
+  },
+  {
+    q: "How do I log in to my JustMarkets account?",
+    a: <>If you already have a JustMarkets account, log in directly at the official <a href="https://justmarkets.com/login" target="_blank" rel="noopener noreferrer" className="text-amber-400 hover:underline">JustMarkets Personal Area</a> using your registered email and password — these are separate from your MT4/MT5 trading credentials. Don't have an account yet? Use our link above to register instead.</>,
+    qText: "How do I log in to my JustMarkets account?",
+    aText: "If you already have a JustMarkets account, log in directly at the official JustMarkets Personal Area (justmarkets.com/login) using your registered email and password — these are separate from your MT4/MT5 trading credentials. If you don't have an account yet, use the registration link on this page instead.",
   },
 ];
+
+// FAQPage schema — generated from FAQS so it always mirrors the visible accordion content
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": FAQS.map(f => ({
+    "@type": "Question",
+    "name": f.qText,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": f.aText,
+    },
+  })),
+};
+
+// BreadcrumbList schema — mirrors the visible breadcrumb in the Hero component
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://fxbrokers.co.ke/" },
+    { "@type": "ListItem", "position": 2, "name": "Brokers", "item": "https://fxbrokers.co.ke/brokers" },
+    { "@type": "ListItem", "position": 3, "name": "JustMarkets", "item": "https://fxbrokers.co.ke/brokers/justmarkets" },
+  ],
+};
 
 // ─── Components ───────────────────────────────────────────────────────────────
 
@@ -105,9 +170,7 @@ function FaqItem({ q, a }) {
         <span className="text-white font-medium text-sm">{q}</span>
         <span className={`text-[#C9A84C] transition-transform ${open ? "rotate-45" : ""}`}>+</span>
       </button>
-      {open && (
-        <div className="px-4 pb-4 text-gray-400 text-sm border-t border-white/5 pt-3 leading-relaxed">{a}</div>
-      )}
+      <div className={`px-4 pb-4 text-gray-400 text-sm border-t border-white/5 pt-3 leading-relaxed ${open ? "" : "hidden"}`}>{a}</div>
     </div>
   );
 }
@@ -122,12 +185,12 @@ export default function JustMarketsReview() {
   return (
     <div className="min-h-screen bg-[#07101E] text-gray-300 selection:bg-[#C9A84C]/30">
       <Helmet>
-        <title>JustMarkets Kenya Review 2026 | High leverage broker?</title>
-        <meta name="description" content="Is JustMarkets a good broker for Kenyan traders? Our 2026 review covers JustMarkets minimum deposit, M-Pesa support, MT4/MT5/cTrader platforms, FCA regulation, and whether JustMarkets is regulated in Kenya." />
+        <title>JustMarkets Kenya Review 2026: Is It Regulated & Legit?</title>
+        <meta name="description" content="Is JustMarkets regulated in Kenya and is it legit? 2026 review: FCA/ASIC regulation, minimum deposit & withdrawal, and M-Pesa support for Kenyan traders." />
         <link rel="canonical" href="https://fxbrokers.co.ke/brokers/justmarkets" />
 
-        <meta property="og:title" content="JustMarkets Kenya Review 2026 | M-Pesa & cTrader" />
-        <meta property="og:description" content="JustMarkets Kenya review — $1 minimum deposit, M-Pesa support, MT4, MT5 and cTrader platforms, FCA & ASIC regulated." />
+        <meta property="og:title" content="JustMarkets Kenya Review 2026: Regulated & Legit?" />
+        <meta property="og:description" content="JustMarkets Kenya review — is it regulated and legit? Covers FCA/ASIC licensing, minimum deposit & withdrawal, M-Pesa support, and copy trading." />
         <meta property="og:url" content="https://fxbrokers.co.ke/brokers/justmarkets" />
         <meta property="og:type" content="article" />
 
@@ -139,8 +202,8 @@ export default function JustMarketsReview() {
             "reviewBody": "JustMarkets is a fast-growing broker popular with Kenyan traders, offering a $1 minimum deposit, M-Pesa support, MT4, MT5 and cTrader platforms, and FCA regulation at group level.",
             "reviewRating": {
               "@type": "Rating",
-              "ratingValue": "4.7",
-              "bestRating": "5"
+              "ratingValue": "${overallScore}",
+              "bestRating": "10"
             },
             "author": {
               "@type": "Person",
@@ -160,6 +223,9 @@ export default function JustMarketsReview() {
             }
           }
         `}</script>
+
+        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
+        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
       </Helmet>
 
       <main className="max-w-full mx-auto pt-10 pb-12">
