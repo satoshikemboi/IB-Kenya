@@ -446,7 +446,7 @@ export default function FBSReview() {
       <div className="md:hidden fixed bottom-0 inset-x-0 z-30 bg-[#07101E]/95 backdrop-blur border-t border-white/10 p-3">
         <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
           className="flex items-center justify-center gap-2 w-full bg-linear-to-r from-green-600 to-green-700 text-gray-100 font-bold py-3 rounded-lg text-center text-sm">
-          Open FBS Account | $1 Min
+          Create FBS Account | $1 Min
         </a>
       </div>
     </div>

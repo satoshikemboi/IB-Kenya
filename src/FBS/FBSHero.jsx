@@ -135,7 +135,7 @@ export default function FBSHero({ broker = defaultBroker }) {
               rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-4 py-2 bg-linear-to-r from-green-600 to-green-700 text-gray-100 text-md font-semibold rounded-lg no-underline hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
             >
-              Create {broker.name} Account
+              Open Free {broker.name} Account
               <span className="text-md font-bold">→</span>
             </a>
           </div>
