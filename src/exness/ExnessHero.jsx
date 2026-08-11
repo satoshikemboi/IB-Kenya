@@ -136,7 +136,7 @@ export default function ExnessHero({ broker = defaultBroker }) {
               rel="noopener noreferrer sponsored"
               className="inline-flex items-center gap-2 px-4 py-2 bg-amber-500 text-gray-800 text-md font-semibold rounded-lg no-underline hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
             >
-              Visit {broker.name}
+              Create {broker.name} Account
               <span className="text-md font-bold">→</span>
             </a>
           </div>
@@ -147,7 +147,7 @@ export default function ExnessHero({ broker = defaultBroker }) {
           Exness Kenya offers the lowest barrier to entry of any broker on our list, with no minimum
           deposit and instant 24/7 M-Pesa deposits and withdrawals. Regulated by the FCA, CySEC, and
           Kenya's own Capital Markets Authority (CMA), Exness pairs local accessibility with top-tier
-          international oversight — our #1 pick for Kenyan traders in 2026.
+          international oversight, our #1 pick for Kenyan traders in 2026.
         </p>
         <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400">
            At Exness, over 98% of withdrawals are processed automatically. "Fastest withdrawals" refers to a comparison of Exness’ withdrawal processing time vs. three other brokers, last updated on 7 May 2025. Processing times may vary depending on the chosen payment method.
