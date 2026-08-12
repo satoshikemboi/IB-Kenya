@@ -6,42 +6,6 @@ import ForexGuides from "../components/ForexGuides";
 /* ─── Data ─────────────────────────────────────────────────────────────────── */
 
 const CATEGORIES = {
-  "top-10-forex-brokers-in-kenya": {
-    title: "Top 10 Forex Brokers in Kenya",
-    metaTitle: "Top 10 Forex Brokers in Kenya 2026 — Ranked & Reviewed",
-    metaDesc: "Discover the top 10 forex brokers in Kenya for 2026, ranked by regulation, spreads, M-Pesa support, and trading conditions. Updated by our expert team.",
-    intro: "Here is our expert ranking of the top 10 forex brokers available to Kenyan traders in 2026, based on hands-on testing, CMA regulation verification, M-Pesa deposit testing, and real spread analysis. All brokers listed are either CMA-licensed or regulated by Tier-1 authorities including the FCA, ASIC, and CySEC. We update this list every quarter.",
-    top10: [
-      { rank: 1,  name: "Exness",          slug: "exness",       note: "Highest trading volume globally; CMA regulated" },
-      { rank: 2,  name: "XM Group",         slug: "xm",           note: "Best for beginners; low $5 minimum deposit" },
-      { rank: 3,  name: "HFM",              slug: "hfm",          note: "CMA regulated; ultra-low spreads from 0.0 pips" },
-      { rank: 4,  name: "JustMarkets",      slug: "justmarkets",  note: "Competitive spreads; M-Pesa support" },
-      { rank: 5,  name: "FBS",              slug: "fbs",          note: "Lowest minimum deposit at $1" },
-      { rank: 6,  name: "FxPro",            slug: "fxpro",        note: "Multi-platform: MT4, MT5, cTrader & more" },
-      { rank: 7,  name: "FxPesa",           slug: "fxpesa",       note: "CMA licence no. 107; built for Kenyan traders" },
-      { rank: 8,  name: "FP Markets",       slug: "fpmarkets",    note: "CMA licence no. 193; strong customer support" },
-      { rank: 9,  name: "Deriv",            slug: "deriv",        note: "CMA licensed; 24/7 trade on synthetic indices" },
-      { rank: 10, name: "Fusion Markets",   slug: "fusion-markets", note: "Lowest spreads from 0.2 pips" },
-    ],
-    faqs: [
-      {
-        question: "What are the top 10 forex brokers by trading volume in Kenya?",
-        answer: "Based on CMA registration and global trading volume data, the top forex brokers by volume available in Kenya include Exness, XM Group, HFM, IC Markets, FP Markets, JustMarkets, FBS, FxPro, FxPesa, and Windsor Brokers.",
-      },
-      {
-        question: "Which forex brokers are regulated by the CMA in Kenya?",
-        answer: "The Capital Markets Authority (CMA) has licensed several brokers including Exness, HFM, Windsor Brokers, FxPesa, FP Markets, and IC Markets.",
-      },
-      {
-        question: "Which top-10 brokers accept M-Pesa deposits?",
-        answer: "Exness, XM Group, HFM, JustMarkets, FBS, Deriv, and FxPesa all support M-Pesa deposits and withdrawals in Kenya.",
-      },
-      {
-        question: "What is the minimum deposit for the top brokers in Kenya?",
-        answer: "Minimum deposits vary: FBS starts at $1, Exness has no minimum on standard accounts, and XM/HFM start at $5. Professional ECN accounts typically require $100–$200.",
-      },
-    ],
-  },
 
   "best-forex-brokers-kenya": {
     title: "Best Forex Brokers in Kenya",
@@ -192,7 +156,6 @@ const BROKER_SNIPPETS = {
 };
 
 const CATEGORY_META = {
-  "top-10-forex-brokers-in-kenya": { desc: "Our definitive ranking of the 10 best forex brokers available to Kenyan traders in 2026." },
   "best-forex-brokers-kenya":      { desc: "Our top-ranked picks for Kenyan traders, tested on spreads, regulation & M-Pesa support." },
   "mpesa-brokers":                 { desc: "Deposit and withdraw instantly using M-Pesa. No bank account needed." },
   "lowest-spread-brokers":         { desc: "Raw and ECN accounts starting from 0.0 pips. Pay less on every trade." },
@@ -225,53 +188,6 @@ function AccordionItem({ question, answer }) {
       {open && (
         <p className="text-gray-400 text-sm leading-relaxed pb-5 -mt-1">{answer}</p>
       )}
-    </div>
-  );
-}
-
-function Top10List({ top10 }) {
-  return (
-    <div className="md:bg-[#0a1628] md:border md:border-white/8 md:rounded-2xl overflow-hidden mb-8">
-      <div className="px-6 py-5 border-b border-white/8 flex items-center justify-between">
-        <div>
-          <p className="text-[10px] font-semibold uppercase tracking-widest text-[#C9A84C]/70 mb-1">Expert Ranking · 2026</p>
-          <h2 className="text-white font-bold text-lg leading-tight">Top 10 Forex Brokers in Kenya</h2>
-        </div>
-        <span className="hidden sm:flex items-center gap-1.5 text-[10px] font-medium text-emerald-400/80 bg-emerald-500/8 border border-emerald-500/15 rounded-full px-3 py-1">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse inline-block" />
-          Updated Mar 2026
-        </span>
-      </div>
-      <ol className="divide-y divide-white/5">
-        {top10.map((item) => (
-          <li key={item.rank} className="flex items-center gap-4 px-3 py-3.5 hover:bg-white/2 transition-colors group">
-            <span className={`text-sm font-bold w-6 shrink-0 tabular-nums ${item.rank <= 3 ? "text-[#C9A84C]" : "text-gray-600"}`}>
-              {item.rank}.
-            </span>
-            <div className="flex-1 min-w-0">
-              {item.slug ? (
-                <Link
-                  to={`/brokers/${item.slug}`}
-                  className="text-sm font-semibold text-[#7eb8d4] hover:text-[#C9A84C] underline underline-offset-2 decoration-[#7eb8d4]/30 hover:decoration-[#C9A84C]/50 transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ) : (
-                <span className="text-sm font-semibold text-gray-300">{item.name}</span>
-              )}
-              {item.note && (
-                <span className="text-gray-600 text-xs ml-2 sm:inline">— {item.note}</span>
-              )}
-            </div>
-            {item.slug && (
-              <span className="text-gray-700 group-hover:text-[#C9A84C] transition-colors text-xs shrink-0">→</span>
-            )}
-          </li>
-        ))}
-      </ol>
-      <p className="text-[11px] text-gray-700 px-6 py-3 border-t border-white/5">
-        Rankings based on CMA regulation, spreads, M-Pesa support, and platform quality.
-      </p>
     </div>
   );
 }
