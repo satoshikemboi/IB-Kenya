@@ -262,33 +262,32 @@ export default function ExnessHero({ broker = defaultBroker }) {
       </div>
 
       {/* Partner offer banner */}
-      <div className="flex justify-center items-center my-4 px-4">
-        <a
-          href={AFFILIATE_LINK}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="group block overflow-hidden rounded-lg border border-white/10 bg-[#0d1117] shadow-2xl transition-all hover:border-yellow-500/30"
-        >
-          <img
-            src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png"
-            width="1200"
-            height="628"
-            alt="Exness - take control of your trades"
-            className="w-full h-auto max-w-3xl transform transition-transform duration-500 group-hover:scale-[1.02]"
-            loading="lazy"
-          />
+<div className="max-w-4xl mx-auto px-[5vw] pb-8">
+  <a
+    href={AFFILIATE_LINK}
+    target="_blank"
+    rel="noopener noreferrer sponsored"
+    className="group block w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d1117] shadow-2xl transition-all hover:border-yellow-500/30"
+  >
+    <img
+      src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png"
+      width="1200"
+      height="628"
+      alt="Exness - Take control of your trades"
+      className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
+    />
 
-          <div className="py-2 px-4 border-t border-white/5 flex justify-between items-center bg-black/20">
-            <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">
-              Partner Offer
-            </span>
+    <div className="py-2 px-4 border-t border-white/5 flex justify-between items-center bg-black/20">
+      <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">
+        Partner Offer
+      </span>
 
-            <span className="text-[10px] text-zinc-500">
-              Exness Ltd.
-            </span>
-          </div>
-        </a>
-      </div>
+      <span className="text-[10px] text-zinc-500">
+        Exness Ltd.
+      </span>
+    </div>
+  </a>
+</div>
     </div>
   );
 }
