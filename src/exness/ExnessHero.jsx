@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import Author from "../components/Author";
 
-export const AFFILIATE_LINK = "https://one.exnessonelink.com/a/1sh0vxrgqd";
-export const BROKERPAGE_LINK = "https://www.exnesspromo.com/en/trade-on-the-go-app/?partner_id=1sh0vxrgqd";
+export const AFFILIATE_LINK = "https://one.exnessonelink.com/a/ggaswwew8a";
+export const BROKERPAGE_LINK = "https://www.exnesspromo.com/en-ke/exness-terminal/?partner_id=ggaswwew8a";
 
 export function ShieldIcon({ className = "w-4 h-4" }) {
   return (

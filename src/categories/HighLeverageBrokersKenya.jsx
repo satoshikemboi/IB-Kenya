@@ -8,8 +8,8 @@ import Author from "../components/Author";
 --------------------------------------------------------- */
 const LINKS = {
   fxpesa: "https://portal.fxpesa.com/live-account/?accountType=Standard&clickid=1403263",
-  exness: "https://one.exnessonelink.com/a/1sh0vxrgqd",
-  exnessBanner: "https://one.exnessonelink.com/intl/en/a/1sh0vxrgqd",
+  exness: "https://one.exnessonelink.com/a/ggaswwew8a",
+  exnessBanner: "https://one.exnessonelink.com/intl/en/a/ggaswwew8a",
   hfm: "https://register.hfm.com/ke/en/new-live-account/?refid=30515020",
   xm: "https://affs.click/MbQNk",
   justmarkets: "https://one.justmarkets.link/a/17thm0lpq8",
@@ -99,8 +99,6 @@ function BrokerHeading({ logo, name, sub, tag, tagTone = "emerald" }) {
   );
 }
 
-// Buttons are always amber-400 — this is the one consistent primary CTA color across the page.
-// Pass `reviewHref` to also render a secondary "Read review" link alongside the primary CTA.
 function Cta({ href, label, reviewHref }) {
   return (
     <div className="mb-6 flex flex-wrap items-center gap-3">
@@ -191,7 +189,7 @@ function VerifyStep({ n, title, children }) {
   );
 }
 
-function AuthorByline({ author }) {
+function Authorbyline({ author }) {
   if (!author) return null;
   return (
     <div className="mb-6 flex items-center gap-3">
