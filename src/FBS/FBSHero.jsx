@@ -231,7 +231,7 @@ export default function FBSHero({ broker = defaultBroker }) {
             </div>
 
             {/* CTA */}
-            <div className="relative -left-[60px] sm:left-0">
+            <div className="relative -left-15 sm:left-0">
               <a
                 href={broker.affiliateLink}
                 target="_blank"
