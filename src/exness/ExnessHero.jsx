@@ -226,7 +226,7 @@ export default function ExnessHero({ broker = defaultBroker }) {
             </div>
 
             {/* CTA */}
-            <div className="flex justify-center sm:justify-start relative -left-[60px] sm:left-0">
+            <div className="flex justify-center sm:justify-start relative -left-15 sm:left-0">
               <a
                 href={broker.affiliateLink}
                 target="_blank"
