@@ -33,6 +33,7 @@ const Deriv            = lazy(() => import("./components/Deriv"));
 const Fusion           = lazy(() => import("./components/Fusion"));
 const HowToSignUp      = lazy(() => import("./exness/HowToSignUp"));
 const Top5ForexBrokersKenya = lazy(() => import("./categories/Top5ForexBrokersKenya"));
+import HighLeverageBrokersKenya from "./categories/HighLeverageBrokersKenya";
 
 // ─── Google Analytics Tracker ────────────────────────────────────────────────
 /**
@@ -107,6 +108,7 @@ export default function App() {
                 <Route path="/brokers/category" element={<BrokerCategory />} />
                 <Route path="/brokers/category/:slug" element={<BrokerCategory />} />
                 <Route path="/top-5-forex-brokers-kenya" element={<Top5ForexBrokersKenya />} />
+                <Route path="/high-leverage-brokers-kenya" element={<HighLeverageBrokersKenya />} />
 
                 {/* ── Tools & Information ── */}
                 <Route path="/methodology" element={<Methodology />} />
