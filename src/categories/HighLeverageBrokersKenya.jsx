@@ -1,5 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { ArrowUpRight, ChevronDown } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+import Author from "../components/Author";
 
 /* ---------------------------------------------------------
    Links
@@ -32,6 +34,20 @@ const LOGOS = {
   fpmarkets: "/fpmarkets.png",
   deriv: "/deriv.png",
   fusionmarkets: "/fusion.png",
+};
+
+// Internal review page routes — adjust to match your actual review page paths/slugs
+const REVIEWS = {
+  fxpesa: "/brokers/fxpesa",
+  exness: "/brokers/exness",
+  hfm: "/brokers/hfm",
+  xm: "/brokers/xm",
+  justmarkets: "/brokers/justmarkets",
+  fbs: "/brokers/fbs",
+  deriv: "/brokers/deriv",
+  fusionmarkets: "/brokers/fusion-markets",
+  fxpro: "/brokers/fxpro",
+  fpmarkets: "/brokers/fp-markets",
 };
 
 /* ---------------------------------------------------------
@@ -83,17 +99,28 @@ function BrokerHeading({ logo, name, sub, tag, tagTone = "emerald" }) {
   );
 }
 
-// Buttons are always amber-400 — this is the one consistent CTA color across the page.
-function Cta({ href, label }) {
+// Buttons are always amber-400 — this is the one consistent primary CTA color across the page.
+// Pass `reviewHref` to also render a secondary "Read review" link alongside the primary CTA.
+function Cta({ href, label, reviewHref }) {
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer sponsored"
-      className="mb-6 inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-linear-to-r from-amber-300 to-amber-400 px-4 py-2 text-sm font-semibold text-gray-800 no-underline transition-colors hover:bg-amber-400 hover:text-neutral-950 focus-visible:outline-2 focus-visible:outline-amber-400 focus-visible:outline-offset-2"
-    >
-      {label} <ArrowUpRight size={14} />
-    </a>
+    <div className="mb-6 flex flex-wrap items-center gap-3">
+      <a
+        href={href}
+        target="_blank"
+        rel="noopener noreferrer sponsored"
+        className="inline-flex items-center gap-1.5 rounded-full border border-amber-400/40 bg-linear-to-r from-amber-300 to-amber-400 px-4 py-2 text-sm font-semibold text-gray-800 no-underline transition-colors hover:bg-amber-400 hover:text-neutral-950 focus-visible:outline-2 focus-visible:outline-amber-400 focus-visible:outline-offset-2"
+      >
+        {label} <ArrowUpRight size={14} />
+      </a>
+      {reviewHref && (
+        <a
+          href={reviewHref}
+          className="inline-flex items-center gap-1.5 rounded-full border border-neutral-700 px-4 py-2 text-sm font-semibold text-neutral-200 no-underline transition-colors hover:border-neutral-500 hover:text-neutral-50 focus-visible:outline-2 focus-visible:outline-neutral-500 focus-visible:outline-offset-2"
+        >
+          Read review
+        </a>
+      )}
+    </div>
   );
 }
 
@@ -164,6 +191,34 @@ function VerifyStep({ n, title, children }) {
   );
 }
 
+function AuthorByline({ author }) {
+  if (!author) return null;
+  return (
+    <div className="mb-6 flex items-center gap-3">
+      {author.avatar && (
+        <img
+          src={author.avatar}
+          alt={author.name}
+          className="h-10 w-10 shrink-0 rounded-full border border-white/10 object-cover"
+          loading="lazy"
+        />
+      )}
+      <div className="min-w-0 text-sm leading-tight">
+        <div className="font-medium text-neutral-200">
+          {author.url ? (
+            <a href={author.url} className="hover:text-amber-400 hover:underline">
+              {author.name}
+            </a>
+          ) : (
+            author.name
+          )}
+        </div>
+        {author.title && <div className="mt-0.5 text-neutral-500">{author.title}</div>}
+      </div>
+    </div>
+  );
+}
+
 /* ---------------------------------------------------------
    Page
 --------------------------------------------------------- */
@@ -183,6 +238,40 @@ export default function HighLeverageBrokersKenya() {
 
   return (
     <div className="min-h-full bg-neutral-950 font-['IBM_Plex_Sans',sans-serif] text-neutral-100">
+      <Helmet>
+        <title>High Leverage Forex Brokers in Kenya 2026 | CMA vs Offshore (Up to 1:3000)</title>
+        <meta name="description" content="Compare high leverage forex brokers in Kenya: CMA-regulated brokers capped at 1:400 vs offshore brokers offering up to 1:3000. See which brokers fall into each category, M-Pesa support, and how to verify a license before you deposit." />
+        <link rel="canonical" href="https://fxbrokers.co.ke/high-leverage-brokers-kenya" />
+
+        <meta property="og:title" content="High Leverage Forex Brokers in Kenya | CMA-Regulated vs Offshore" />
+        <meta property="og:description" content="CMA-licensed brokers cap leverage at 1:400. Offshore brokers like JustMarkets and FBS go up to 1:3000. Here's what you gain and lose with each." />
+        <meta property="og:url" content="https://fxbrokers.co.ke/high-leverage-brokers-kenya" />
+        <meta property="og:type" content="article" />
+
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "High Leverage Forex Brokers in Kenya: CMA-Regulated vs Offshore Options",
+            "description": "A breakdown of CMA-regulated brokers capped at 1:400 leverage and offshore brokers offering up to 1:3000 for Kenyan traders, including licensing, M-Pesa support, and risk considerations.",
+            "author": {
+              "@type": "Person",
+              "name": "Felix Kemboi"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "FxBrokers Kenya",
+              "url": "https://fxbrokers.co.ke"
+            },
+            "datePublished": "2026-08-12",
+            "dateModified": "2026-08-13",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": "https://fxbrokers.co.ke/high-leverage-brokers-kenya"
+            }
+          }
+        `}</script>
+      </Helmet>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');`}</style>
 
       {/* progress bar */}
@@ -207,6 +296,9 @@ export default function HighLeverageBrokersKenya() {
           1:1000 to 1:3000+. Here's exactly which brokers fall into each camp,
           and what you give up by choosing one over the other.
         </p>
+
+        <Author />
+
         <div className="mb-9 flex flex-wrap gap-x-3.5 gap-y-1 border-y border-neutral-800 py-3 text-[0.78rem] text-neutral-400">
           <span>9 min read</span>
           <span>·</span>
@@ -216,6 +308,16 @@ export default function HighLeverageBrokersKenya() {
               see disclosure
             </a>
           </span>
+        </div>
+
+        <div className="mb-9">
+          <AdBanner
+            href={LINKS.justmarketsBanner2}
+            src="https://justmarkets.com/uploads/promo_materials/jm-1200x628-leverage-3000-en.png"
+            alt="JustMarkets"
+            w={1200}
+            h={628}
+          />
         </div>
 
         <p className="mb-5 text-[1.04rem] leading-[1.8] text-neutral-200 first-letter:float-left first-letter:pr-2 first-letter:pt-1 first-letter:font-['Fraunces',serif] first-letter:text-6xl first-letter:font-semibold first-letter:leading-[0.85] first-letter:text-amber-400">
@@ -317,19 +419,19 @@ export default function HighLeverageBrokersKenya() {
           Money, and EazzyPay. Leverage tops out at 1:400 on forex and metals,
           with a lower cap of around 1:200 on indices.
         </p>
-        <Cta href={LINKS.fxpesa} label="Open a FXPesa account" />
+        <Cta href={LINKS.fxpesa} label="Open a FXPesa account" reviewHref={REVIEWS.fxpesa} />
 
         <BrokerHeading logo={LOGOS.exness} name="Exness (KE) Limited" tag="CMA · 1:400" />
         <p className={cls.p}>
           Exness's Kenyan entity is capped at 1:400, same as every other CMA
-          broker — despite Exness's global brand being associated with
+          broker, despite Exness's global brand being associated with
           "unlimited leverage" marketing. That higher leverage exists only on
           Exness's offshore entities, and in practice Exness routes Kenyan
           residents to the CMA-regulated entity rather than the offshore one.
           If you sign up expecting unlimited leverage as a Kenyan resident,
           you won't get it here.
         </p>
-        <Cta href={LINKS.exness} label="Open an Exness account" />
+        <Cta href={LINKS.exness} label="Open an Exness account" reviewHref={REVIEWS.exness} />
 
         <div className="mb-6">
           <AdBanner
@@ -366,7 +468,7 @@ export default function HighLeverageBrokersKenya() {
           entities in Seychelles and St. Vincent go much higher, but that's a
           separate legal entity outside CMA protection.
         </p>
-        <Cta href={LINKS.hfm} label="Open a HFM account" />
+        <Cta href={LINKS.hfm} label="Open a HFM account" reviewHref={REVIEWS.hfm} />
 
         <BrokerHeading logo={LOGOS.xm} name="XM Kenya" tag="CMA · 1:400" />
         <p className={cls.p}>
@@ -376,7 +478,7 @@ export default function HighLeverageBrokersKenya() {
           structure can now do so under CMA protection rather than relying
           solely on XM's international regulators.
         </p>
-        <Cta href={LINKS.xm} label="Open a XM account" />
+        <Cta href={LINKS.xm} label="Open a XM account" reviewHref={REVIEWS.xm} />
 
         {/* ============ OFFSHORE SECTION ============ */}
         <h2 className={cls.h2}>Offshore Brokers Offering Higher Leverage</h2>
@@ -433,7 +535,7 @@ export default function HighLeverageBrokersKenya() {
           start small and read recent trader feedback before committing
           serious capital.
         </p>
-        <Cta href={LINKS.justmarkets} label="Open a JustMarkets account" />
+        <Cta href={LINKS.justmarkets} label="Open a JustMarkets account" reviewHref={REVIEWS.justmarkets} />
 
         <div className="mb-6">
           <AdBanner
@@ -454,7 +556,7 @@ export default function HighLeverageBrokersKenya() {
           balance protection is offered to cushion, but not eliminate — the
           risk that comes with leverage this high.
         </p>
-        <Cta href={LINKS.fbs} label="Open a FBS account" />
+        <Cta href={LINKS.fbs} label="Open a FBS account" reviewHref={REVIEWS.fbs} />
 
         <div className="mb-6 grid gap-4 sm:grid-cols-2">
           <FbsAdSlot
@@ -485,7 +587,7 @@ export default function HighLeverageBrokersKenya() {
           the instrument and account. It's regulated across several offshore
           jurisdictions but holds no CMA license.
         </p>
-        <Cta href={LINKS.deriv} label="Open a Deriv account" />
+        <Cta href={LINKS.deriv} label="Open a Deriv account" reviewHref={REVIEWS.deriv} />
 
         <div className={cls.h3}>
           <LogoBadge src={LOGOS.fusionmarkets} alt="Fusion Markets logo" />
@@ -501,8 +603,8 @@ export default function HighLeverageBrokersKenya() {
           entity. Neither holds a CMA license.
         </p>
         <div className="flex flex-wrap gap-3">
-          <Cta href={LINKS.fusionmarkets} label="Open a Fusion Markets account" />
-          <Cta href={LINKS.fxpro} label="Open a FxPro account" />
+          <Cta href={LINKS.fusionmarkets} label="Open a Fusion Markets account" reviewHref={REVIEWS.fusionmarkets} />
+          <Cta href={LINKS.fxpro} label="Open a FxPro account" reviewHref={REVIEWS.fxpro} />
         </div>
 
         <BrokerHeading logo={LOGOS.fpmarkets} name="FP Markets (international entity)" tag="Dual · CMA + Offshore" />
@@ -514,7 +616,7 @@ export default function HighLeverageBrokersKenya() {
           entity you land in during signup if local regulation matters to
           you.
         </p>
-        <Cta href={LINKS.fpmarkets} label="Open a FP Markets account" />
+        <Cta href={LINKS.fpmarkets} label="Open a FP Markets account" reviewHref={REVIEWS.fpmarkets} />
 
         <h2 className={cls.h2}>The Real Risk Behind High Leverage</h2>
         <p className={cls.p}>
