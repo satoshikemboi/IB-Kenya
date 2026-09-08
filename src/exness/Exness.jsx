@@ -122,7 +122,7 @@ function ScoreBar({ label, score }) {
         <span className="text-stone-600 font-semibold tabular-nums">{score}/10</span>
       </div>
       <div className="h-1.5 bg-stone-200 rounded-full overflow-hidden">
-        <div className="h-full bg-amber-500 rounded-full" style={{ width: `${score * 10}%` }} />
+        <div className="h-full bg-[#FFE535] rounded-full" style={{ width: `${score * 10}%` }} />
       </div>
     </div>
   );
