@@ -48,7 +48,7 @@ export default function Navbar() {
                     e.target.nextSibling.style.display = "block";
                   }}
                 />
-                <span className="hidden text-amber-400 font-bold text-xs leading-none" aria-hidden="true">
+                <span className="hidden text-[#FFE535] font-bold text-xs leading-none" aria-hidden="true">
                   FX
                 </span>
               </div>
@@ -57,8 +57,8 @@ export default function Navbar() {
                 className="text-white font-bold text-lg tracking-tight leading-none"
                 style={{ fontFamily: "'Sora', 'DM Sans', sans-serif", letterSpacing: "-0.02em" }}
               >
-                <span className="text-amber-400">Fx</span>Brokers
-                <span className="text-amber-400/70 font-semibold">.co.ke</span>
+                <span className="text-[#FFE535]">fx</span>brokers
+                <span className="text-[#FFE535] font-semibold">.co.ke</span>
               </span>
             </Link>
 
@@ -70,7 +70,7 @@ export default function Navbar() {
                   to={link.href}
                   className={({ isActive }) =>
                     `relative px-3.5 py-2 rounded-lg text-sm font-medium transition-all duration-150 ${
-                      isActive ? "text-amber-400" : "text-slate-400 hover:text-white"
+                      isActive ? "text-[#FFE535]" : "text-slate-400 hover:text-white"
                     }`
                   }
                 >
@@ -93,7 +93,7 @@ export default function Navbar() {
               </Link>
               <Link
                 to="/brokers"
-                className="relative group overflow-hidden bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-bold px-4 py-2 rounded-xl transition-colors duration-200 flex items-center gap-1.5"
+                className="relative group overflow-hidden bg-[#FFE535] hover:bg-amber-300 text-slate-900 text-sm font-bold px-4 py-2 rounded-xl transition-colors duration-200 flex items-center gap-1.5"
               >
                 Find My Broker
                 <svg className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform duration-150" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>

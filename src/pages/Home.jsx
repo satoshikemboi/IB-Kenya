@@ -15,7 +15,7 @@ const featuredBrokers = [
     spread: "From 0.0 pips",
     badge: "Top Rated",
     badgeColor: "gold",
-    affiliate: "https://one.exnessonelink.com/a/1sh0vxrgqd",
+    affiliate: "https://one.exnessonelink.com/a/ggaswwew8a",
     change: "+2.4%",
     positive: true,
   },
@@ -60,29 +60,6 @@ const featuredBrokers = [
     affiliate: "https://one.justmarkets.link/a/17thm0lpq8",
     change: "+3.2%",
     positive: true,
-  },
-];
-
-const whyTrustUs = [
-  {
-    icon: "🛡️",
-    title: "Independent Reviews",
-    desc: "Our analysts test each broker with real funds. No paid placements skew our rankings.",
-  },
-  {
-    icon: "📊",
-    title: "50+ Data Points",
-    desc: "Every broker is scored on spreads, regulation, deposits, platforms, and support.",
-  },
-  {
-    icon: "🇰🇪",
-    title: "Kenya-Focused",
-    desc: "We prioritise brokers that accept M-Pesa, support KES accounts, and serve Kenyan traders.",
-  },
-  {
-    icon: "🔄",
-    title: "Regularly Updated",
-    desc: "Broker conditions change. We review and refresh scores every quarter.",
   },
 ];
 
@@ -181,7 +158,7 @@ function MiniSparkline({ positive }) {
 
 function HeroBrokerCard({ broker, index }) {
   const badgeStyles = {
-    gold: "bg-amber-400/15 text-amber-400 border-amber-400/25",
+    gold: "bg-[#FFE535] text-amber-400 border-amber-400/25",
     blue: "bg-sky-400/15 text-sky-400 border-sky-400/25",
     green: "bg-emerald-400/15 text-emerald-400 border-emerald-400/25",
     purple: "bg-violet-400/15 text-violet-400 border-violet-400/25",
@@ -255,64 +232,6 @@ function HeroBrokerCard({ broker, index }) {
         </Link>
       </div>
     </div>
-  );
-}
-
-function FullBrokerCard({ broker }) {
-  const badgeStyles = {
-    gold: "bg-amber-400/12 text-amber-400 border-amber-400/25",
-    blue: "bg-sky-400/12 text-sky-400 border-sky-400/25",
-    green: "bg-emerald-400/12 text-emerald-400 border-emerald-400/25",
-    purple: "bg-violet-400/12 text-violet-400 border-violet-400/25",
-  };
-
-  return (
-    <article className="group relative bg-[#0B1929] border border-white/8 rounded-2xl p-5 flex flex-col gap-4 hover:border-amber-400/35 transition-all duration-300">
-      <span className={`absolute top-4 right-4 text-xs px-2 py-0.5 rounded-full border font-medium ${badgeStyles[broker.badgeColor]}`}>
-        {broker.badge}
-      </span>
-
-      <div className="flex items-center gap-3">
-        <div className="w-11 h-11 bg-white/5 rounded-xl flex items-center justify-center border border-white/8 shrink-0">
-          <img src={broker.logo} alt={`${broker.name} logo`} className="w-7 h-7 object-contain" loading="lazy"
-            onError={(e) => { e.target.style.display = "none"; e.target.nextSibling.style.display = "flex"; }}
-          />
-          <span className="text-white font-bold text-xs hidden w-7 h-7 items-center justify-center">
-            {broker.name.slice(0, 2).toUpperCase()}
-          </span>
-        </div>
-        <div>
-          <h3 className="text-white font-semibold text-base">{broker.name}</h3>
-          <StarRating rating={broker.rating} />
-        </div>
-      </div>
-
-      <dl className="grid grid-cols-2 gap-2 text-sm">
-        <div className="">
-          <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Min. Deposit</dt>
-          <dd className="text-white font-semibold mt-0.5">{broker.minDeposit}</dd>
-        </div>
-        <div className="">
-          <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Spread</dt>
-          <dd className="text-white font-semibold mt-0.5">{broker.spread}</dd>
-        </div>
-        <div className="col-span-2">
-          <dt className="text-slate-500 text-[10px] uppercase tracking-wider">Regulation</dt>
-          <dd className="text-white font-semibold mt-0.5">{broker.regulation}</dd>
-        </div>
-      </dl>
-
-      <div className="flex gap-2 mt-auto">
-        <a href={broker.affiliate} target="_blank" rel="noopener noreferrer sponsored"
-          className="flex-1 bg-amber-400 hover:bg-amber-300 text-slate-900 text-sm font-bold text-center py-2.5 rounded-xl transition-colors duration-200">
-          Open Account
-        </a>
-        <Link to={`/brokers/${broker.name.toLowerCase().replace(/\s+/g, "-")}`}
-          className="flex-1 border border-white/15 hover:border-amber-400/40 text-slate-400 hover:text-white text-sm font-medium text-center py-2.5 rounded-xl transition-all duration-200">
-          Read Review
-        </Link>
-      </div>
-    </article>
   );
 }
 
@@ -424,7 +343,7 @@ export default function Home() {
                 style={{ fontFamily: "'Sora', 'DM Sans', sans-serif", letterSpacing: "-0.02em" }}>
                 Find the{" "}
                 <span className="relative inline-block">
-                  <span className="text-amber-400">Best Broker</span>
+                  <span className="text-[#FFE535]">Best Broker</span>
                   {/* Underline accent */}
                   <svg className="absolute -bottom-1 left-0 w-full" height="4" viewBox="0 0 200 4">
                     <path d="M0 2 Q100 0 200 2" stroke="#FBBF24" strokeWidth="1.5" fill="none" opacity="0.5" strokeDasharray="4 3" />
@@ -439,9 +358,9 @@ export default function Home() {
                 We compare spreads, regulation, M-Pesa support, and more.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-3 mb-10">
+              <div className="flex flex-col sm:flex-row gap-3 mb-4">
                 <Link to="/brokers"
-                  className="group relative overflow-hidden bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold px-7 py-3.5 rounded-xl transition-all duration-200 text-base text-center">
+                  className="group relative overflow-hidden bg-[#FFE535] hover:bg-amber-300 text-slate-900 font-bold px-7 py-2.5 rounded-lg transition-all duration-200 text-base text-center">
                   <span className="relative z-10">Compare All Brokers</span>
                 </Link>
                 <Link to="/brokers/best-forex-brokers-kenya"
@@ -452,25 +371,6 @@ export default function Home() {
                   </svg>
                 </Link>
               </div>
-
-              {/* Stats bar */}
-              <div className="flex flex-wrap gap-6">
-                {[
-                  { num: "50+", label: "Brokers Reviewed", icon: "📋" },
-                  { num: "10K+", label: "Traders Helped", icon: "👥" },
-                  { num: "100%", label: "Independent", icon: "🛡️" },
-                ].map(({ num, label, icon }) => (
-                  <div key={label} className="flex items-center gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center text-base shrink-0">
-                      {icon}
-                    </div>
-                    <div>
-                      <p className="text-white font-bold text-lg leading-none">{num}</p>
-                      <p className="text-slate-500 text-xs mt-0.5">{label}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
             </div>
 
             {/* ── RIGHT COLUMN — Broker cards ── */}
@@ -478,8 +378,6 @@ export default function Home() {
               {/* Panel heading */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2">
-                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
-                  <span className="text-slate-400 text-xs font-semibold tracking-widest uppercase">Live Rankings</span>
                 </div>
                 <Link to="/brokers" className="text-amber-400 hover:text-amber-300 text-xs font-medium flex items-center gap-1">
                   View all
@@ -529,99 +427,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* ── FULL BROKER GRID ── */}
-        <section className="py-16 px-4 lg:px-8 bg-[#070F1C]" aria-labelledby="brokers-heading">
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
-              <div>
-                <h2 id="brokers-heading" className="text-3xl font-bold text-white mb-2"
-                  style={{ fontFamily: "'Sora', sans-serif" }}>
-                  Top Forex Brokers — 2026
-                </h2>
-                <p className="text-slate-400 text-sm">Hand-picked and independently verified. Updated quarterly.</p>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-slate-500">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-                Updated March 2026
-              </div>
-            </div>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-              {featuredBrokers.map((broker) => (
-                <FullBrokerCard key={broker.id} broker={broker} />
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Link to="/brokers"
-                className="inline-flex items-center gap-2 border border-white/10 hover:border-amber-400/30 text-slate-300 hover:text-white text-sm font-medium px-6 py-3 rounded-xl transition-all duration-200">
-                View all 50+ broker reviews →
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* ── WHY TRUST US ── */}
-        <section className="py-16 px-4 lg:px-8 border-t border-white/6" aria-labelledby="trust-heading">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 id="trust-heading" className="text-3xl font-bold text-white mb-3"
-                style={{ fontFamily: "'Sora', sans-serif" }}>
-                Why Trust FxBrokers.co.ke?
-              </h2>
-              <p className="text-slate-400 text-sm max-w-xl mx-auto">
-                We exist to protect Kenyan traders from unregulated brokers and hidden fees.
-              </p>
-            </div>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {whyTrustUs.map((item) => (
-                <div key={item.title} className="flex gap-4 bg-[#0B1929] border border-white/8 rounded-2xl p-5">
-                  <span className="text-2xl shrink-0 mt-0.5">{item.icon}</span>
-                  <div>
-                    <h3 className="text-white font-semibold text-base mb-1">{item.title}</h3>
-                    <p className="text-slate-400 text-sm leading-relaxed">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── METHODOLOGY ── */}
-        <section className="py-14 px-4 lg:px-8 bg-[#070F1C]" aria-labelledby="methodology-heading">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-10">
-              <h2 id="methodology-heading" className="text-2xl font-bold text-white mb-3"
-                style={{ fontFamily: "'Sora', sans-serif" }}>
-                How We Rank Forex Brokers
-              </h2>
-              <p className="text-slate-400 text-sm max-w-xl mx-auto">
-                Transparent, data-driven scoring. No broker can buy a higher position.
-              </p>
-            </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-              {[
-                { label: "Regulation & Safety", weight: "30%", color: "#FBBF24", bg: "rgba(251,191,36,0.07)" },
-                { label: "Spreads & Fees", weight: "25%", color: "#38BDF8", bg: "rgba(56,189,248,0.07)" },
-                { label: "Platforms & Tools", weight: "25%", color: "#34D399", bg: "rgba(52,211,153,0.07)" },
-                { label: "Support & Deposits", weight: "20%", color: "#A78BFA", bg: "rgba(167,139,250,0.07)" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-2xl p-5 text-center border border-white/8 relative overflow-hidden"
-                  style={{ background: item.bg }}>
-                  <div className="absolute inset-0 rounded-2xl" style={{ boxShadow: `inset 0 0 0 1px ${item.color}15` }} />
-                  <div className="text-3xl font-bold mb-2 font-mono" style={{ color: item.color }}>{item.weight}</div>
-                  <p className="text-slate-400 text-xs leading-snug">{item.label}</p>
-                </div>
-              ))}
-            </div>
-            <div className="text-center mt-6">
-              <Link to="/methodology" className="text-amber-400 hover:underline text-sm font-medium">
-                Read our full methodology →
-              </Link>
-            </div>
-          </div>
-        </section>
-
         {/* ── FAQ ── */}
         <section className="py-16 px-4 lg:px-8 border-t border-white/6" aria-labelledby="faq-heading">
           <div className="max-w-3xl mx-auto">
@@ -633,31 +438,6 @@ export default function Home() {
               {faqs.map((faq) => (
                 <FaqItem key={faq.q} q={faq.q} a={faq.a} />
               ))}
-            </div>
-          </div>
-        </section>
-
-        {/* ── CTA BANNER ── */}
-        <section className="py-16 px-4 lg:px-8 pb-24" aria-label="Call to action">
-          <div className="max-w-3xl mx-auto relative overflow-hidden rounded-3xl p-px"
-            style={{ background: "linear-gradient(135deg, rgba(251,191,36,0.25) 0%, rgba(251,191,36,0.05) 50%, rgba(56,189,248,0.15) 100%)" }}>
-            <div className="relative rounded-3xl p-10 text-center overflow-hidden"
-              style={{ background: "linear-gradient(135deg, #0D1E35 0%, #070F1C 100%)" }}>
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-96 h-24 bg-amber-400/8 rounded-full blur-3xl pointer-events-none" />
-              <h2 className="relative text-2xl sm:text-3xl font-bold text-white mb-3"
-                style={{ fontFamily: "'Sora', sans-serif" }}>
-                Not sure which broker to choose?
-              </h2>
-              <p className="relative text-slate-400 text-sm mb-7 max-w-md mx-auto leading-relaxed">
-                Answer 3 quick questions and we'll match you with the best broker for your trading style and budget.
-              </p>
-              <Link to="/brokers"
-                className="relative inline-flex items-center gap-2 bg-amber-400 hover:bg-amber-300 text-slate-900 font-bold px-8 py-3.5 rounded-xl transition-colors duration-200 text-base">
-                Find My Broker — Free
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
             </div>
           </div>
         </section>

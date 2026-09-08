@@ -204,11 +204,11 @@ export default function FBSHero({ broker = defaultBroker }) {
             {/* Title + badge */}
             <div className="flex items-center gap-3 flex-wrap mb-2">
 
-              <h1 className="font-playfair text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-zinc-50">
+              <h1 className="text-2xl font-semibold text-zinc-50">
                 {broker.name} Kenya Review 2026: $1 Minimum Deposit & Cent Account
               </h1>
 
-              <span className="text-[0.62rem] font-bold px-2.5 py-0.5 rounded-full bg-linear-to-r from-amber-600 to-amber-400 text-black tracking-wide">
+              <span className="text-[0.62rem] font-semibold px-2.5 py-0.5 rounded-full bg-linear-to-r from-green-600 to-green-500 text-black tracking-wide">
                 $1 Min Deposit
               </span>
 
