@@ -20,11 +20,9 @@ const ACCOUNT_TYPES = [
 ];
 
 const PROS = [
-  "No minimum deposit",
   "Instant 24/7 M-Pesa deposits & withdrawals",
   "Spreads from 0.0 pips",
   "FCA, CySEC & CMA regulated",
-  "Unlimited leverage available",
   "MT4, MT5 & Exness Trade app",
 ];
 const CONS = [
@@ -413,7 +411,7 @@ export default function ExnessReview() {
     </div>
   </div>
 </section>
-            <section id="accounts" className="px-2 border border-stone-200 bg-white shadow-sm overflow-hidden">
+            <section id="accounts" className="px-6 border border-stone-200 bg-white shadow-sm overflow-hidden">
               <h2 className="text-stone-900 font-bold text-lg mb-4">Exness Kenya Account Types</h2>
               <div className="overflow-x-auto -mx-6 px-6">
                 <table className="w-full text-left text-sm min-w-full">
@@ -578,7 +576,7 @@ export default function ExnessReview() {
             </section>
 
             {/* ── FAQ ────────────────────────────────────────────────────── */}
-            <section id="faq">
+            <section id="faq" className="px-6">
               <h2 className="text-stone-900 font-bold text-lg mb-4">Exness Kenya FAQ</h2>
               {FAQS.map((f, i) => <FaqItem key={i} q={f.q} a={f.a} />)}
             </section>
