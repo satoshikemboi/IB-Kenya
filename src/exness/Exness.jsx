@@ -12,11 +12,11 @@ const SCORES = {
 };
 
 const ACCOUNT_TYPES = [
-  { name: "Standard", minDeposit: "$0", spread: "0.3 pips", commission: "None", best: "Beginners" },
-  { name: "Standard Cent", minDeposit: "$0", spread: "0.3 pips", commission: "None", best: "Practice" },
+  { name: "Standard", minDeposit: "$10", spread: "0.3 pips", commission: "None", best: "Beginners" },
+  { name: "Standard Cent", minDeposit: "$10", spread: "0.3 pips", commission: "None", best: "Practice" },
   { name: "Pro", minDeposit: "$200", spread: "0.1 pips", commission: "None", best: "Intermediate" },
   { name: "Raw Spread", minDeposit: "$200", spread: "0.0 pips", commission: "$3.5/lot", best: "Active traders", highlight: true },
-  { name: "Zero", minDeposit: "$200", spread: "0.0 pips", commission: "$3.5/lot", best: "Scalpers" },
+  { name: "Zero", minDeposit: "$200", spread: "0.0 pips", commission: "$0.05/lot", best: "Scalpers" },
 ];
 
 const PROS = [
@@ -40,9 +40,9 @@ const REGULATORS = [
 ];
 
 const PAYMENT_METHODS = [
-  { name: "M-Pesa", time: "Instant", fee: "Free", min: "$1", highlight: true },
+  { name: "M-Pesa", time: "Instant", fee: "Free", min: "$10", highlight: true },
   { name: "Visa / Mastercard", time: "Instant", fee: "Free", min: "$10" },
-  { name: "Airtel Money", time: "Instant", fee: "Free", min: "$1" },
+  { name: "Airtel Money", time: "Instant", fee: "Free", min: "$10" },
   { name: "Skrill / Neteller", time: "Instant", fee: "Free", min: "$10" },
   { name: "Crypto", time: "~30 min", fee: "Network", min: "$10" },
 ];
@@ -225,7 +225,7 @@ export default function ExnessReview() {
             <section id="ratings" className="p-6 md:rounded-xl bg-white border border-stone-200 shadow-sm">
               <div className="flex items-center justify-between mb-5">
                 <h2 className="text-stone-900 font-bold text-lg flex items-center gap-2">
-                  <span className="w-1 h-5 bg-amber-600 rounded-full"></span> Rating Breakdown
+                  <span className="w-1 h-5 bg-[#FFE535] rounded-full"></span> Rating Breakdown
                 </h2>
                 <span className="text-[10px] text-stone-500 uppercase tracking-widest">Score: {overallScore}/10</span>
               </div>
@@ -289,7 +289,7 @@ export default function ExnessReview() {
 
   <div className="space-y-8">
     {/* Standard Accounts Tier */}
-    <div className="rounded-xl border border-stone-200 bg-stone-50/60 p-5 sm:p-6">
+    <div className=" p-5 sm:p-6">
       <div className="mb-4 flex items-center gap-2">
         <span className="rounded-md bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700 border border-amber-200">
           Tier 1
@@ -303,15 +303,15 @@ export default function ExnessReview() {
       </p>
 
       <div className="grid gap-4 sm:grid-cols-2">
-        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div className=" ">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-bold text-amber-700 text-sm">Standard Account</h4>
+            <h4 className="font-bold text-amber-700 text-lg">Standard Account</h4>
             <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-              Min. $1 – $10
+              Min. $10
             </span>
           </div>
           <p className="text-xs text-stone-600 leading-relaxed">
-            The most popular choice for retail investors. The minimum deposit via M-Pesa or local bank transfers depends on the payment system minimum—typically starting as low as <strong>$1 to $10</strong> (~130 KES to 1,300 KES). It features stable spreads starting from 0.2 pips with zero commission.
+            The most popular choice for retail investors. The minimum deposit via M-Pesa or local bank transfers depends on the payment system minimum—typically starting as low as <strong> $10</strong> (~130 KES to 1,300 KES). It features stable spreads starting from 0.2 pips with zero commission.
           </p>
           <img
             src="/standard.png"
@@ -321,11 +321,11 @@ export default function ExnessReview() {
           />
         </div>
 
-        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div className=" ">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-bold text-amber-700 text-sm">Standard Cent Account</h4>
+            <h4 className="font-bold text-amber-700 text-lg">Standard Cent Account</h4>
             <span className="text-[11px] font-medium text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">
-              Min. $1
+              Min. $10
             </span>
           </div>
           <p className="text-xs text-stone-600 leading-relaxed">
@@ -342,7 +342,7 @@ export default function ExnessReview() {
     </div>
 
     {/* Professional Accounts Tier */}
-    <div className="rounded-xl border border-stone-200 bg-stone-50 p-5 sm:p-6">
+    <div className=" ">
       <div className="mb-4 flex items-center gap-2">
         <span className="rounded-md bg-amber-50 px-2.5 py-1 text-xs font-semibold text-amber-700 border border-amber-200">
           Tier 2
@@ -356,15 +356,15 @@ export default function ExnessReview() {
       </p>
 
       <div className="grid gap-4 md:grid-cols-3">
-        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div className=" ">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-bold text-amber-700 text-sm">Raw Spread Account</h4>
+            <h4 className="font-bold text-amber-700 text-lg">Raw Spread Account</h4>
             <span className="text-[11px] font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded">
-              Min. $500
+              Min. $200
             </span>
           </div>
           <p className="text-xs text-stone-600 leading-relaxed">
-            Requires a fixed minimum deposit of <strong>$500</strong>. Features raw spreads from 0.0 pips plus a fixed commission of up to $3.50 per lot per side ($7 round-turn).
+            Requires a fixed minimum deposit of <strong>$200</strong>. Features raw spreads from 0.0 pips plus a fixed commission of up to $3.50 per lot per side ($7 round-turn).
           </p>
           <img
             src="/rawspread.png"
@@ -374,15 +374,15 @@ export default function ExnessReview() {
           />
         </div>
 
-        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div className=" ">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-bold text-amber-700 text-sm">Zero Account</h4>
+            <h4 className="font-bold text-amber-700 text-lg">Zero Account</h4>
             <span className="text-[11px] font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded">
-              Min. $500
+              Min. $200
             </span>
           </div>
           <p className="text-xs text-stone-600 leading-relaxed">
-            Requires a minimum deposit of <strong>$500</strong>. Offers zero pips spread on the top 30 instruments for 95% of the trading day, with commissions starting from $0.20 per side per lot depending on the instrument.
+            Requires a minimum deposit of <strong>$200</strong>. Offers zero pips spread on the top 30 instruments for 95% of the trading day, with no commissions.
           </p>
           <img
             src="/zero.png"
@@ -392,15 +392,15 @@ export default function ExnessReview() {
           />
         </div>
 
-        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+        <div className="">
           <div className="flex items-center justify-between mb-2">
-            <h4 className="font-bold text-amber-700 text-sm">Pro Account</h4>
+            <h4 className="font-bold text-amber-700 text-lg">Pro Account</h4>
             <span className="text-[11px] font-medium text-amber-700 bg-amber-50 px-2 py-0.5 rounded">
-              Min. $500
+              Min. $200
             </span>
           </div>
           <p className="text-xs text-stone-600 leading-relaxed">
-            Requires a minimum deposit of <strong>$500</strong>. Features instant execution with zero commissions and spreads starting from 0.1 pips.
+            Requires a minimum deposit of <strong>$200</strong>. Features instant execution with zero commissions and spreads starting from 0.1 pips.
           </p>
           <img
             src="/pro.png"
@@ -437,8 +437,89 @@ export default function ExnessReview() {
             </section>
 
             {/* ── DEPOSITS & WITHDRAWALS ────────────────────────────────── */}
+            {/* Exness Deposits & Withdrawals SEO Section */}
+<section id="deposits-guide" className="my-8 p-6 sm:p-8">
+  <header className="mb-6 border-b border-stone-200 pb-4">
+    <h2 className="font-playfair text-2xl sm:text-2xl font-semibold text-stone-900">
+      Exness Deposits & Withdrawals in Kenya: M-Pesa, Fees & Processing Times
+    </h2>
+    <p className="mt-2 text-sm text-stone-600 leading-relaxed">
+      One of the main reasons Kenyan traders choose Exness is how well the broker handles local money movement. Instead of routing everything through slow international wire transfers, <strong>Exness settles M-Pesa deposits and withdrawals in seconds</strong>, at any hour, including weekends and public holidays. Here&apos;s exactly how funding and cashing out works.
+    </p>
+  </header>
+
+  <div className="space-y-8">
+    {/* Depositing */}
+    <div className="">
+      <div className="mb-4 flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-stone-900">
+          How to Deposit Into Exness From Kenya
+        </h3>
+      </div>
+      <p className="mb-4 text-xs text-stone-600 leading-relaxed">
+        Open the Exness Personal Area or the Exness Trade app, select Deposit, and choose the method that suits your account currency. Most Kenyan traders fund their account the same day they register, since local methods post almost immediately.
+      </p>
+
+      <div className="grid gap-4 sm:grid-cols-2">
+        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <h4 className="font-bold text-amber-700 text-sm">M-Pesa Deposits</h4>
+          <p className="text-xs text-stone-600 leading-relaxed mt-2">
+            Select M-Pesa, enter your registered Safaricom number, and confirm the STK push prompt with your M-Pesa PIN. Funds typically land in your trading account within seconds. There a minimum deposit starting with as little as <strong>$10 (roughly KES 1300)</strong>.
+          </p>
+        </div>
+        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <h4 className="font-bold text-amber-700 text-sm">Cards & E-Wallets</h4>
+          <p className="text-xs text-stone-600 leading-relaxed mt-2">
+            Visa and Mastercard deposits also post instantly, though your issuing bank may apply its own currency conversion margin. Skrill and Neteller suit traders who already hold a balance in either wallet, while crypto deposits (USDT, BTC, ETH) usually clear in around 30 minutes depending on network congestion.
+          </p>
+        </div>
+      </div>
+      <img src="/deposit.png" alt="Exness Payment Methods" className="mt-4 rounded-lg border border-stone-200 w-full" />
+      
+    </div>
+
+    {/* Withdrawing */}
+    <div className=" ">
+      <div className="mb-4 flex items-center gap-2">
+        <h3 className="text-2xl font-semibold text-stone-900">
+          How to Withdraw From Exness to M-Pesa
+        </h3>
+      </div>
+      <p className="mb-4 text-xs text-stone-600 leading-relaxed">
+        Exness processes withdrawal requests on its side 24 hours a day, seven days a week, including weekends and Kenyan public holidays, when many other brokers pause processing until the next business day.
+      </p>
+
+      <div className="grid gap-4 md:grid-cols-3">
+        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <h4 className="font-bold text-amber-700 text-sm">Processing Time</h4>
+          <p className="text-xs text-stone-600 leading-relaxed mt-2">
+            M-Pesa withdrawals are usually credited within minutes of approval, since Exness doesn&apos;t batch requests or wait for a daily cut-off window.
+          </p>
+        </div>
+        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <h4 className="font-bold text-amber-700 text-sm">Withdrawal Fees</h4>
+          <p className="text-xs text-stone-600 leading-relaxed mt-2">
+            Exness does not charge an internal fee on M-Pesa or e-wallet withdrawals. Standard Safaricom M-Pesa charges may still apply on the receiving end, the same as any other M-Pesa transfer.
+          </p>
+        </div>
+        <div className="rounded-lg border border-stone-200 bg-white p-4 shadow-sm">
+          <h4 className="font-bold text-amber-700 text-sm">Minimum & Limits</h4>
+          <p className="text-xs text-stone-600 leading-relaxed mt-2">
+            The minimum withdrawal via M-Pesa is $10. Larger amounts may be split into multiple M-Pesa transactions to fit Safaricom&apos;s per-transaction limits, Exness handles this split automatically.
+          </p>
+        </div>
+      </div>
+
+      <img src="/withdrawal.png" alt="Exness Withdrawal Methods" className="mt-4 rounded-lg border border-stone-200 w-full" />
+
+      <p className="mt-4 text-xs text-stone-500 leading-relaxed">
+        As with most regulated brokers, Exness generally requires withdrawals to go back through the same method used to deposit, up to the amount deposited, before any remaining profit can be sent to a different channel. This is a standard anti-fraud measure, not an Exness-specific restriction.
+      </p>
+    </div>
+  </div>
+</section>
             <section id="deposits" className="p-6 rounded-2xl border border-stone-200 bg-white shadow-sm">
-              <h2 className="text-stone-900 font-bold text-lg mb-4">Deposits & Withdrawals</h2>
+              <h2 className="text-stone-900 font-semibold text-lg mb-4">Deposits & Withdrawals</h2>
               <div className="overflow-x-auto">
                 <table className="w-full text-left text-sm min-w-100">
                   <thead>
@@ -528,7 +609,7 @@ export default function ExnessReview() {
                 </div>
               </div>
               <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-                className="mt-6 block w-full bg-linear-to-r from-yellow-600 to-amber-500 text-gray-900 font-bold py-3 rounded-lg text-center text-md hover:bg-[#b5953b] transition-all">
+                className="mt-6 block w-full bg-[#FFE535] text-gray-900 font-bold py-3 rounded-lg text-center text-md hover:bg-[#b5953b] transition-all">
                 Open Exness Account →
               </a>
               <p className="text-[10px] text-stone-500 text-center mt-2">No minimum deposit via M-Pesa</p>
@@ -538,9 +619,9 @@ export default function ExnessReview() {
       </main>
 
       {/* ── MOBILE STICKY CTA ────────────────────────────────────────────── */}
-      <div className="md:hidden fixed bottom-0 inset-x-0 z-30 bg-white/95 backdrop-blur border-t border-stone-200 p-3">
+      <div className="md:hidden fixed bottom-0 inset-x-0 z-30 bg-gray-800 backdrop-blur border-t border-stone-200 p-3">
         <a href={AFFILIATE_LINK} target="_blank" rel="noopener noreferrer sponsored"
-          className="flex items-center justify-center gap-2 w-full bg-amber-500 text-gray-800 font-bold py-3 rounded-lg text-center text-md">
+          className="flex items-center justify-center gap-2 w-full bg-[#FFE535] text-gray-800 font-semibold py-3 rounded-sm text-center text-md">
           Open Exness Account (Instant M-Pesa) →
         </a>
       </div>

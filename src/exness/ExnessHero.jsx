@@ -231,7 +231,7 @@ export default function ExnessHero({ broker = defaultBroker }) {
                 href={broker.affiliateLink}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-amber-500 text-gray-800 text-md font-semibold rounded-lg no-underline whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#FFE535] text-gray-800 text-lg font-semibold rounded-lg no-underline whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
               >
                 Create {broker.name} Account
 
