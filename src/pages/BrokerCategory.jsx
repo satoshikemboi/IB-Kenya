@@ -163,6 +163,7 @@ const BROKER_SNIPPETS = {
 };
 
 const CATEGORY_META = {
+  "top-10-forex-brokers-in-kenya": { desc: "Our top 10 picks for Kenyan traders, ranked by spreads, regulation, and M-Pesa support." },
   "best-forex-brokers-kenya":      { desc: "Our top-ranked picks for Kenyan traders, tested on spreads, regulation & M-Pesa support." },
   "mpesa-brokers":                 { desc: "Deposit and withdraw instantly using M-Pesa. No bank account needed." },
   "lowest-spread-brokers":         { desc: "Raw and ECN accounts starting from 0.0 pips. Pay less on every trade." },
