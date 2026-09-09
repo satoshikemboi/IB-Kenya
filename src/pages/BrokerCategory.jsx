@@ -6,6 +6,13 @@ import ForexGuides from "../components/ForexGuides";
 /* ─── Data ─────────────────────────────────────────────────────────────────── */
 
 const CATEGORIES = {
+  "top-10-forex-brokers-in-kenya": {
+    title: "Top 10 Forex Brokers in Kenya",
+    metaTitle: "Top 10 Forex Brokers in Kenya 2026 — Ranked & Reviewed",
+    metaDesc: "The top 10 forex brokers for Kenyan traders in 2026, ranked by our experts. Compare spreads, regulation, M-Pesa support, and minimum deposits.",
+    intro: "Our top 10 forex brokers in Kenya for 2026 are ranked based on spreads, regulation, M-Pesa support, and minimum deposits. Exness, HFM, and JustMarkets lead our list for most Kenyan traders.",
+    top10: ["exness", "hfm", "justmarkets", "xm", "fbs", "fxpesa", "fpmarkets", "deriv", "fxpro", "fusion-markets"],
+  },
 
   "best-forex-brokers-kenya": {
     title: "Best Forex Brokers in Kenya",
