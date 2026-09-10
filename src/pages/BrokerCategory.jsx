@@ -200,6 +200,35 @@ function AccordionItem({ question, answer }) {
   );
 }
 
+function Top10List({ top10 }) {
+  return (
+    <div className="bg-[#0a1628] border border-[#C9A84C]/20 rounded-2xl p-5 mb-8">
+      <div className="text-xs font-semibold tracking-widest uppercase text-[#C9A84C] mb-3">
+        Quick Answer
+      </div>
+      <ol className="flex flex-col gap-2">
+        {top10.map((slug, idx) => {
+          const b = BROKER_SNIPPETS[slug] || { name: slug, rating: 0 };
+          return (
+            <li key={slug}>
+              <a
+                href={`#broker-${slug}`}
+                className="flex items-center justify-between gap-3 py-1 text-sm text-gray-300 hover:text-[#C9A84C] transition-colors"
+              >
+                <span>
+                  <span className="text-[#C9A84C] font-semibold mr-2">{idx + 1}.</span>
+                  {b.name}
+                </span>
+                {b.rating > 0 && <span className="text-gray-500 shrink-0">⭐ {b.rating}/5</span>}
+              </a>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  );
+}
+
 /* ─── Main Component ────────────────────────────────────────────────────────── */
 
 export default function BrokerCategory() {
@@ -262,9 +291,11 @@ export default function BrokerCategory() {
 
   const isTop10 = slug === "top-10-forex-brokers-in-kenya";
 
-  const brokers = cat.brokers
-    ? cat.brokers.map(s => ({ slug: s, ...(BROKER_SNIPPETS[s] || { name: s, rating: 0 }) }))
-    : [];
+  // Both `cat.brokers` (plain list) and `cat.top10` (ranked list) are arrays of
+  // broker slugs — build the same enriched shape for either one.
+  const brokerList = (cat.brokers || cat.top10 || []).map(
+    s => ({ slug: s, ...(BROKER_SNIPPETS[s] || { name: s, rating: 0 }) })
+  );
 
   /* ── Category page ── */
   return (
@@ -309,12 +340,13 @@ export default function BrokerCategory() {
 
           {/* Broker cards */}
           <div className="flex flex-col gap-4">
-            {(isTop10 ? cat.top10 : brokers).map((broker, idx) => {
-              const details = BROKER_SNIPPETS[broker.slug] || broker;
+            {brokerList.map((broker, idx) => {
+              const details = broker;
               return (
                 <article
                   key={broker.slug || idx}
-                  className="bg-[#0D1B2E] border border-white/10 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-[#C9A84C]/30 transition-all"
+                  id={`broker-${broker.slug}`}
+                  className="bg-[#0D1B2E] border border-white/10 rounded-xl p-5 flex flex-col sm:flex-row sm:items-center gap-4 hover:border-[#C9A84C]/30 transition-all scroll-mt-24"
                 >
                   <div className="text-gray-200 font-semibold text-lg w-6 shrink-0 hidden sm:block">{idx + 1}.</div>
                   <div className="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-[#C9A84C] font-black text-sm shrink-0">
