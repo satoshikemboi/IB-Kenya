@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Kemboi from "./pages/Kemboi";
 
+
 // ─── Lazy-load Pages ─────────────────────────────────────────────────────────
 const BrokerList       = lazy(() => import("./pages/BrokerList"));
 const BrokerReview     = lazy(() => import("./pages/BrokerReview"));
@@ -31,7 +32,7 @@ const FxPesa           = lazy(() => import("./components/FxPesa"));
 const FPMarkets        = lazy(() => import("./components/FpMarkets"));
 const Deriv            = lazy(() => import("./components/Deriv"));
 const Fusion           = lazy(() => import("./components/Fusion"));
-const HowToSignUp      = lazy(() => import("./exness/HowToSignUp"));
+const HowToSignUp      =lazy(() => import("./exness/HowToSignUp"));
 const Top5ForexBrokersKenya = lazy(() => import("./categories/Top5ForexBrokersKenya"));
 import HighLeverageBrokersKenya from "./categories/HighLeverageBrokersKenya";
 
