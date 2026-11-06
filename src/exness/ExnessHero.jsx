@@ -2,292 +2,147 @@ import { Link } from "react-router-dom";
 import Author from "../components/Author";
 
 export const AFFILIATE_LINK = "https://one.exnessonelink.com/a/ggaswwew8a";
-export const BROKERPAGE_LINK =
-  "https://www.exnesspromo.com/en-ke/exness-terminal/?partner_id=ggaswwew8a";
+export const BROKERPAGE_LINK ="https://www.exnesspromo.com/en-ke/exness-terminal/?partner_id=ggaswwew8a";
 
-export function ShieldIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <path
-        d="M12 3l7 3v5c0 4.5-2.9 8.3-7 9.5-4.1-1.2-7-5-7-9.5V6l7-3z"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M9 12l2 2 4-4"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-export function PhoneIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <rect
-        x="7"
-        y="2.5"
-        width="10"
-        height="19"
-        rx="2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-      />
-      <path
-        d="M11 18.5h2"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-export function TrendingIcon({ className = "w-4 h-4" }) {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className={className}>
-      <path
-        d="M3 17l6-6 4 4 8-9"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="M15 6h6v6"
-        stroke="currentColor"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+/* Shared exports used by Exness.jsx */
+const Icon = ({ className = "w-4 h-4", children }) => (
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
+    {children}
+  </svg>
+);
+export const ShieldIcon = (p) => (
+  <Icon {...p}><path d="M12 3l7 3v5c0 4.5-2.9 8.3-7 9.5-4.1-1.2-7-5-7-9.5V6l7-3z" /><path d="M9 12l2 2 4-4" /></Icon>
+);
+export const PhoneIcon = (p) => (
+  <Icon {...p}><rect x="7" y="2.5" width="10" height="19" rx="2" /><path d="M11 18.5h2" /></Icon>
+);
+export const TrendingIcon = (p) => (
+  <Icon {...p}><path d="M3 17l6-6 4 4 8-9" /><path d="M15 6h6v6" /></Icon>
+);
 
 export function ScoreRing({ score, size = 104 }) {
-  const stroke = 7;
-  const radius = (size - stroke) / 2;
-  const circumference = 2 * Math.PI * radius;
-  const pct = Math.min(Math.max(score / 10, 0), 1);
-  const offset = circumference * (1 - pct);
-
+  const r = (size - 7) / 2;
+  const c = 2 * Math.PI * r;
+  const ring = (stroke, extra) => (
+    <circle cx={size / 2} cy={size / 2} r={r} stroke={stroke} strokeWidth="7" fill="none" {...extra} />
+  );
   return (
-    <div
-      className="relative shrink-0"
-      style={{ width: size, height: size }}
-    >
+    <div className="relative shrink-0" style={{ width: size, height: size }}>
       <svg width={size} height={size} className="-rotate-90">
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          stroke="rgba(255,255,255,0.08)"
-          strokeWidth={stroke}
-          fill="none"
-        />
-
-        <circle
-          cx={size / 2}
-          cy={size / 2}
-          r={radius}
-          stroke="#C9A84C"
-          strokeWidth={stroke}
-          fill="none"
-          strokeDasharray={circumference}
-          strokeDashoffset={offset}
-          strokeLinecap="round"
-        />
+        {ring("rgba(0,0,0,0.08)")}
+        {ring("#C9A84C", {
+          strokeDasharray: c,
+          strokeDashoffset: c * (1 - Math.min(Math.max(score / 10, 0), 1)),
+          strokeLinecap: "round",
+        })}
       </svg>
-
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <span className="text-white font-bold text-2xl tabular-nums leading-none">
-          {score}
-        </span>
-
-        <span className="text-[9px] text-gray-500 uppercase tracking-wider mt-1">
-          out of 10
-        </span>
+        <span className="text-2xl font-bold leading-none tabular-nums text-zinc-900">{score}</span>
+        <span className="mt-1 text-[9px] uppercase tracking-wider text-zinc-500">out of 10</span>
       </div>
     </div>
   );
 }
 
-/* ── Default data ─────────────────────────────────────────────────────── */
-
 const defaultBroker = {
   name: "Exness",
-  logo: "/exness.png",
-  score: "9.4",
-  founded: "2008",
-  headquarters: "Cyprus",
+  score: 9.4,
   regulation: ["FCA", "CySEC", "CMA"],
   affiliateLink: AFFILIATE_LINK,
 };
 
-/* ── Helpers ──────────────────────────────────────────────────────────── */
-
-function Stars({ score }) {
-  const filled = Math.round((parseFloat(score) / 10) * 5);
-
-  return (
-    <span className="text-amber-400 text-base tracking-wide">
-      {"★".repeat(filled)}
-      {"☆".repeat(5 - filled)}
-    </span>
-  );
-}
-
-/* ── Component ────────────────────────────────────────────────────────── */
-
 export default function ExnessHero({ broker = defaultBroker }) {
+  const stars = Math.round(broker.score / 2);
+
   return (
-    <div className="border-b border-white/6 bg-[#0d1117]">
-      <div className="max-w-4xl mx-auto px-[5vw] py-8">
-
+    <section className="font-[Manrope] bg-white text-[#141414]">
+      <div className="mx-auto max-w-6xl px-6">
         {/* Breadcrumb */}
-        <div className="flex items-center gap-2 text-[0.7rem] text-zinc-600 mb-6">
-          <Link
-            to="/"
-            className="hover:text-zinc-400 transition-colors no-underline"
-          >
-            Home
-          </Link>
+        <nav className="py-6 text-base text-zinc-500">
+          <Link to="/" className="no-underline hover:text-black">Home</Link>
+          {" / "}
+          <Link to="/brokers" className="no-underline hover:text-black">Brokers</Link>
+          {" / "}
+          <span className="text-black">{broker.name}</span>
+        </nav>
 
-          <span>›</span>
-
-          <Link
-            to="/brokers"
-            className="hover:text-zinc-400 transition-colors no-underline"
-          >
-            Brokers
-          </Link>
-
-          <span>›</span>
-
-          <span className="text-zinc-400">
-            {broker.name}
-          </span>
-        </div>
-
-        <div className="flex items-start gap-6 flex-wrap">
-
-          {/* Logo */}
-          <div className="w-24 h-24 rounded-2xl flex items-center justify-center bg-white/4 border border-white/8 shrink-0 overflow-hidden">
-            <img
-              src={broker.logo}
-              alt={`${broker.name} Logo`}
-              className="w-full h-full object-contain"
-              onError={(e) => {
-                e.target.style.display = "none";
-                e.target.parentElement.innerHTML = `
-                  <span style="
-                    font-size:1.8rem;
-                    font-weight:700;
-                    color:#4ade80
-                  ">
-                    ${broker.name.charAt(0)}
-                  </span>
-                `;
-              }}
-            />
+        <div className="grid gap-12 py-10 lg:grid-cols-[1fr_380px] lg:py-20">
+          <div>
+            <h1 className="text-[clamp(2.2rem,5vw,4rem)] font-semibold leading-[1.15] tracking-tight">
+              Exness Kenya Review 2026 | Best M-Pesa Broker?
+            </h1>
+            <div className="mt-6">
+              <Author />
+            </div>
           </div>
 
-          {/* Info */}
-          <div className="flex-1 min-w-0">
-
-            <div className="flex items-center gap-3 flex-wrap mb-2">
-              <h1 className="font-playfair text-[clamp(1.6rem,3vw,2.4rem)] font-semibold text-zinc-50">
-                {broker.name} Kenya Review 2026 | Best M-Pesa Broker?
-              </h1>
-
-              <span className="text-[0.62rem] font-bold px-2.5 py-0.5 rounded-full bg-linear-to-r from-amber-600 to-amber-400 text-black tracking-wide">
-                Tight spreads | Fast execution
-              </span>
-            </div>
-
-            {/* Rating */}
-            <Stars score={broker.score} />
-
-            {/* Author */}
-            <Author />
-
-            {/* Regulation */}
-            <div className="flex flex-wrap gap-x-6 gap-y-1 text-[0.78rem] text-zinc-500 mb-5">
-              <span>
+          <aside>
+            <a
+              href={broker.affiliateLink}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-block rounded-md bg-[#FFE600] px-6 py-3 font-semibold text-black no-underline hover:brightness-95"
+            >
+              Start trading with Exness
+            </a>
+            <p className="mt-6 text-sm leading-relaxed text-zinc-500">
+              This review does not constitute investment advice. Past performance is not indicative of future
+              results. Fees, spreads and market conditions may change over time. Your capital is at risk. Please
+              trade responsibly.
+            </p>
+            <div className="mt-6 space-y-2 border-t border-zinc-200 pt-6 text-sm text-zinc-500">
+              <p>
+                Rating:{" "}
+                <span className="text-base tracking-wide text-amber-500">
+                  {"★".repeat(stars)}{"☆".repeat(5 - stars)}
+                </span>{" "}
+                <span className="font-semibold text-black">{broker.score}/10</span>
+              </p>
+              <p>
                 Regulated by:{" "}
-                <span className="text-zinc-300">
-                  {broker.regulation.join(", ")}
-                </span>
-              </span>
+                <span className="font-semibold text-black">{broker.regulation.join(", ")}</span>
+              </p>
             </div>
-
-            {/* CTA */}
-            <div className="flex justify-center sm:justify-start relative -left-15 sm:left-0">
-              <a
-                href={broker.affiliateLink}
-                target="_blank"
-                rel="noopener noreferrer sponsored"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-[#FFE535] text-gray-800 text-lg font-semibold rounded-lg no-underline whitespace-nowrap hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(22,163,74,0.4)] transition-all duration-200"
-              >
-                Create {broker.name} Account
-
-                <span className="text-md font-bold">
-                  →
-                </span>
-              </a>
-            </div>
-          </div>
+          </aside>
         </div>
-
-        {/* SEO intro paragraph */}
-        <p className="mt-6 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          Exness Kenya offers the lowest barrier to entry of any broker on our
-          list, with no minimum deposit and instant 24/7 M-Pesa deposits and
-          withdrawals. Regulated by the FCA, CySEC, and Kenya's own Capital
-          Markets Authority (CMA), Exness pairs local accessibility with
-          top-tier international oversight, our #1 pick for Kenyan traders in
-          2026.
-        </p>
-
-        <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400">
-          At Exness, over 98% of withdrawals are processed automatically.
-          "Fastest withdrawals" refers to a comparison of Exness’ withdrawal
-          processing time vs. three other brokers, last updated on 7 May 2025.
-          Processing times may vary depending on the chosen payment method.
-        </p>
       </div>
 
-      {/* Partner offer banner */}
-<div className="max-w-4xl mx-auto px-[5vw] pb-8">
-  <a
-    href={AFFILIATE_LINK}
-    target="_blank"
-    rel="noopener noreferrer sponsored"
-    className="group block w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d1117] shadow-2xl transition-all hover:border-yellow-500/30"
-  >
-    <img
-      src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png"
-      width="1200"
-      height="628"
-      alt="Exness - Take control of your trades"
-      className="block w-full h-auto transition-transform duration-500 group-hover:scale-[1.02]"
-    />
-
-    <div className="py-2 px-4 border-t border-white/5 flex justify-between items-center bg-black/20">
-      <span className="text-[10px] uppercase tracking-widest text-zinc-600 font-bold">
-        Partner Offer
+      {/* Intro band */}
+<div className="bg-[#eff0f0] py-14">
+  <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 lg:flex-row lg:items-center">
+    <a
+      href={AFFILIATE_LINK}
+      target="_blank"
+      rel="noopener noreferrer sponsored"
+      className="block overflow-hidden rounded-lg bg-white no-underline lg:w-3/5 lg:shrink-0"
+    >
+      <img
+        src="https://d3dpet1g0ty5ed.cloudfront.net/EN_Take_control_1200x628.png"
+        width="1200"
+        height="628"
+        alt="Exness - Take control of your trades"
+        className="block h-auto w-full"
+      />
+      <span className="flex justify-between px-4 py-2 text-xs text-zinc-500">
+        <b>Partner offer</b>
+        <span>Exness Ltd.</span>
       </span>
+    </a>
 
-      <span className="text-[10px] text-zinc-500">
-        Exness Ltd.
-      </span>
+    <div className="space-y-4">
+      <p className="text-xl leading-relaxed">
+        Exness Kenya offers the lowest barrier to entry of any broker on our list, with no minimum deposit
+        and instant 24/7 M-Pesa deposits and withdrawals. Regulated by the FCA, CySEC, and Kenya's own
+        Capital Markets Authority (CMA), it is our #1 pick for Kenyan traders in 2026.
+      </p>
+      <p className="text-sm leading-relaxed text-zinc-500">
+        At Exness, over 98% of withdrawals are processed automatically. "Fastest withdrawals" refers to a
+        comparison of Exness' withdrawal processing time vs. three other brokers, last updated on 7 May 2025.
+        Processing times may vary depending on the chosen payment method.
+      </p>
     </div>
-  </a>
+  </div>
 </div>
-    </div>
+    </section>
   );
 }

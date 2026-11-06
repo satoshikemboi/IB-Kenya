@@ -191,7 +191,7 @@ export default function ExnessReview() {
         `}</script>
       </Helmet>
 
-      <main className="max-w-full mx-auto pt-10 pb-12">
+      <main className="max-w-full mx-auto pb-12">
 
         <ExnessHero
           broker={{
@@ -610,7 +610,7 @@ export default function ExnessReview() {
                 className="mt-6 block w-full bg-[#FFE535] text-gray-900 font-bold py-3 rounded-lg text-center text-md hover:bg-[#b5953b] transition-all">
                 Open Exness Account →
               </a>
-              <p className="text-[10px] text-stone-500 text-center mt-2">No minimum deposit via M-Pesa</p>
+              <p className="text-[10px] text-stone-500 text-center mt-2">10$ minimum deposit via M-Pesa</p>
             </div>
           </aside>
         </div>
